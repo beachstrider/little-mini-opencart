@@ -40,82 +40,9 @@
 	</head>
 	<body>
 		<div id="alert" class="toast-container position-fixed top-0 end-0 p-3"></div>
-		<nav id="top">
-			<div class="container">
-				<div class="nav float-start">
-					<ul class="list-inline">
-						<li class="list-inline-item">{{ currency }}</li>
-						<li class="list-inline-item">{{ language }}</li>
-					</ul>
-				</div>
-				<div class="nav float-end">
-					<ul class="list-inline">
-						<li class="list-inline-item">
-							<a href="{{ contact }}">
-								<i class="fa-solid fa-phone"></i>
-							</a>
-							<span class="d-none d-md-inline">{{ telephone }}</span>
-						</li>
-						<li class="list-inline-item">
-							<div class="dropdown">
-								<a href="{{ account }}" class="dropdown-toggle" data-bs-toggle="dropdown">
-									<i class="fa-solid fa-user"></i>
-									<span class="d-none d-md-inline">{{ text_account }}</span>
-									<i class="fa-solid fa-caret-down"></i>
-								</a>
-								<ul class="dropdown-menu dropdown-menu-right">
-									{% if not logged %}
-										<li>
-											<a href="{{ register }}" class="dropdown-item">{{ text_register }}</a>
-										</li>
-										<li>
-											<a href="{{ login }}" class="dropdown-item">{{ text_login }}</a>
-										</li>
-									{% else %}
-										<li>
-											<a href="{{ account }}" class="dropdown-item">{{ text_account }}</a>
-										</li>
-										<li>
-											<a href="{{ order }}" class="dropdown-item">{{ text_order }}</a>
-										</li>
-										<li>
-											<a href="{{ transaction }}" class="dropdown-item">{{ text_transaction }}</a>
-										</li>
-										<li>
-											<a href="{{ download }}" class="dropdown-item">{{ text_download }}</a>
-										</li>
-										<li>
-											<a href="{{ logout }}" class="dropdown-item">{{ text_logout }}</a>
-										</li>
-									{% endif %}
-								</ul>
-							</div>
-						</li>
-						<li class="list-inline-item">
-							<a href="{{ wishlist }}" id="wishlist-total" title="{{ text_wishlist }}">
-								<i class="fa-solid fa-heart"></i>
-								<span class="d-none d-md-inline">{{ text_wishlist }}</span>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="{{ shopping_cart }}" title="{{ text_shopping_cart }}">
-								<i class="fa-solid fa-cart-shopping"></i>
-								<span class="d-none d-md-inline">{{ text_shopping_cart }}</span>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="{{ checkout }}" title="{{ text_checkout }}">
-								<i class="fa-solid fa-share"></i>
-								<span class="d-none d-md-inline">{{ text_checkout }}</span>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
 		<header>
-			<div class="container">
-				<div class="flex">
+			<div class="container py-[10px]">
+				<div class="flex justify-between items-center">
 					<div class="flex items-center gap-9">
 						<div id="logo">
 							{% if logo %}
@@ -128,11 +55,35 @@
 						</div>
 						<div>{{search}}</div>
 					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3 col-lg-4"></div>
-					{# <div class="col-md-5">{{ search }}</div> #}
-					<div id="header-cart" class="col-md-4 col-lg-3">{{ cart }}</div>
+					<div class="flex gap-4 items-center">
+						{% if not logged %}
+							<a href="{{ register }}" title="{{ text_shopping_cart }}" class="flex items-center gap-[10px]">
+								<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M4.9 8.7L4.6 8.3L3.8 8.9L4.1 9.3L4.9 8.7ZM10.9 9.3L11.2 8.9L10.4 8.3L10.1 8.7L10.9 9.3ZM7.5 14C3.91015 14 1 11.0899 1 7.5H0C0 11.6421 3.35786 15 7.5 15V14ZM14 7.5C14 11.0899 11.0899 14 7.5 14V15C11.6421 15 15 11.6421 15 7.5H14ZM7.5 1C11.0899 1 14 3.91015 14 7.5H15C15 3.35786 11.6421 0 7.5 0V1ZM7.5 0C3.35786 0 0 3.35786 0 7.5H1C1 3.91015 3.91015 1 7.5 1V0ZM4 6H5V5H4V6ZM10 6H11V5H10V6ZM10.1 8.7C8.8 10.4333 6.2 10.4333 4.9 8.7L4.1 9.3C5.8 11.5667 9.2 11.5667 10.9 9.3L10.1 8.7Z" fill="#080E16"/>
+								</svg>
+								<span>{{ text_register }}</span>
+							</a>
+
+							<a href="{{ login }}" title="{{ text_shopping_cart }}" class="flex items-center gap-[10px]">
+								<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 3.49804C10.5 5.15396 9.157 6.49609 7.5 6.49609C5.843 6.49609 4.5 5.15396 4.5 3.49804C4.5 1.84212 5.843 0.5 7.5 0.5C9.157 0.5 10.5 1.84212 10.5 3.49804Z" stroke="#080E16" stroke-linecap="square"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 14.4909H2.5C2.5 13.7808 2.5 13.1053 2.5 12.4936C2.5 10.8368 3.84315 9.49414 5.5 9.49414H9.5C11.1569 9.49414 12.5 10.8368 12.5 12.4936C12.5 13.1053 12.5 13.7808 12.5 14.4909Z" stroke="#080E16" stroke-linecap="square"/>
+								</svg>
+								<span>{{ text_login }}</span>
+							</a>
+						{% else %}
+							<a href="{{ account }}" title="{{ text_account }}" class="flex items-center gap-[10px]">
+								<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 3.49804C10.5 5.15396 9.157 6.49609 7.5 6.49609C5.843 6.49609 4.5 5.15396 4.5 3.49804C4.5 1.84212 5.843 0.5 7.5 0.5C9.157 0.5 10.5 1.84212 10.5 3.49804Z" stroke="#080E16" stroke-linecap="square"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 14.4909H2.5C2.5 13.7808 2.5 13.1053 2.5 12.4936C2.5 10.8368 3.84315 9.49414 5.5 9.49414H9.5C11.1569 9.49414 12.5 10.8368 12.5 12.4936C12.5 13.1053 12.5 13.7808 12.5 14.4909Z" stroke="#080E16" stroke-linecap="square"/>
+								</svg>
+								<span>{{ text_account }}</span>
+							</a>
+
+						{% endif %}
+
+						{{ cart }}
+					</div>
 				</div>
 			</div>
 		</header>

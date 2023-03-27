@@ -13,7 +13,7 @@ body {
   font-family: "avenir", sans-serif;
   font-weight: 400;
   color: #666;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 20px;
   width: 100%;
 }
@@ -251,18 +251,14 @@ footer a {
 }
 
 /* logo */
-#logo {
-  margin: 0 0 10px 0;
-}
+#logo {}
 
 #logo img {
   max-width: 200px;
 }
 
 /* search */
-#search {
-  margin-bottom: 10px;
-}
+#search {}
 
 #search .form-control-lg {
   height: 40px;
