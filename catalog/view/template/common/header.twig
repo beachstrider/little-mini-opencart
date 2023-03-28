@@ -40,39 +40,50 @@
 	</head>
 	<body>
 		<div id="alert" class="toast-container position-fixed top-0 end-0 p-3"></div>
-		<header>
+		<header class="border-b-[1px] border-[#6B7A93]">
 			<div class="container py-[10px]">
 				<div class="flex justify-between items-center">
-					<div class="flex items-center gap-9">
+					<div class="flex items-center sm:gap-9 gap-[18px]">
+						<button class="sm:hidden block">
+							<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0 5.5H15M0 1.5H15M0 9.5H15M0 13.5H15" stroke="#080E16"/>
+							</svg>
+						</button>
 						<div id="logo">
 							{% if logo %}
-								<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-fluid"/></a>
+								<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" class="img-fluid sm:h-auto h-[24px]"/></a>
 							{% else %}
 								<h1>
 									<a href="{{ home }}">{{ name }}</a>
 								</h1>
 							{% endif %}
 						</div>
-						<div>{{search}}</div>
+						{{search}}
 					</div>
-					<div class="flex gap-4 items-center">
+					<div class="flex gap-4 items-center sm:text-[14px] text-[10px]">
 						{% if not logged %}
-							<a href="{{ register }}" title="{{ text_shopping_cart }}" class="flex items-center gap-[10px]">
-								<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<a href="{{ register }}" title="{{ text_shopping_cart }}" class="flex sm:flex-row flex-col items-center sm:gap-[10px]">
+								<svg class="sm:block hidden" width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M4.9 8.7L4.6 8.3L3.8 8.9L4.1 9.3L4.9 8.7ZM10.9 9.3L11.2 8.9L10.4 8.3L10.1 8.7L10.9 9.3ZM7.5 14C3.91015 14 1 11.0899 1 7.5H0C0 11.6421 3.35786 15 7.5 15V14ZM14 7.5C14 11.0899 11.0899 14 7.5 14V15C11.6421 15 15 11.6421 15 7.5H14ZM7.5 1C11.0899 1 14 3.91015 14 7.5H15C15 3.35786 11.6421 0 7.5 0V1ZM7.5 0C3.35786 0 0 3.35786 0 7.5H1C1 3.91015 3.91015 1 7.5 1V0ZM4 6H5V5H4V6ZM10 6H11V5H10V6ZM10.1 8.7C8.8 10.4333 6.2 10.4333 4.9 8.7L4.1 9.3C5.8 11.5667 9.2 11.5667 10.9 9.3L10.1 8.7Z" fill="#080E16"/>
 								</svg>
+								<img class="sm:hidden block" src="/image/catalog/Button-Signup.png"/>
 								<span>{{ text_register }}</span>
 							</a>
 
-							<a href="{{ login }}" title="{{ text_shopping_cart }}" class="flex items-center gap-[10px]">
-								<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<a href="{{ login }}" title="{{ text_shopping_cart }}" class="flex sm:flex-row flex-col items-center sm:gap-[10px]">
+								<svg class="sm:block hidden" width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 3.49804C10.5 5.15396 9.157 6.49609 7.5 6.49609C5.843 6.49609 4.5 5.15396 4.5 3.49804C4.5 1.84212 5.843 0.5 7.5 0.5C9.157 0.5 10.5 1.84212 10.5 3.49804Z" stroke="#080E16" stroke-linecap="square"/>
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 14.4909H2.5C2.5 13.7808 2.5 13.1053 2.5 12.4936C2.5 10.8368 3.84315 9.49414 5.5 9.49414H9.5C11.1569 9.49414 12.5 10.8368 12.5 12.4936C12.5 13.1053 12.5 13.7808 12.5 14.4909Z" stroke="#080E16" stroke-linecap="square"/>
+								</svg>
+								<svg class="sm:hidden block" width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<circle cx="12.5" cy="12.5" r="12" stroke="#080E16"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 8.49804C15.5 10.154 14.157 11.4961 12.5 11.4961C10.843 11.4961 9.5 10.154 9.5 8.49804C9.5 6.84212 10.843 5.5 12.5 5.5C14.157 5.5 15.5 6.84212 15.5 8.49804Z" stroke="#080E16" stroke-linecap="square"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 19.4909H7.5C7.5 18.7808 7.5 18.1053 7.5 17.4936C7.5 15.8368 8.84315 14.4941 10.5 14.4941H14.5C16.1569 14.4941 17.5 15.8368 17.5 17.4936C17.5 18.1053 17.5 18.7808 17.5 19.4909Z" stroke="#080E16" stroke-linecap="square"/>
 								</svg>
 								<span>{{ text_login }}</span>
 							</a>
 						{% else %}
-							<a href="{{ account }}" title="{{ text_account }}" class="flex items-center gap-[10px]">
+							<a href="{{ account }}" title="{{ text_account }}" class="flex sm:flex-row flex-col items-center sm:gap-[10px]">
 								<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 3.49804C10.5 5.15396 9.157 6.49609 7.5 6.49609C5.843 6.49609 4.5 5.15396 4.5 3.49804C4.5 1.84212 5.843 0.5 7.5 0.5C9.157 0.5 10.5 1.84212 10.5 3.49804Z" stroke="#080E16" stroke-linecap="square"/>
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 14.4909H2.5C2.5 13.7808 2.5 13.1053 2.5 12.4936C2.5 10.8368 3.84315 9.49414 5.5 9.49414H9.5C11.1569 9.49414 12.5 10.8368 12.5 12.4936C12.5 13.1053 12.5 13.7808 12.5 14.4909Z" stroke="#080E16" stroke-linecap="square"/>
