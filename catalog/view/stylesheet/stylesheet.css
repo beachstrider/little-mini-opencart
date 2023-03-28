@@ -61,6 +61,12 @@ a:hover {
   text-decoration: none;
 }
 
+hr {
+  width: 100%;
+  opacity: 1;
+  background-color: #6B7A93;
+}
+
 /* Chrome border line */
 button:focus {
   outline: none !important;

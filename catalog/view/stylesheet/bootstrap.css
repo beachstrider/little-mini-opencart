@@ -6489,7 +6489,7 @@ fieldset:disabled .btn {
   border: 4px solid #fff;
   border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .carousel.pointer-event {
@@ -6658,6 +6658,7 @@ fieldset:disabled .btn {
 }
 
 .carousel-indicators {
+  display: none !important;
   position: absolute;
   right: 0;
   bottom: -50px;

@@ -1,8 +1,14 @@
 {{ header }}
-<div id="common-home" class="container">
-	<div class="row">
-		{{ column_left }}
-		<div id="content" class="col">{{ content_top }}{{ content_bottom }}</div>
-		{{ column_right }}</div>
+<div id="common-home">
+	{{ column_left }}
+
+	{{ content_banner }}
+
+	<hr/>
+	{{ content_top }}
+	<hr/>
+	{{ content_bottom }}
+
+	{{ column_right }}
 </div>
 {{ footer }}
