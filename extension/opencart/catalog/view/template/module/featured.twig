@@ -1,6 +1,10 @@
-<h3>{{ heading_title }}</h3>
-<div class="row{% if axis == 'horizontal' %} row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4{% endif %}">
-	{% for product in products %}
-		<div class="col">{{ product }}</div>
-	{% endfor %}
+<div class="sm:py-[80px] py-[32px]">
+	<div class="sm:flex justify-between">
+		<h3 class="font-bold sm:text-[40px] text-[30px] uppercase">{{ heading_title }}</h3>
+	</div>
+	<div class="sm:mt-[40px] mt-[16px] grid sm:grid-cols-6 grid-cols-2 sm:gap-[32px] gap-[15px]">
+		{% for product in products %}
+			<div class="">{{ product }}</div>
+		{% endfor %}
+	</div>
 </div>

@@ -692,8 +692,15 @@ footer a:hover {
 }
 
 .product-thumb {
-  border: 1px solid #ddd;
-  margin-bottom: 15px;
+  border-top: 1px solid #6B7A93;
+  border-bottom: 1px solid #6B7A93;
+  filter: drop-shadow(0px 10px 40px rgba(8, 14, 22, 0.1));
+  background-color: white;
+}
+
+.product-thumb:hover {
+  border-top: 1px solid #F98D78;
+  border-bottom: 1px solid #F98D78;
 }
 
 .product-thumb h4 {
@@ -705,8 +712,12 @@ footer a:hover {
   margin-bottom: 15px;
 }
 
-.product-thumb .image a:hover {
-  opacity: 0.8;
+.product-thumb .btn-buy {
+  display: none;
+}
+
+.product-thumb:hover .btn-buy {
+  display: block;
 }
 
 .product-thumb .description {
