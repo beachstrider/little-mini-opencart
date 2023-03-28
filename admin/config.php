@@ -3,12 +3,12 @@
 define('APPLICATION', 'Admin');
 
 // HTTP
-define('HTTP_SERVER', 'http://localhost/admin_dir/');
+define('HTTP_SERVER', 'http://localhost/admin/');
 define('HTTP_CATALOG', 'http://localhost/');
 
 // DIR
 define('DIR_OPENCART', 'E:/xampp/htdocs/');
-define('DIR_APPLICATION', DIR_OPENCART . 'admin_dir/');
+define('DIR_APPLICATION', DIR_OPENCART . 'admin/');
 define('DIR_EXTENSION', DIR_OPENCART . 'extension/');
 define('DIR_IMAGE', DIR_OPENCART . 'image/');
 define('DIR_SYSTEM', DIR_OPENCART . 'system/');

@@ -12,6 +12,10 @@ class Home extends \Opencart\System\Engine\Controller {
 		$data['content_banner'] = $this->load->controller('common/content_banner');
 		$data['content_top'] = $this->load->controller('common/content_top');
 		$data['content_bottom'] = $this->load->controller('common/content_bottom');
+		
+		$data['section_best_deals'] = $this->load->view('common/section_best_deals');
+		$data['section_members'] = $this->load->view('common/section_members');
+
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
