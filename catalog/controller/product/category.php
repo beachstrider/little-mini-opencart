@@ -362,7 +362,8 @@ class Category extends \Opencart\System\Engine\Controller {
 			$data['content_top'] = $this->load->controller('common/content_top');
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['section_save_membership'] = $this->load->view('common/section_save_membership');
-			$data['section_best_deals'] = $this->load->view('common/section_best_deals');
+			$d['register'] = $this->url->link('account/register', 'language=' . $this->config->get('config_language'));
+			$data['section_best_deals'] = $this->load->view('common/section_best_deals', $d);
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 

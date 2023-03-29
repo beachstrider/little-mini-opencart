@@ -127,12 +127,12 @@ div.required .form-label:before {
 }
 
 #alert .alert {
-  min-width: 400px;
   position: relative;
 }
 
 @media (min-width: 1300px) {
   #alert .alert {
+    min-width: 400px;
     right: 50px;
   }
 }
@@ -503,7 +503,6 @@ footer a {
 
 /* content */
 #content {
-  min-height: 600px;
 }
 
 /* footer */
@@ -882,4 +881,49 @@ footer a:hover {
 #cookie div {
   font-size: 16px;
   color: #FFFFFF;
+}
+
+.breadcrumb-container>a:last-of-type {
+  text-decoration: underline;
+}
+
+.purchase-type-container {
+  background-color: rgb(243 243 243);
+}
+.purchase-type-container {}
+.purchase-type-container.selected {
+  background-color: #FFF3E2;
+}
+.purchase-type-container .btn-purchase{
+  display: none;
+}
+.purchase-type-container.selected .btn-purchase{
+  display: block;
+}
+.purchase-type-container > div {
+  opacity: 0.5;
+}
+.purchase-type-container.selected > div {
+  opacity: 1;
+}
+.purchase-type-container .checkbox-custom svg {
+  display: none;
+}
+.purchase-type-container.selected .checkbox-custom svg:first-of-type{
+  display: block;
+}
+.purchase-type-container:not(.selected) .checkbox-custom svg:last-of-type{
+  display: block;
+}
+
+.auth-modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #6b6e73;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

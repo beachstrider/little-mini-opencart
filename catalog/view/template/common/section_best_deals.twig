@@ -10,9 +10,9 @@
 							<path d="M0.5 4.5L7.5 8.5L14.5 4.5M1.5 1.5H13.5C14.0523 1.5 14.5 1.94772 14.5 2.5V12.5C14.5 13.0523 14.0523 13.5 13.5 13.5H1.5C0.947716 13.5 0.5 13.0523 0.5 12.5V2.5C0.5 1.94772 0.947715 1.5 1.5 1.5Z" stroke="#080E16"/>
 						</svg>
 					</div>
-					<input type="text" name="search" placeholder="Your email ..." class="text-dark product-search-input pr-[36px] pl-[10px] py-[9px] border-1 border-[#6B7A93] text-[14px] min-w-full sm:min-w-[370px]"/>
+					<input id="subscribe_now_email" type="email" name="email" placeholder="Your email ..." class="text-dark product-search-input pr-[36px] pl-[10px] py-[9px] border-1 border-[#6B7A93] text-[14px] min-w-full sm:min-w-[370px] h-[41px]"/>
 				</div>
-				<a href="#" class="px-[26px] py-[10px] bg-indigo text-white font-semibold sm:w-[200px] flex justify-center sm:mt-0 mt-[20px]">SIGN UP NOW</a>
+				<button href="{{ register }}" onclick="location.href='{{ register }}&email=' + $('#subscribe_now_email').val()" class="px-[26px] py-[10px] bg-indigo text-white font-semibold sm:w-[200px] flex justify-center sm:mt-0 mt-[20px]">SIGN UP NOW</button>
 			</div>
 		</div>
 	</div>
