@@ -294,6 +294,12 @@ class Category extends \Opencart\System\Engine\Controller {
 
 			sort($limits);
 
+			$data['next_limit'] = "";
+
+			if(intval($limit) <= $product_total) {
+				$data['next_limit'] = $this->url->link('product/category', 'language=' . $this->config->get('config_language') . '&path=' . $this->request->get['path'] . $url . '&limit=' . $limit + 10);
+			}
+			
 			foreach ($limits as $value) {
 				$data['limits'][] = [
 					'text'  => $value,
@@ -347,6 +353,7 @@ class Category extends \Opencart\System\Engine\Controller {
 			$data['sort'] = $sort;
 			$data['order'] = $order;
 			$data['limit'] = $limit;
+			$data['product_total'] = $product_total;
 
 			$data['continue'] = $this->url->link('common/home', 'language=' . $this->config->get('config_language'));
 

@@ -3,19 +3,23 @@
 		<div class="pt-[10px] px-[10px] flex justify-end">
 			<button class="text-[8px] uppercase px-[10px] py-[5px] rounded-full bg-indigo text-white">LUXURY</button>
 		</div>
-		<div class="image relative">
-			<img src="{{ thumb }}" alt="{{ name }}" title="{{ name }}" class="img-fluid"/>
+		<div class="image relative p-[10px]">
+			<div class="flex justify-center">
+				<img src="{{ thumb }}" alt="{{ name }}" title="{{ name }}" class="img-fluid"/>
+			</div>
 			<div class="absolute bottom-0 w-full flex justify-center px-[10px]">
-				<button type="submit" formaction="{{ add_to_cart }}" data-bs-toggle="tooltip" title="{{ button_cart }}" class="btn-buy px-[26px] py-[8px] bg-indigo text-white font-semibold sm:w-[200px] flex justify-center sm:mt-0 mt-[20px]">
+				<button type="submit" formaction="{{ add_to_cart }}" title="{{ button_cart }}" class="btn-buy px-[26px] py-[8px] bg-indigo text-white font-semibold sm:w-[200px] flex justify-center sm:mt-0 mt-[20px]">
 					BUY
 				</button>
 			</div>
 		</div>
-		<div class="content grow text-center p-[10px]">
-			<h4 class="text-orange font-bold">
-				<a href="{{ href }}">{{ name }}</a>
-			</h4>
-			<p class="mt-[3px]">{{ description }}</p>
+		<div class="content grow flex flex-col justify-between text-center p-[10px]">
+			<div>
+				<h4 class="text-orange font-bold">
+					<a href="{{ href }}">{{ name }}</a>
+				</h4>
+				<p class="mt-[3px]">{{ description }}</p>
+			</div>
 			{% if price %}
 				<div class="sm:mt-[38px] mt-[28px] flex justify-between gap-[4px]">
 					<div class="">

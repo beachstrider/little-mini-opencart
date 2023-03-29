@@ -56,6 +56,7 @@ h6 {
 a {
   color: #080E16;
   text-decoration: none;
+  cursor: pointer;
 }
 
 a:hover {
@@ -235,6 +236,21 @@ div.required .form-label:before {
 #top .nav>.list-inline .list-inline-item .dropdown>a {
   color: #888;
   text-shadow: 0 1px 0 #FFF;
+}
+
+.dropdown-menu::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 35%;
+  margin-left: 16px;
+  margin-top: -11px;
+  width: 0;
+  z-index: 1;
+  height: 0;
+  border-bottom: solid 10px #6B7A93;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
 }
 
 #top .btn-link {

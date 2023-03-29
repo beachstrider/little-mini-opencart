@@ -1,21 +1,29 @@
-<ul class="pagination">
-  {% if first %}
-    <li class="page-item"><a href="{{ first }}" class="page-link">|&lt;</a></li>
-  {% endif %}
-  {% if prev %}
-    <li class="page-item"><a href="{{ prev }}" class="page-link">&lt;</a></li>
-  {% endif %}
-  {% for link in links %}
-    {% if link.page == page %}
-      <li class="page-item active"><span class="page-link">{{ link.page }}</span></li>
-    {% else %}
-      <li class="page-item"><a href="{{ link.href }}" class="page-link">{{ link.page }}</a></li>
-    {% endif %}
-  {% endfor %}
-  {% if next %}
-    <li class="page-item"><a href="{{ next }}" class="page-link">&gt;</a></li>
-  {% endif %}
-  {% if last %}
-    <li class="page-item"><a href="{{ last }}" class="page-link">&gt;|</a></li>
-  {% endif %}
-</ul>
+<div class="flex text-[16px] border-t border-b border-darkBlue sm:w-[170px] justify-between items-center h-[48px]">
+	{% if page == 1 %}
+		<button disabled class="block text-[16px] leading-[48px]">
+			<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M10 14L3 7.5L10 1" stroke="#080E16" stroke-linecap="square"/>
+			</svg>
+		</button>
+	{% else %}
+		<a href="{{ prev }}" class="block text-[16px] leading-[48px]">
+			<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M10 14L3 7.5L10 1" stroke="#080E16" stroke-linecap="square"/>
+			</svg>
+		</a>
+	{% endif %}
+	<div class="">{{ page }}/{{ num_pages }}</div>
+	{% if page == num_pages %}
+		<button disabled class="block text-[16px] leading-[48px]">
+			<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M5 14L12 7.5L5 1" stroke="#080E16" stroke-linecap="square"/>
+			</svg>
+		</button>
+	{% else %}
+		<a href="{{ next }}" class="block text-[16px] leading-[48px]">
+			<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M5 14L12 7.5L5 1" stroke="#080E16" stroke-linecap="square"/>
+			</svg>
+		</a>
+	{% endif %}
+</div>

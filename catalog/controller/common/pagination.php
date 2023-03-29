@@ -79,6 +79,8 @@ class Pagination extends \Opencart\System\Engine\Controller {
 			}
 		}
 
+		$data['num_pages'] = $num_pages;
+
 		if ($num_pages > $page) {
 			$data['next'] = str_replace('{page}', $page + 1, $url);
 			$data['last'] = str_replace('{page}', $num_pages, $url);
