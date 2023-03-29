@@ -89,8 +89,8 @@ class Pagination extends \Opencart\System\Engine\Controller {
 			$data['last'] = '';
 		}
 
+		return $this->load->view('common/pagination', $data);
 		if ($num_pages > 1 || $back) {
-			return $this->load->view('common/pagination', $data);
 		} else {
 			return '';
 		}
