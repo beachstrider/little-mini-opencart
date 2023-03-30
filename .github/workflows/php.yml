@@ -3,18 +3,16 @@ name: PHP Composer
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Delete config.php
-        run: rm config.php
+        run: rm ./config.php
       - name: Delete admin/config.php
-        run: rm admin/config.php
+        run: rm ./admin/config.php
       - name: Rename server.config.php to config.php
-        run: mv server.config.php config.php
+        run: mv ./server.config.php ./config.php
       - name: Rename admin/server.config.php to admin/config.php
-        run: mv admin/server.config.php admin/config.php
+        run: mv ./admin/server.config.php ./admin/config.php
