@@ -485,7 +485,6 @@ class Product extends \Opencart\System\Engine\Controller {
 			$data['section_save_membership'] = $this->load->view('common/section_save_membership');
 			$d['register'] = $this->url->link('account/register', 'language=' . $this->config->get('config_language'));
 			$data['section_best_deals'] = $this->load->view('common/section_best_deals', $d);
-			$data['script_product'] = $this->load->view('product/script_product', $data);
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 

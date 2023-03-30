@@ -1,0 +1,103 @@
+2023-03-27 13:50:00 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/common/column_left.twig" (looked into: ). in E:\xampp\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+2023-03-27 14:33:55 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/common/column_left.twig" (looked into: ). in E:\xampp\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+2023-03-27 14:36:30 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/common/column_left.twig" (looked into: ). in E:\xampp\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+2023-03-27 15:27:19 - PHP Warning: imagecreatefrompng(): gd-png: libpng warning: iCCP: known incorrect sRGB profile
+File: E:\xampp\htdocs\system\library\image.php
+Line: 47
+
+2023-03-27 20:52:19 - PHP Warning: imagecreatefrompng(): gd-png: libpng warning: iCCP: known incorrect sRGB profile
+File: E:\xampp\htdocs\system\library\image.php
+Line: 47
+
+2023-03-27 22:57:20 - PHP Warning: imagecreatefrompng(): gd-png: libpng warning: iCCP: known incorrect sRGB profile
+File: E:\xampp\htdocs\system\library\image.php
+Line: 47
+
+2023-03-28 00:09:56 - PHP Warning: imagecreatefrompng(): gd-png: libpng warning: iCCP: known incorrect sRGB profile
+File: E:\xampp\htdocs\system\library\image.php
+Line: 47
+
+2023-03-28 00:19:31 - PHP Warning: imagecreatefrompng(): gd-png: libpng warning: iCCP: known incorrect sRGB profile
+File: E:\xampp\htdocs\system\library\image.php
+Line: 47
+
+2023-03-28 00:38:32 - PHP Warning:  Undefined variable $data in E:\xampp\htdocs\catalog\controller\common\content_banner.php on line 13
+2023-03-28 00:38:32 - TypeError:  Opencart\System\Engine\Loader::view(): Argument #2 ($data) must be of type array, null given, called in E:\xampp\htdocs\catalog\controller\common\content_banner.php on line 13 in E:\xampp\htdocs\system\engine\loader.php on line 137
+2023-03-28 00:39:02 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/common/content_banner.twig" (looked into: ). in E:\xampp\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+2023-03-28 12:11:39 - Error:  Class "Opencart\Catalog\Controller\Common\Controller" not found in E:\xampp\htdocs\catalog\controller\common\first_page.php on line 5
+2023-03-28 21:05:11 - Twig\Error\SyntaxError:  Unknown "endif" tag. in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 20
+2023-03-28 21:05:22 - Twig\Error\SyntaxError:  Unknown "endif" tag. in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 23
+2023-03-28 21:06:05 - Twig\Error\SyntaxError:  Unknown "endif" tag. in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 36
+2023-03-28 21:20:18 - Twig\Error\SyntaxError:  Unknown "endif" tag. in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 37
+2023-03-28 22:02:29 - ParseError:  syntax error, unexpected token "if"
+File: E:\xampp\htdocs\admin\controller\common\pagination.php
+Line: 87
+
+2023-03-29 00:20:54 - Twig\Error\SyntaxError:  Unexpected token "end of print statement" of value "". in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 63
+2023-03-29 00:21:41 - Twig\Error\SyntaxError:  Unexpected token "end of print statement" of value "". in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 63
+2023-03-29 00:24:41 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\product\category.php on line 277
+2023-03-29 00:33:25 - PHP Warning:  Undefined variable $sorts in E:\xampp\htdocs\catalog\controller\product\category.php on line 277
+2023-03-29 00:49:51 - ParseError:  syntax error, unexpected token "foreach" in E:\xampp\htdocs\catalog\controller\product\category.php on line 299
+2023-03-29 01:03:08 - ParseError:  syntax error, unexpected token "<" in E:\xampp\htdocs\catalog\controller\product\category.php on line 299
+2023-03-29 01:03:42 - ParseError:  syntax error, unexpected token "<" in E:\xampp\htdocs\catalog\controller\product\category.php on line 300
+2023-03-29 01:04:15 - ParseError:  syntax error, unexpected token "<" in E:\xampp\htdocs\catalog\controller\product\category.php on line 300
+2023-03-29 01:07:33 - Twig\Error\SyntaxError:  Unexpected character "#". in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 67
+2023-03-29 01:07:48 - Twig\Error\SyntaxError:  Unexpected token "punctuation" of value "{" ("end of statement block" expected). in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 67
+2023-03-29 01:08:28 - Twig\Error\SyntaxError:  Unexpected token "punctuation" of value "{" ("end of statement block" expected). in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 67
+2023-03-29 01:20:07 - Twig\Error\SyntaxError:  Unexpected character "$". in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 15
+2023-03-29 02:16:19 - Twig\Error\SyntaxError:  Unexpected end of template. in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 92
+2023-03-29 02:17:08 - Twig\Error\SyntaxError:  Unexpected end of template. in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 94
+2023-03-29 02:27:38 - Twig\Error\SyntaxError:  Unexpected end of template. in E:\xampp\htdocs\catalog\view\template\product\category.twig on line 90
+2023-03-29 14:10:26 - Twig\Error\SyntaxError:  Unexpected token "end of statement block" of value "". in E:\xampp\htdocs\catalog\view\template\product\product.twig on line 6
+2023-03-29 14:10:46 - Twig\Error\SyntaxError:  Unexpected token "end of statement block" of value "". in E:\xampp\htdocs\catalog\view\template\product\product.twig on line 6
+2023-03-29 14:14:18 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 54
+2023-03-29 14:14:18 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 54
+2023-03-29 14:14:18 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 54
+2023-03-29 16:31:41 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:31:44 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:31:47 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:31:50 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:31:51 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:31:52 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:31:53 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:31:53 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:31:53 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:32:06 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:32:40 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:32:41 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:32:58 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:33:00 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:33:25 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:33:27 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:33:28 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 16:33:29 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 17:56:13 - Twig\Error\SyntaxError:  Unknown "dump" function. in E:\xampp\htdocs\catalog\view\template\product\product.twig on line 52
+2023-03-29 18:17:04 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 165
+2023-03-29 18:17:04 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 165
+2023-03-29 18:17:04 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 165
+2023-03-29 18:17:04 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 165
+2023-03-29 18:17:04 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 165
+2023-03-29 18:17:04 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 165
+2023-03-29 18:17:04 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 165
+2023-03-29 18:17:04 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 165
+2023-03-29 18:17:04 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 165
+2023-03-29 18:17:44 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\e4\e4186b3a25e920987d827227b14168bd.php on line 165
+2023-03-29 18:21:43 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/common/script_product.twig" (looked into: ). in E:\xampp\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+2023-03-29 18:22:17 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/common/script_product.twig" (looked into: ). in E:\xampp\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+2023-03-29 18:22:24 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/common/script_product.twig" (looked into: ). in E:\xampp\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+2023-03-29 18:35:24 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\88\884526e5f09196ece0ff96f77a5bad43.php on line 93
+2023-03-29 18:36:04 - PHP Warning:  Array to string conversion in E:\xampp\storage\cache\template\88\884526e5f09196ece0ff96f77a5bad43.php on line 93
+2023-03-29 20:06:06 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 20:11:09 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 296
+2023-03-29 21:43:03 - Error:  Call to undefined method Opencart\System\Library\Request::get() in E:\xampp\htdocs\catalog\controller\account\register.php on line 103
+2023-03-29 21:43:14 - Error:  Call to undefined method Opencart\System\Library\Request::query() in E:\xampp\htdocs\catalog\controller\account\register.php on line 103
+2023-03-29 21:46:43 - PHP Warning:  Undefined array key "email" in E:\xampp\htdocs\catalog\controller\account\register.php on line 96
+2023-03-29 21:47:17 - PHP Warning:  Undefined array key "email" in E:\xampp\htdocs\catalog\controller\account\register.php on line 97
+2023-03-29 23:55:45 - Exception:  Error: Could not make a database link using littlemini@92.205.3.167! in E:\xampp\htdocs\system\library\db\mysqli.php on line 19
+2023-03-29 23:57:04 - Exception:  Error: Could not make a database link using littlemini@92.205.3.167! in E:\xampp\htdocs\system\library\db\mysqli.php on line 19
+2023-03-30 00:07:27 - Exception:  Error: Could not make a database link using littlemini@92.205.3.167! in E:\xampp\htdocs\system\library\db\mysqli.php on line 19
+2023-03-30 00:08:29 - Exception:  Error: Could not make a database link using littlemini@92.205.3.167! in E:\xampp\htdocs\system\library\db\mysqli.php on line 19
+2023-03-30 00:30:58 - Exception:  Error: Could not make a database link using littlemini@localhost! in E:\xampp\htdocs\system\library\db\mysqli.php on line 19
+2023-03-30 02:02:02 - Exception:  Error: Could not make a database link using root@localhost! in E:\xampp\htdocs\system\library\db\mysqli.php on line 19
+2023-03-30 02:02:24 - Exception:  Error: Could not make a database link using root@localhost! in E:\xampp\htdocs\system\library\db\mysqli.php on line 19
+2023-03-30 19:45:39 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/product/script_product.twig" (looked into: ). in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227

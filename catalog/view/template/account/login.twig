@@ -20,12 +20,12 @@
   {% endif %}
       <form id="form-login" action="{{ login }}" method="post" data-oc-toggle="ajax">
         <div class="mb-3">
-          <label for="input-email" class="">{{ entry_email }}</label>
-          <input type="text" name="email" value="{{ email }}" placeholder="{{ entry_email }}" id="input-email" class="form-control"/>
+          <label for="input-email" class="block">{{ entry_email }}</label>
+          <input type="text" name="email" value="{{ email }}" placeholder="{{ entry_email }}" id="input-email" class="w-full"/>
         </div>
         <div class="mb-3">
-          <label for="input-password" class="">{{ entry_password }}</label>
-          <input type="password" name="password" value="{{ password }}" placeholder="{{ entry_password }}" id="input-password" class="form-control"/>
+          <label for="input-password" class="block">{{ entry_password }}</label>
+          <input type="password" name="password" value="{{ password }}" placeholder="{{ entry_password }}" id="input-password" class="w-full"/>
           <a class="block mt-[10px] underline" href="{{ forgotten }}">{{ text_forgotten }}</a>
         </div>
         <button type="submit" class="w-[170px] font-bold bg-indigo py-[12px] text-white uppercase">{{ button_login }}</button>

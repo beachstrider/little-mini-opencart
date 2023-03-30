@@ -32,13 +32,13 @@
           border: none;
       }
 
-      #container {
+      #container mx-auto sm:px-0 px-[20px] {
           width: 680px;
       }
   </style>
 </head>
 <body>
-<div id="container">
+<div id="container mx-auto sm:px-0 px-[20px]">
   {% if image %}
     <div style="float: right; margin-left: 20px;"><a href="{{ store_url }}" title="{{ store_name }}"><img src="{{ image }}" alt="{{ store_name }}"/></a></div>
   {% endif %}

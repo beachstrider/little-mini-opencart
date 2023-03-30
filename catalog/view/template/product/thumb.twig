@@ -7,7 +7,7 @@
 			<div class="flex justify-center">
 				<img src="{{ thumb }}" alt="{{ name }}" title="{{ name }}" class="img-fluid"/>
 			</div>
-			<div class="absolute bottom-0 w-full flex justify-center px-[10px]">
+			<div class="absolute sm:flex hidden bottom-0 w-full justify-center px-[10px] left-0">
 				<button type="submit" formaction="{{ add_to_cart }}" title="{{ button_cart }}" class="btn-buy px-[26px] py-[8px] bg-indigo text-white font-semibold sm:w-[200px] flex justify-center sm:mt-0 mt-[20px]">
 					BUY
 				</button>
@@ -49,6 +49,9 @@
 				</div>
 			{% endif %}
 		</div>
+		<button type="submit" formaction="{{ add_to_cart }}" title="{{ button_cart }}" class="sm:hidden block px-[26px] py-[8px] bg-indigo text-white font-semibold sm:w-[200px] flex justify-center sm:mt-0 mt-[20px]">
+			BUY
+		</button>
 		<input type="hidden" name="product_id" value="{{ product_id }}"/>
 		<input type="hidden" name="quantity" value="{{ minimum }}"/>
 	</div>

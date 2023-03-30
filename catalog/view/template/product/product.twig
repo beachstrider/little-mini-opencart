@@ -1,5 +1,5 @@
 {{ header }}
-<div id="product-info" class="container">
+<div id="product-info" class="container mx-auto sm:px-0 px-[20px]">
 	<div class="breadcrumb-container flex opacity-[0.5] text-[12px] gap-[4px] py-[16px]">
 		{% for key, breadcrumb in breadcrumbs %}
 			<a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a>
@@ -162,7 +162,7 @@
 		{{ content_bottom }}</div>
 	{{ column_right }}</div></div>{% if products %}
 <div class="sm:py-[80px] py-[60px] bg-[#FFF3E2]">
-	<div class="container">
+	<div class="container mx-auto sm:px-0 px-[20px]">
 		<h3 class="sm:text-[40px] text-[30px] font-bold uppercase">{{ text_related }}</h3>
 		<div class="sm:mt-[40px] mt-[30px] grid sm:grid-cols-6 grid-cols-2 sm:gap-[30px] gap-[10px]">
 			{% for product in products %}
@@ -170,4 +170,6 @@
 			{% endfor %}
 		</div>
 	</div>
-</div>{% endif %}{{ section_save_membership }}{{ section_best_deals }}{{ footer }}{{ script_product }}
+</div>{% endif %}{{ section_save_membership }}{{ section_best_deals }}{{ footer }}
+
+<script src="catalog/view/javascript/product.js" type="text/javascript"></script>

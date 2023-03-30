@@ -11,7 +11,6 @@
       <div class="text-orange">REGISTER</div>
         &nbsp;YOUR ACCOUNT
     </div>
-    {# <div class="sm:text-[18px] text-[14px] mt-[16px]">If you are already a member you can login here. You will automatically be registered as a member when you complete your first order at LittleMini.</div> #}
     <form id="form-register" action="{{ register }}" method="post" data-oc-toggle="ajax" class="sm:mt-[28px] mt-[22px]">
       <fieldset id="account">
         {% if customer_groups|length > 1 %}
@@ -29,21 +28,21 @@
         <div class="mb-3 required">
           <label for="input-firstname" class="">{{ entry_firstname }}</label>
           <div class="w-full">
-            <input type="text" name="firstname" value="" placeholder="{{ entry_firstname }}" id="input-firstname" class="form-control"/>
+            <input type="text" name="firstname" value="" placeholder="{{ entry_firstname }}" id="input-firstname" class="w-full"/>
             <div id="error-firstname" class="invalid-feedback"></div>
           </div>
         </div>
         <div class="mb-3 required">
           <label for="input-lastname" class="">{{ entry_lastname }}</label>
           <div class="w-full">
-            <input type="text" name="lastname" value="" placeholder="{{ entry_lastname }}" id="input-lastname" class="form-control"/>
+            <input type="text" name="lastname" value="" placeholder="{{ entry_lastname }}" id="input-lastname" class="w-full"/>
             <div id="error-lastname" class="invalid-feedback"></div>
           </div>
         </div>
         <div class="mb-3 required">
           <label for="input-email" class="">{{ entry_email }}</label>
           <div class="w-full">
-            <input type="email" name="email" value="{{ initial_email }}" placeholder="{{ entry_email }}" id="input-email" class="form-control"/>
+            <input type="email" name="email" value="{{ initial_email }}" placeholder="{{ entry_email }}" id="input-email" class="w-full"/>
             <div id="error-email" class="invalid-feedback"></div>
           </div>
         </div>
@@ -52,7 +51,7 @@
           <div class="row mb-3{% if config_telephone_required %} required{% endif %}">
             <label for="input-telephone" class="">{{ entry_telephone }}</label>
             <div class="w-full">
-              <input type="tel" name="telephone" value="" placeholder="{{ entry_telephone }}" id="input-telephone" class="form-control"/>
+              <input type="tel" name="telephone" value="" placeholder="{{ entry_telephone }}" id="input-telephone" class="w-full"/>
               <div id="error-telephone" class="invalid-feedback"></div>
             </div>
           </div>
@@ -111,7 +110,7 @@
             <div class="row mb-3 custom-field custom-field-{{ custom_field.custom_field_id }}">
               <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="">{{ custom_field.name }}</label>
               <div class="w-full">
-                <input type="text" name="custom_field[{{ custom_field.custom_field_id }}]" value="{{ custom_field.value }}" placeholder="{{ custom_field.name }}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control"/>
+                <input type="text" name="custom_field[{{ custom_field.custom_field_id }}]" value="{{ custom_field.value }}" placeholder="{{ custom_field.name }}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="w-full"/>
                 <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
               </div>
             </div>
@@ -121,7 +120,7 @@
             <div class="row mb-3 custom-field custom-field-{{ custom_field.custom_field_id }}">
               <label for="input-custom-field-{{ custom_field.custom_field_id }}" class="">{{ custom_field.name }}</label>
               <div class="w-full">
-                <textarea name="custom_field[{{ custom_field.custom_field_id }}]" rows="5" placeholder="{{ custom_field.name }}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="form-control">{{ custom_field.value }}</textarea>
+                <textarea name="custom_field[{{ custom_field.custom_field_id }}]" rows="5" placeholder="{{ custom_field.name }}" id="input-custom-field-{{ custom_field.custom_field_id }}" class="w-full">{{ custom_field.value }}</textarea>
                 <div id="error-custom-field-{{ custom_field.custom_field_id }}" class="invalid-feedback"></div>
               </div>
             </div>
@@ -186,7 +185,7 @@
         <div class="mb-3 required">
           <label for="input-password" class="">{{ entry_password }}</label>
           <div class="w-full">
-            <input type="password" name="password" value="" placeholder="{{ entry_password }}" id="input-password" class="form-control"/>
+            <input type="password" name="password" value="" placeholder="{{ entry_password }}" id="input-password" class="w-full"/>
             <div id="error-password" class="invalid-feedback"></div>
           </div>
         </div>
@@ -212,8 +211,9 @@
       <div class="d-inline-block pt-2 pd-2 w-100">
         <div class="">
           {% if text_agree %}
-            <div class="form-check">
-              <label class="form-check-label">{{ text_agree }}</label> <input type="checkbox" name="agree" value="1" class="form-check-input"/>
+            <div class="flex items-center gap-[10px]">
+              <input type="checkbox" name="agree" value="1" class=""/>
+              <label class="">{{ text_agree }}</label>
             </div>
           {% endif %}
           <button type="submit" class="mt-[12px] w-[170px] font-bold bg-indigo py-[12px] text-white uppercase">{{ button_continue }}</button>

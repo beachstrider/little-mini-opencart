@@ -39,7 +39,18 @@
 					fontWeight: {
 						'semibold': '400',
 						'bold': '400'
-					}
+					},
+					container: {
+						center: true,
+						padding: '20px',
+						screens: {
+							sm: '600px',
+							md: '728px',
+							lg: '984px',
+							xl: '1100px',
+							'2xl': '1170px',
+						},
+					},
 				}
 			}
 		</script>
@@ -64,9 +75,9 @@
 		{% endfor %}
 	</head>
 	<body>
-		<div id="alert" class="toast-container position-fixed sm:top-[88px] top-[60px] right-0 p-[8px]"></div>
+		<div id="alert" class="toast-container fixed right-0 p-[8px]"></div>
 		<header class="border-b-[1px] border-[#6B7A93]">
-			<div class="container py-[10px]">
+			<div class="container mx-auto sm:px-0 px-[20px] mx-auto py-[10px]">
 				<div class="flex justify-between items-center">
 					<div class="flex items-center sm:gap-9 gap-[18px]">
 						<button class="sm:hidden block">
