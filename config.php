@@ -42,7 +42,7 @@ define('DIR_LOGS', DIR_STORAGE . 'logs/');
 define('DIR_SESSION', DIR_STORAGE . 'session/');
 define('DIR_UPLOAD', DIR_STORAGE . 'upload/');
 define('DB_DRIVER', 'mysqli');
-define('DB_HOSTNAME', '92.205.3.167');
+define('DB_HOSTNAME', 'localhost');
 define('DB_USERNAME', 'littlemini');
 define('DB_PASSWORD', 'GhMyhk&bCVjpMk@d');
 define('DB_DATABASE', 'littlemini');
