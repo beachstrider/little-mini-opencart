@@ -114,3 +114,29 @@ Line: 87
 2023-03-31 02:38:38 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\product\category.php on line 197
 2023-03-31 02:38:38 - PHP Warning:  Undefined variable $product in E:\xampp\htdocs\catalog\controller\product\category.php on line 198
 2023-03-31 02:38:38 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\product\category.php on line 198
+2023-03-31 03:23:19 - Exception:  Error: Table 'littlemini.oc_store' doesn't exist<br/>Error No: 1146<br/>SELECT * FROM `oc_store` WHERE REPLACE(`url`, 'www.', '') = 'http://localhost/' in E:\xampp\htdocs\system\library\db\mysqli.php on line 48
+2023-03-31 03:23:22 - Exception:  Error: Table 'littlemini.oc_store' doesn't exist<br/>Error No: 1146<br/>SELECT * FROM `oc_store` WHERE REPLACE(`url`, 'www.', '') = 'http://localhost/' in E:\xampp\htdocs\system\library\db\mysqli.php on line 48
+2023-03-31 03:23:25 - Exception:  Error: Table 'littlemini.oc_store' doesn't exist<br/>Error No: 1146<br/>SELECT * FROM `oc_store` WHERE REPLACE(`url`, 'www.', '') = 'http://localhost/' in E:\xampp\htdocs\system\library\db\mysqli.php on line 48
+2023-03-31 03:23:28 - Exception:  Error: Table 'littlemini.oc_store' doesn't exist<br/>Error No: 1146<br/>SELECT * FROM `oc_store` WHERE REPLACE(`url`, 'www.', '') = 'http://localhost/' in E:\xampp\htdocs\system\library\db\mysqli.php on line 48
+2023-03-31 03:36:06 - Exception:  Error: Table 'littlemini.oc_store' doesn't exist<br/>Error No: 1146<br/>SELECT * FROM `oc_store` WHERE REPLACE(`url`, 'www.', '') = 'http://localhost/' in E:\xampp\htdocs\system\library\db\mysqli.php on line 48
+2023-03-31 05:19:35 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 160
+2023-03-31 05:19:35 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 160
+2023-03-31 05:19:35 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 160
+2023-03-31 05:19:35 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 160
+2023-03-31 05:19:35 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 160
+2023-03-31 05:19:35 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 160
+2023-03-31 05:19:36 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 160
+2023-03-31 05:19:36 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 160
+2023-03-31 05:19:36 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 160
+2023-03-31 05:19:36 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 160
+2023-03-31 06:23:34 - Twig\Error\SyntaxError:  Unknown "endif" tag. in E:\xampp\htdocs\catalog\view\template\checkout\cart.twig on line 33
+2023-03-31 06:23:34 - Twig\Error\SyntaxError:  Unknown "endif" tag. in E:\xampp\htdocs\catalog\view\template\checkout\cart.twig on line 33
+2023-03-31 06:38:53 - PHP Warning:  rename(E:\xampp\htdocs\system\storage\cache\template\9b\9be571B.tmp,E:/xampp/htdocs/system/storage/cache/template/9b/9beb5136015d401810a49e62ccaca14a.php): Access is denied (code: 5) in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 61
+2023-03-31 06:38:53 - RuntimeException:  Failed to write cache file "E:/xampp/htdocs/system/storage/cache/template/9b/9beb5136015d401810a49e62ccaca14a.php". in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 76
+age\vendor\twig\twig\src\Cache\FilesystemCache.php on line 61
+2023-03-31 06:38:53 - PHP Warning:  rename(E:\xampp\htdocs\system\storage\cache\template\9b\9be571C.tmp,E:/xampp/htdocs/system/storage/cache/template/9b/9beb5136015d401810a49e62ccaca14a.php): Access is denied (code: 5) in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 61
+2023-03-31 06:38:53 - RuntimeException:  Failed to write cache file "E:/xampp/htdocs/system/storage/cache/template/9b/9beb5136015d401810a49e62ccaca14a.php". in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 76
+2023-03-31 06:38:53 - RuntimeException:  Failed to write cache file "E:/xampp/htdocs/system/storage/cache/template/9b/9beb5136015d401810a49e62ccaca14a.php". in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 76
+2023-03-31 07:19:51 - Exception:  Error: Could not call registry key model_checkout_cart! in E:\xampp\htdocs\system\engine\controller.php on line 25
+2023-03-31 07:19:51 - Exception:  Error: Could not call registry key model_checkout_cart! in E:\xampp\htdocs\system\engine\controller.php on line 25
+2023-03-31 07:20:19 - TypeError:  Opencart\Catalog\Model\Checkout\Cart::getTotals(): Argument #1 ($totals) must be of type array, null given in E:\xampp\htdocs\catalog\model\checkout\cart.php on line 118

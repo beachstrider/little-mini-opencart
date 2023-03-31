@@ -1,86 +1,111 @@
 {{ header }}
 <div id="checkout-cart" class="container mx-auto sm:px-0 px-[20px]">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-      <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
-  {% if attention %}
-    <div class="alert alert-info"><i class="fa-solid fa-circle-info"></i> {{ attention }} <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
-  {% endif %}
-  {% if success %}
-    <div class="alert alert-success alert-dismissible"><i class="fa-solid fa-circle-check"></i> {{ success }} <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
-  {% endif %}
-  {% if error_warning %}
-    <div class="alert alert-danger alert-dismissible"><i class="fa-solid fa-circle-exclamation"></i> {{ error_warning }} <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
-  {% endif %}
-  <div class="row">{{ column_left }}
-    <div id="content" class="col">{{ content_top }}
-      <h1>{{ heading_title }}{% if weight %} ({{ weight }}){% endif %}</h1>
-      <div id="shopping-cart">{{ list }}</div>
-      {% if modules %}
-        <h2>{{ text_next }}</h2>
-        <p>{{ text_next_choice }}</p>
-        <div id="accordion" class="accordion">
-          {% for module in modules %}
-            {{ module }}
-          {% endfor %}
-        </div>
-      {% endif %}
-      <br/>
-      <div class="d-inline-block pt-2 pd-2 w-100">
-        <div class="float-start"><a href="{{ continue }}" class="btn btn-light">{{ button_shopping }}</a></div>
-        <div class="float-end"><a href="{{ checkout }}" class="btn btn-primary">{{ button_checkout }}</a></div>
-      </div>
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
+	<div class="sm:text-[40px] font-bold sm:mt-[40px] mt-[30px] flex">
+		<span class="text-orange">YOUR</span>
+		&nbsp;SHOPPING CART
+	</div>
+	<div class="sm:py-[20px] py-[15px]">
+		<div class="">
+			{% if attention %}
+				<div class="alert alert-info">
+					<i class="fa-solid fa-circle-info"></i>
+					{{ attention }}
+					<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+				</div>
+			{% endif %}
+			{% if success %}
+				<div class="alert alert-success alert-dismissible">
+					<i class="fa-solid fa-circle-check"></i>
+					{{ success }}
+					<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+				</div>
+			{% endif %}
+			{% if error_warning %}
+				<div class="alert alert-danger alert-dismissible">
+					<i class="fa-solid fa-circle-exclamation"></i>
+					{{ error_warning }}
+					<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+				</div>
+			{% endif %}
+			<div class="grid sm:grid-cols-9 sm:gap-[30px] gap-[15px]">
+				<div id="content" class="col-span-5">
+					<div id="shopping-cart">{{ list }}</div>
+					<div class="sm:mt-[20px] mt-[15px] sm:p-[20px] p-[15px] bg-orangeLight flex sm:gap-[28px] gap-[20px]">
+						<div class="">
+							<img src="/image/catalog/objects/little-mini-group-logo.png" alt="" srcset=""/>
+						</div>
+						<div class="">
+							<div class="flex justify-between">
+								<div class="">
+									<div class="sm:text-[10px] text-[8px]">Membership</div>
+									<div class="sm:text-[12px] text-[9px] font-bold">FIRST MONTH IS FREE</div>
+								</div>
+								<div class="sm:text-[10px] text-[8px]">1profile p/m
+									<span class="text-[16px] font-bold">$89</span>
+								</div>
+							</div>
+							<div class="sm:text-[12px] text-[9px] mt-[10px]">Access to all LittleMinis benefits for 0 DKK in the first month, then 89,- DKK per month(<a href="#" class="underline">view benefits</a>). By choosing the member price you become a member (<a href="#" class="underline">conditions</a>) and you receive the LittleMini member benefits. Cancellable at any time.</div>
+						</div>
+					</div>
+					<br/>
+				</div>
+				<div class="col-span-4">
+					<div class="float-end">
+						<a href="{{ checkout }}" class="w-full uppercase block px-[26px] py-[14px] bg-indigo text-white font-semibold flex justify-center sm:mt-0 mt-[20px]">{{ button_checkout }}</a>
+					</div>
+					<div class="flex justify-between bg-orangeLight mt-[20px] p-[20px]">
+						<div class="sm:text-[24px] text-[18px] font-bold uppercase">YOUR ORDER</div>
+						<div class="sm:text-[24px] text-[18px] text-orange font-bold">
+							{% for total in totals %}
+								{% if total.code == 'total' %}
+									{{ total.text }}
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+					<div class="p-[20px] relative bg-orangeGray">
+						<div class="flex justify-between opacity-[0.5] line-through">
+							<div class="sm:text-[24px] text-[18px] font-bold uppercase">NORMAL PRICE</div>
+							<div class="sm:text-[24px] text-[18px] font-bold">{{ price }}</div>
+						</div>
+						<div class="sm:pt-[30px] pt-[22px]">
+							<div class="flex gap-[22px]">
+								<div class="py-[4px]">
+									<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M5 5.5H6M9 9.5H10M10 5L5 10M6.80145 0.789347L5.67243 1.91837C5.48717 2.10363 5.23589 2.20772 4.97389 2.20772H3.19561C2.65001 2.20772 2.20772 2.65001 2.20772 3.19561V4.97389C2.20772 5.23589 2.10363 5.48717 1.91837 5.67243L0.789347 6.80145C0.403551 7.18725 0.403551 7.81275 0.789347 8.19855L1.91837 9.32757C2.10363 9.51283 2.20772 9.76411 2.20772 10.0261V11.8044C2.20772 12.35 2.65001 12.7923 3.19561 12.7923H4.97389C5.23589 12.7923 5.48717 12.8964 5.67243 13.0816L6.80145 14.2107C7.18725 14.5964 7.81275 14.5964 8.19855 14.2107L9.32757 13.0816C9.51283 12.8964 9.76411 12.7923 10.0261 12.7923H11.8044C12.35 12.7923 12.7923 12.35 12.7923 11.8044V10.0261C12.7923 9.76411 12.8964 9.51283 13.0816 9.32757L14.2107 8.19855C14.5964 7.81275 14.5964 7.18725 14.2107 6.80145L13.0816 5.67243C12.8964 5.48717 12.7923 5.23589 12.7923 4.97389V3.19561C12.7923 2.65001 12.35 2.20772 11.8044 2.20772H10.0261C9.76411 2.20772 9.51283 2.10363 9.32757 1.91837L8.19855 0.789347C7.81275 0.403551 7.18725 0.403551 6.80145 0.789347Z" stroke="#080E16"/>
+									</svg>
+								</div>
+								<div class="">
+									<div>You save 44% on this order.</div>
+									<div class="opacity-[0.5]">Savings: $120</div>
+								</div>
+							</div>
+							<div class="flex gap-[22px]">
+								<div class="py-[4px]">
+									<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M2 9.5H5M13 9.5H10M3 6.5H12M14.5 6.4967V12.5C14.5 13.0523 14.0523 13.5 13.5 13.5H12.5C11.9477 13.5 11.5 13.0523 11.5 12.5V11.5H3.5V12.5C3.5 13.0523 3.05228 13.5 2.5 13.5H1.5C0.947715 13.5 0.5 13.0523 0.5 12.5V6.4967L2.62597 2.95576C3.16824 2.05257 4.14452 1.5 5.19799 1.5H9.80201C10.8555 1.5 11.8318 2.05257 12.374 2.95576L14.5 6.4967Z" stroke="#080E16"/>
+									</svg>
+								</div>
+								<div class="">
+									<div>Cheap and fast shipping.</div>
+									<div class="opacity-[0.5]">VAT included.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="flex justify-center sm:text-[12px] text-[8px] py-[15px]">
+						<div class="flex gap-[10px]">
+							<svg width="15" height="19" viewbox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.5 4.43132L7.5 0.633789L14.5 4.43132M0.5 4.43132L7.5 8.22884M0.5 4.43132V4.43379M14.5 4.43132L7.5 8.22884M14.5 4.43132V14.5671L7.5 18.3671M14.5 4.43132L7.5 8.23379V18.3671M7.5 8.22884V18.3671M7.5 8.22884L0.5 4.43379M7.5 18.3671L0.5 14.5671V4.43379" stroke="#080E16" stroke-linejoin="round"/>
+							</svg>
+							<div>We ship today and accept returns for up to 90 days.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-<script type="text/javascript"><!--
-$('#shopping-cart').on('submit', 'form', function (e) {
-    e.preventDefault();
-
-    var element = this;
-
-    if (e.originalEvent !== undefined && e.originalEvent.submitter !== undefined) {
-        var button = e.originalEvent.submitter;
-    } else {
-        var button = '';
-    }
-
-    $.ajax({
-        url: $(button).attr('formaction'),
-        type: 'post',
-        data: $(element).serialize(),
-        dataType: 'json',
-        beforeSend: function () {
-            $(button).prop('disabled', true).addClass('loading');
-        },
-        complete: function () {
-            $(button).prop('disabled', false).removeClass('loading');
-        },
-        success: function (json) {
-            console.log(json);
-
-            if (json['redirect']) {
-                location = json['redirect'];
-            }
-
-            if (json['error']) {
-                $('#alert').prepend('<div class="alert alert-danger alert-dismissible"><i class="fa-solid fa-circle-exclamation"></i> ' + json['error'] + ' <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>');
-            }
-
-            if (json['success']) {
-                $('#alert').prepend('<div class="alert alert-success alert-dismissible"><i class="fa-solid fa-circle-exclamation"></i> ' + json['success'] + ' <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>');
-            }
-
-            $('#shopping-cart').load('index.php?route=checkout/cart|list&language={{ language }}', {}, function () {
-                $('#header-cart').load('index.php?route=common/cart|info&language={{ language }}');
-            });
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-        }
-    });
-});
-//--></script>
-{{ footer }}
+{{section_save_membership}}
+{{section_best_deals}}
+{{footer}}

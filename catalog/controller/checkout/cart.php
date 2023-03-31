@@ -3,6 +3,7 @@ namespace Opencart\Catalog\Controller\Checkout;
 class Cart extends \Opencart\System\Engine\Controller {
 	public function index(): void {
 		$this->load->language('checkout/cart');
+		$this->load->model('checkout/cart');
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
@@ -49,8 +50,23 @@ class Cart extends \Opencart\System\Engine\Controller {
 				$data['weight'] = '';
 			}
 
-			$data['list'] = $this->load->controller('checkout/cart|getList');
+			$data['totals'] = [];
 
+			$totals = [];
+			$taxes = $this->cart->getTaxes();
+			$total = 0;
+			($this->model_checkout_cart->getTotals)($totals, $taxes, $total);
+
+			foreach ($totals as $result) {
+				$data['totals'][] = [
+					'code'  => $result['code'],
+					'title' => $result['title'],
+					'text'  => $this->currency->format($result['value'], $this->session->data['currency'])
+				];
+			}
+
+			$data['list'] = $this->load->controller('checkout/cart|getList');
+			
 			$data['modules'] = [];
 
 			$this->load->model('setting/extension');
@@ -72,6 +88,8 @@ class Cart extends \Opencart\System\Engine\Controller {
 			$data['column_right'] = $this->load->controller('common/column_right');
 			$data['content_top'] = $this->load->controller('common/content_top');
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
+			$data['section_save_membership'] = $this->load->view('common/section_save_membership');
+			$data['section_best_deals'] = $this->load->view('common/section_best_deals');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 
@@ -157,6 +175,7 @@ class Cart extends \Opencart\System\Engine\Controller {
 				'cart_id'      => $product['cart_id'],
 				'thumb'        => $product['image'],
 				'name'         => $product['name'],
+				// 'meta_title'         => $product['meta_title'],
 				'model'        => $product['model'],
 				'option'       => $product['option'],
 				'subscription' => $description,
@@ -181,24 +200,6 @@ class Cart extends \Opencart\System\Engine\Controller {
 				'description' => $voucher['description'],
 				'amount'      => $this->currency->format($voucher['amount'], $this->session->data['currency'])
 			];
-		}
-
-		$data['totals'] = [];
-
-		$totals = [];
-		$taxes = $this->cart->getTaxes();
-		$total = 0;
-
-		// Display prices
-		if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
-			($this->model_checkout_cart->getTotals)($totals, $taxes, $total);
-
-			foreach ($totals as $result) {
-				$data['totals'][] = [
-					'title' => $result['title'],
-					'text'  => $this->currency->format($result['value'], $this->session->data['currency'])
-				];
-			}
 		}
 
 		return $this->load->view('checkout/cart_list', $data);
