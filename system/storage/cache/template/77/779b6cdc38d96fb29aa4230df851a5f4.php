@@ -36,7 +36,7 @@ class __TwigTemplate_cebd547d253e7c5aa0db721a2a80cbf4 extends Template
         // line 1
         echo "<form method=\"post\" data-oc-toggle=\"ajax\" data-oc-load=\"";
         echo ($context["cart"] ?? null);
-        echo "\" data-oc-target=\"#cart-dropdown\" class=\" h-full\">
+        echo "\" data-oc-target=\"#header-cart\" class=\"h-full\">
 \t<div class=\"product-thumb h-full flex flex-col\">
 \t\t<div class=\"pt-[10px] px-[10px] flex justify-end\">
 \t\t\t<button class=\"text-[8px] leading-[9px] uppercase px-[10px] py-[5px] rounded-full bg-indigo text-white\">LUXURY</button>

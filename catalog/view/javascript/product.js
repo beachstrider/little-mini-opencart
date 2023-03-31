@@ -62,7 +62,7 @@ $("#form-product").on("submit", function (e) {
           </div>
         `);
 
-        $("#cart-dropdown").load("index.php?route=common/cart|info");
+        $("#header-cart").load("index.php?route=common/cart|info");
       }
     },
     error: function (xhr, ajaxOptions, thrownError) {
@@ -74,16 +74,6 @@ $("#form-product").on("submit", function (e) {
 });
 
 $(document).ready(function () {
-  const purchaseTypecontainer = $(".purchase-type-container");
-
-  $(".magnific-popup").magnificPopup({
-    type: "image",
-    delegate: "a",
-    gallery: {
-      enabled: true,
-    },
-  });
-
   $(".btn-purchase-type").on("click", async function (e) {
     subscription_plan_id = Number(
       $(this).closest(".purchase-type-container").data("type")

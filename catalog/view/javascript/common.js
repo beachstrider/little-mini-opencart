@@ -79,7 +79,7 @@ $("#form-product").on("submit", function (e) {
           </div>
         `);
 
-        $("#cart-dropdown").load("index.php?route=common/cart|info");
+        $("#header-cart").load("index.php?route=common/cart|info");
       }
     },
     error: function (xhr, ajaxOptions, thrownError) {
@@ -653,12 +653,28 @@ var chain = new Chain();
   };
 })(window.jQuery);
 
+// custom dropdown
 $(document).ready(function () {
-  $(".magnific-popup").magnificPopup({
-    type: "image",
-    delegate: "a",
-    gallery: {
-      enabled: true,
-    },
+  $(document).on("click", "[data-custom-dropdown-toggle]", function (e) {
+    e.stopPropagation();
+    const dropdown = $(`#${$(this).data("custom-dropdown-toggle")}`);
+    dropdown.show();
+  });
+
+  $(document).on("click", "body", function (e) {
+    let isDropdown = false;
+    $(e.target)
+      .parents()
+      .each(function () {
+        const id = $(this).attr("id");
+        const handlers = $(`[data-custom-dropdown-toggle="${id}"]`).length;
+        if (handlers > 0) isDropdown = true;
+      });
+    if (!isDropdown) {
+      $("[data-custom-dropdown-toggle]").each(function () {
+        const dropdown = $(`#${$(this).data("custom-dropdown-toggle")}`);
+        dropdown.hide();
+      });
+    }
   });
 });
