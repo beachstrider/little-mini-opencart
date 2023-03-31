@@ -1,5 +1,5 @@
 {% for product in products %}
-	<div class="flex py-[20px] border-b border-darkBlue">
+	<div class="cart-item flex py-[20px] border-b border-darkBlue">
 		<div class="text-center">
 			{% if product.thumb %}
 				<a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="w-[120px]"/></a>
@@ -50,7 +50,7 @@
 							type="hidden" name="key" value="{{ product.cart_id }}">
 
 							{# - #}
-							<button type="submit" formaction="{{ product_remove }}" title="{{ button_remove }}" class="" disabled>
+							<button type="button" formaction="{{ product_edit }}" formaction-remove="{{ product_remove }}" title="{{ product_edit }}" class="btn-cart-change-quantity" data-diff="-1">
 								<svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<circle cx="12.5" cy="12.5" r="12" fill="white" stroke="#6B7A93"/>
 									<path d="M6 12.5H19" stroke="#080E16"/>
@@ -59,7 +59,7 @@
 							<input
 							type="text" name="quantity" value="{{ product.quantity }}" size="1" class="text-[18px] !border-none !ring-0 px-[8px] py-0 text-center" readonly>
 							{# + #}
-							<button type="submit" formaction="{{ product_edit }}" title="{{ button_update }}" class="" disabled>
+							<button type="button" formaction="{{ product_edit }}" formaction-remove="{{ product_remove }}" title="{{ button_update }}" class="btn-cart-change-quantity" data-diff="1">
 								<svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<circle cx="12.5" cy="12.5" r="12" fill="white" stroke="#6B7A93"/>
 									<path d="M12.5 6V19M6 12.5H19" stroke="#080E16"/>

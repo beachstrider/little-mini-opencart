@@ -77,14 +77,10 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
         echo "\" type=\"text/javascript\"></script>
 \t\t<link href=\"";
         // line 16
-        echo ($context["bootstrap"] ?? null);
-        echo "\" type=\"text/css\" rel=\"stylesheet\" media=\"screen\"/>
-\t\t<link href=\"";
-        // line 17
         echo ($context["icons"] ?? null);
         echo "\" type=\"text/css\" rel=\"stylesheet\"/>
 \t\t<link href=\"";
-        // line 18
+        // line 17
         echo ($context["stylesheet"] ?? null);
         echo "\" type=\"text/css\" rel=\"stylesheet\"/>
 \t\t<link href=\"/image/catalog/logo.png\" rel=\"icon\"/>
@@ -102,59 +98,59 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 \t\t<script src=\"https://unpkg.com/react-dom@17/umd/react-dom.development.js\" crossorigin></script>
 
 \t\t";
-        // line 33
+        // line 32
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["styles"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["style"]) {
-            // line 34
+            // line 33
             echo "\t\t\t<link href=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["style"], "href", [], "any", false, false, false, 34);
+            echo twig_get_attribute($this->env, $this->source, $context["style"], "href", [], "any", false, false, false, 33);
             echo "\" type=\"text/css\" rel=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["style"], "rel", [], "any", false, false, false, 34);
+            echo twig_get_attribute($this->env, $this->source, $context["style"], "rel", [], "any", false, false, false, 33);
             echo "\" media=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["style"], "media", [], "any", false, false, false, 34);
+            echo twig_get_attribute($this->env, $this->source, $context["style"], "media", [], "any", false, false, false, 33);
             echo "\"/>
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['style'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
+        // line 35
         echo "\t\t";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["scripts"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["script"]) {
-            // line 37
+            // line 36
             echo "\t\t\t<script src=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["script"], "href", [], "any", false, false, false, 37);
+            echo twig_get_attribute($this->env, $this->source, $context["script"], "href", [], "any", false, false, false, 36);
             echo "\" type=\"text/javascript\"></script>
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['script'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
+        // line 38
         echo "\t\t";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["links"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["link"]) {
-            // line 40
+            // line 39
             echo "\t\t\t<link href=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["link"], "href", [], "any", false, false, false, 40);
+            echo twig_get_attribute($this->env, $this->source, $context["link"], "href", [], "any", false, false, false, 39);
             echo "\" rel=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["link"], "rel", [], "any", false, false, false, 40);
+            echo twig_get_attribute($this->env, $this->source, $context["link"], "rel", [], "any", false, false, false, 39);
             echo "\"/>
 \t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['link'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 41
         echo "\t\t";
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["analytics"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["analytic"]) {
-            // line 43
+            // line 42
             echo "\t\t\t";
             echo $context["analytic"];
             echo "
@@ -163,7 +159,7 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['analytic'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 45
+        // line 44
         echo "\t</head>
 \t<body>
 \t\t<div id=\"alert\" class=\"toast-container fixed right-0 p-[8px]\"></div>
@@ -178,9 +174,9 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 \t\t\t\t\t\t</button>
 \t\t\t\t\t\t<div id=\"logo\">
 \t\t\t\t\t\t\t";
-        // line 58
+        // line 57
         if (($context["logo"] ?? null)) {
-            // line 59
+            // line 58
             echo "\t\t\t\t\t\t\t\t<a href=\"";
             echo ($context["home"] ?? null);
             echo "\"><img src=\"";
@@ -192,10 +188,10 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
             echo "\" class=\"img-fluid sm:h-auto h-[24px]\"/></a>
 \t\t\t\t\t\t\t";
         } else {
-            // line 61
+            // line 60
             echo "\t\t\t\t\t\t\t\t<h1>
 \t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 62
+            // line 61
             echo ($context["home"] ?? null);
             echo "\">";
             echo ($context["name"] ?? null);
@@ -203,18 +199,18 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 \t\t\t\t\t\t\t\t</h1>
 \t\t\t\t\t\t\t";
         }
-        // line 65
+        // line 64
         echo "\t\t\t\t\t\t</div>
 \t\t\t\t\t\t";
-        // line 66
+        // line 65
         echo ($context["search"] ?? null);
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"flex gap-4 items-center sm:text-[14px] text-[10px]\">
 \t\t\t\t\t\t";
-        // line 69
+        // line 68
         if ( !($context["logged"] ?? null)) {
-            // line 70
+            // line 69
             echo "\t\t\t\t\t\t\t<a href=\"";
             echo ($context["register"] ?? null);
             echo "\" title=\"";
@@ -225,13 +221,13 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 \t\t\t\t\t\t\t\t</svg>
 \t\t\t\t\t\t\t\t<img class=\"sm:hidden block\" src=\"/image/catalog/Button-Signup.png\"/>
 \t\t\t\t\t\t\t\t<span>";
-            // line 75
+            // line 74
             echo ($context["text_register"] ?? null);
             echo "</span>
 \t\t\t\t\t\t\t</a>
 
 \t\t\t\t\t\t\t<a href=\"";
-            // line 78
+            // line 77
             echo ($context["login"] ?? null);
             echo "\" title=\"";
             echo ($context["text_shopping_cart"] ?? null);
@@ -246,13 +242,13 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 \t\t\t\t\t\t\t\t\t<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M17.5 19.4909H7.5C7.5 18.7808 7.5 18.1053 7.5 17.4936C7.5 15.8368 8.84315 14.4941 10.5 14.4941H14.5C16.1569 14.4941 17.5 15.8368 17.5 17.4936C17.5 18.1053 17.5 18.7808 17.5 19.4909Z\" stroke=\"#080E16\" stroke-linecap=\"square\"/>
 \t\t\t\t\t\t\t\t</svg>
 \t\t\t\t\t\t\t\t<span>";
-            // line 88
+            // line 87
             echo ($context["text_login"] ?? null);
             echo "</span>
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t";
         } else {
-            // line 91
+            // line 90
             echo "\t\t\t\t\t\t\t<a href=\"";
             echo ($context["account"] ?? null);
             echo "\" title=\"";
@@ -263,17 +259,17 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 \t\t\t\t\t\t\t\t\t<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.5 14.4909H2.5C2.5 13.7808 2.5 13.1053 2.5 12.4936C2.5 10.8368 3.84315 9.49414 5.5 9.49414H9.5C11.1569 9.49414 12.5 10.8368 12.5 12.4936C12.5 13.1053 12.5 13.7808 12.5 14.4909Z\" stroke=\"#080E16\" stroke-linecap=\"square\"/>
 \t\t\t\t\t\t\t\t</svg>
 \t\t\t\t\t\t\t\t<span>";
-            // line 96
+            // line 95
             echo ($context["text_account"] ?? null);
             echo "</span>
 \t\t\t\t\t\t\t</a>
 
 \t\t\t\t\t\t";
         }
-        // line 100
+        // line 99
         echo "\t\t\t\t\t\t<div id=\"header-cart\">
 \t\t\t\t\t\t\t";
-        // line 101
+        // line 100
         echo ($context["cart"] ?? null);
         echo "
 \t\t\t\t\t\t</div>
@@ -283,7 +279,7 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 \t\t</header>
 \t\t<main>
 \t\t\t";
-        // line 108
+        // line 107
         echo ($context["menu"] ?? null);
         echo "
 ";
@@ -301,7 +297,7 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  287 => 108,  277 => 101,  274 => 100,  267 => 96,  256 => 91,  250 => 88,  235 => 78,  229 => 75,  218 => 70,  216 => 69,  210 => 66,  207 => 65,  199 => 62,  196 => 61,  184 => 59,  182 => 58,  167 => 45,  158 => 43,  153 => 42,  142 => 40,  137 => 39,  128 => 37,  123 => 36,  110 => 34,  106 => 33,  88 => 18,  84 => 17,  80 => 16,  75 => 15,  69 => 13,  66 => 12,  60 => 10,  58 => 9,  54 => 8,  50 => 7,  40 => 2,  37 => 1,);
+        return array (  283 => 107,  273 => 100,  270 => 99,  263 => 95,  252 => 90,  246 => 87,  231 => 77,  225 => 74,  214 => 69,  212 => 68,  206 => 65,  203 => 64,  195 => 61,  192 => 60,  180 => 58,  178 => 57,  163 => 44,  154 => 42,  149 => 41,  138 => 39,  133 => 38,  124 => 36,  119 => 35,  106 => 33,  102 => 32,  84 => 17,  80 => 16,  75 => 15,  69 => 13,  66 => 12,  60 => 10,  58 => 9,  54 => 8,  50 => 7,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()

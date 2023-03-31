@@ -200,8 +200,9 @@ class __TwigTemplate_02ad692a6588e421a4a7dd32c3a358da extends Template
         // line 110
         echo ($context["section_best_deals"] ?? null);
         echo "
+<script src=\"catalog/view/javascript/cart.js\"></script>
 ";
-        // line 111
+        // line 112
         echo ($context["footer"] ?? null);
         echo "
 ";
@@ -219,7 +220,7 @@ class __TwigTemplate_02ad692a6588e421a4a7dd32c3a358da extends Template
 
     public function getDebugInfo()
     {
-        return array (  205 => 111,  201 => 110,  197 => 109,  154 => 69,  147 => 64,  141 => 63,  135 => 61,  132 => 60,  128 => 59,  118 => 54,  93 => 32,  89 => 30,  82 => 26,  78 => 24,  75 => 23,  68 => 19,  64 => 17,  61 => 16,  54 => 12,  50 => 10,  48 => 9,  37 => 1,);
+        return array (  206 => 112,  201 => 110,  197 => 109,  154 => 69,  147 => 64,  141 => 63,  135 => 61,  132 => 60,  128 => 59,  118 => 54,  93 => 32,  89 => 30,  82 => 26,  78 => 24,  75 => 23,  68 => 19,  64 => 17,  61 => 16,  54 => 12,  50 => 10,  48 => 9,  37 => 1,);
     }
 
     public function getSourceContext()

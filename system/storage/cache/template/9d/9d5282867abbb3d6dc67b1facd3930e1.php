@@ -38,7 +38,7 @@ class __TwigTemplate_26ec2f79a7e740793d6e8f63acde39a8 extends Template
         $context['_seq'] = twig_ensure_traversable(($context["products"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["product"]) {
             // line 2
-            echo "\t<div class=\"flex py-[20px] border-b border-darkBlue\">
+            echo "\t<div class=\"cart-item flex py-[20px] border-b border-darkBlue\">
 \t\t<div class=\"text-center\">
 \t\t\t";
             // line 4
@@ -163,11 +163,13 @@ class __TwigTemplate_26ec2f79a7e740793d6e8f63acde39a8 extends Template
 
 \t\t\t\t\t\t\t";
             // line 53
-            echo "\t\t\t\t\t\t\t<button type=\"submit\" formaction=\"";
+            echo "\t\t\t\t\t\t\t<button type=\"button\" formaction=\"";
+            echo ($context["product_edit"] ?? null);
+            echo "\" formaction-remove=\"";
             echo ($context["product_remove"] ?? null);
             echo "\" title=\"";
-            echo ($context["button_remove"] ?? null);
-            echo "\" class=\"\" disabled>
+            echo ($context["product_edit"] ?? null);
+            echo "\" class=\"btn-cart-change-quantity\" data-diff=\"-1\">
 \t\t\t\t\t\t\t\t<svg width=\"25\" height=\"25\" viewbox=\"0 0 25 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
 \t\t\t\t\t\t\t\t\t<circle cx=\"12.5\" cy=\"12.5\" r=\"12\" fill=\"white\" stroke=\"#6B7A93\"/>
 \t\t\t\t\t\t\t\t\t<path d=\"M6 12.5H19\" stroke=\"#080E16\"/>
@@ -180,11 +182,13 @@ class __TwigTemplate_26ec2f79a7e740793d6e8f63acde39a8 extends Template
             echo "\" size=\"1\" class=\"text-[18px] !border-none !ring-0 px-[8px] py-0 text-center\" readonly>
 \t\t\t\t\t\t\t";
             // line 62
-            echo "\t\t\t\t\t\t\t<button type=\"submit\" formaction=\"";
+            echo "\t\t\t\t\t\t\t<button type=\"button\" formaction=\"";
             echo ($context["product_edit"] ?? null);
+            echo "\" formaction-remove=\"";
+            echo ($context["product_remove"] ?? null);
             echo "\" title=\"";
             echo ($context["button_update"] ?? null);
-            echo "\" class=\"\" disabled>
+            echo "\" class=\"btn-cart-change-quantity\" data-diff=\"1\">
 \t\t\t\t\t\t\t\t<svg width=\"25\" height=\"25\" viewbox=\"0 0 25 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
 \t\t\t\t\t\t\t\t\t<circle cx=\"12.5\" cy=\"12.5\" r=\"12\" fill=\"white\" stroke=\"#6B7A93\"/>
 \t\t\t\t\t\t\t\t\t<path d=\"M12.5 6V19M6 12.5H19\" stroke=\"#080E16\"/>
@@ -215,7 +219,7 @@ class __TwigTemplate_26ec2f79a7e740793d6e8f63acde39a8 extends Template
 
     public function getDebugInfo()
     {
-        return array (  183 => 62,  179 => 60,  166 => 53,  161 => 50,  152 => 44,  148 => 43,  135 => 34,  130 => 32,  126 => 31,  123 => 30,  120 => 29,  115 => 27,  111 => 26,  108 => 25,  105 => 24,  102 => 23,  94 => 21,  90 => 20,  85 => 17,  80 => 16,  77 => 15,  73 => 13,  71 => 12,  65 => 11,  59 => 7,  47 => 5,  45 => 4,  41 => 2,  37 => 1,);
+        return array (  185 => 62,  181 => 60,  166 => 53,  161 => 50,  152 => 44,  148 => 43,  135 => 34,  130 => 32,  126 => 31,  123 => 30,  120 => 29,  115 => 27,  111 => 26,  108 => 25,  105 => 24,  102 => 23,  94 => 21,  90 => 20,  85 => 17,  80 => 16,  77 => 15,  73 => 13,  71 => 12,  65 => 11,  59 => 7,  47 => 5,  45 => 4,  41 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
