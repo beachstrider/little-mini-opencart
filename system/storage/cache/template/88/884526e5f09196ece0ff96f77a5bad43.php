@@ -97,7 +97,7 @@ alert();
             </div>
           `);
 
-          \$('#header-cart').load('index.php?route=common/cart|info');
+          \$('#cart-dropdown').load('index.php?route=common/cart|info');
         }
       },
       error: function (xhr, ajaxOptions, thrownError) {

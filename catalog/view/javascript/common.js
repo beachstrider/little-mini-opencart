@@ -66,11 +66,11 @@ $("#form-product").on("submit", function (e) {
       }
 
       if (json["success"]) {
-        $('#alert').prepend(`
+        $("#alert").prepend(`
           <div class="alert-item sm:min-w-[400px] flex p-4 mb-4 text-green-800 border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:bg-gray-800 dark:border-green-800" role="alert">
             <svg class="flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
             <div class="ml-3 text-sm font-medium">
-              ${json['success']}
+              ${json["success"]}
             </div>
             <button type="button" onclick="$(this).closest('.alert-item').hide()" class="ml-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700"  data-dismiss-target="#alert-border-3" aria-label="Close">
               <span class="sr-only">Dismiss</span>
@@ -79,7 +79,7 @@ $("#form-product").on("submit", function (e) {
           </div>
         `);
 
-        $("#header-cart").load("index.php?route=common/cart|info");
+        $("#cart-dropdown").load("index.php?route=common/cart|info");
       }
     },
     error: function (xhr, ajaxOptions, thrownError) {
@@ -382,11 +382,11 @@ $(document).on("submit", "form[data-oc-toggle='ajax']", function (e) {
       }
 
       if (typeof json["error"] == "string") {
-        $('#alert').prepend(`
+        $("#alert").prepend(`
           <div class="alert-item sm:min-w-[400px] flex p-4 mb-4 text-red-800 border-t-4 border-red-300 bg-red-50 dark:text-red-400 dark:bg-gray-800 dark:border-red-800" role="alert">
             <svg class="flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
             <div class="ml-3 text-sm font-medium">
-              ${json['error']}
+              ${json["error"]}
             </div>
             <button type="button" onclick="$(this).closest('.alert-item').hide()" class="ml-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700"  data-dismiss-target="#alert-border-3" aria-label="Close">
               <span class="sr-only">Dismiss</span>
@@ -398,11 +398,11 @@ $(document).on("submit", "form[data-oc-toggle='ajax']", function (e) {
 
       if (typeof json["error"] == "object") {
         if (json["error"]["warning"]) {
-          $('#alert').prepend(`
+          $("#alert").prepend(`
             <div class="alert-item sm:min-w-[400px] flex p-4 mb-4 text-red-800 border-t-4 border-red-300 bg-red-50 dark:text-red-400 dark:bg-gray-800 dark:border-red-800" role="alert">
               <svg class="flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
               <div class="ml-3 text-sm font-medium">
-                ${json['error']['warning']}
+                ${json["error"]["warning"]}
               </div>
               <button type="button" onclick="$(this).closest('.alert-item').hide()" class="ml-auto -mx-1.5 -my-1.5 bg-red-50 text-red-500 rounded-lg focus:ring-2 focus:ring-red-400 p-1.5 hover:bg-red-200 inline-flex h-8 w-8 dark:bg-gray-800 dark:text-red-400 dark:hover:bg-gray-700"  data-dismiss-target="#alert-border-3" aria-label="Close">
                 <span class="sr-only">Dismiss</span>
@@ -426,11 +426,11 @@ $(document).on("submit", "form[data-oc-toggle='ajax']", function (e) {
       }
 
       if (json["success"]) {
-        $('#alert').prepend(`
+        $("#alert").prepend(`
           <div class="alert-item sm:min-w-[400px] flex p-4 mb-4 text-green-800 border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:bg-gray-800 dark:border-green-800" role="alert">
             <svg class="flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
             <div class="ml-3 text-sm font-medium">
-              ${json['success']}
+              ${json["success"]}
             </div>
             <button type="button" onclick="$(this).closest('.alert-item').hide()" class="ml-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700"  data-dismiss-target="#alert-border-3" aria-label="Close">
               <span class="sr-only">Dismiss</span>

@@ -72,7 +72,7 @@ class __TwigTemplate_18c78c002a7e21b5e0ec4a7d56861ad8 extends Template
 \t\t\t\t<div class=\"sm:mt-[40px] mt-[20px] sm:grid sm:grid-cols-3 gap-[30px]\">
 \t\t\t\t\t<div class=\"col-span-2\">
 \t\t\t\t\t\t<img class=\"border-r-[2px] border-orange w-full\" src=\"/image/catalog/ads/Image(3).png\"/>
-\t\t\t\t\t\t<div class=\"text-[24px] text-center py-[40px] border-b border-darkBlue\">Everything you need to know about Korean skin care.</div>
+\t\t\t\t\t\t<div class=\"text-[24px] text-center sm:py-[48px] py-[32px] border-b border-darkBlue\">Everything you need to know about Korean skin care.</div>
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"sm:flex sm:flex-col grid grid-cols-2 gap-[16px] sm:py-0 py-[20px]\">
 \t\t\t\t\t\t<div class=\"sm:w-[270px] sm:h-[120px] flex justify-end items-start bg-[url('/image/catalog/ads/Image(4).png')] bg-cover p-[10px]\">

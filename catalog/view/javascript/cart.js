@@ -50,7 +50,7 @@ $("#shopping-cart").on("submit", "form", function (e) {
         "index.php?route=checkout/cart|list&language={{ language }}",
         {},
         function () {
-          $("#header-cart").load(
+          $("#cart-dropdown").load(
             "index.php?route=common/cart|info&language={{ language }}"
           );
         }

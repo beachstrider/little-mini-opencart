@@ -1,103 +1,87 @@
-<div class="dropdown">
-	<button href="{{ shopping_cart }}" title="{{ text_shopping_cart }}" class="flex sm:flex-row flex-col items-center sm:gap-[10px] relative" data-dropdown-toggle="cart-dropdown" class="btn btn-inverse btn-block dropdown-toggle">
-		<div class="absolute -top-[4px] left-[16px] bg-[#5D6FF6] rounded-full w-[12px] h-[12px] text-white text-[8px] flex justify-center items-center">{{ count }}</div>
-		<svg width="25" height="25" viewbox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<circle cx="12.5" cy="12.5" r="12" fill="#FFF3E2" stroke="#080E16"/>
-			<path d="M8.5 9.5L11.5 4.5M13.5 4.5L16.5 9.5M5.7032 9.5H19.2968C19.409 9.5 19.5 9.59097 19.5 9.7032V10.142C19.5 13.0079 18.8327 15.8345 17.551 18.398C17.5198 18.4605 17.4558 18.5 17.3859 18.5H7.61409C7.54417 18.5 7.48025 18.4605 7.44898 18.398C6.16727 15.8345 5.5 13.0079 5.5 10.142V9.7032C5.5 9.59097 5.59097 9.5 5.7032 9.5Z" stroke="#080E16"/>
-		</svg>
-		<span>CART</span>
-	</button>
-	<div class="absolute left-0 w-full sm:mt-[54px] mt-[21px]">
-		<div class="relative container mx-auto sm:px-0 px-[20px] flex justify-end z-[10]">
-			<ul id="cart-dropdown" class="!relative hidden bg-white dropdown-menu !right-0 sm:w-[400px] w-full border border-darkBlue !transform-none sm:after:right-[36px] after:right-0 after:!left-auto">
-				{% if products or vouchers %}
-					<li>
-						<div class="p-[20px] border-b border-[#6B7A93] flex justify-between">
-							<div class="flex items-center sm:gap-[18px] gap-[12px]">
-								<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M3.5 5.5L6.5 0.5M8.5 0.5L11.5 5.5M0.703196 5.5H14.2968C14.409 5.5 14.5 5.59097 14.5 5.7032V6.14196C14.5 9.00793 13.8327 11.8345 12.551 14.398C12.5198 14.4605 12.4558 14.5 12.3859 14.5H2.61409C2.54417 14.5 2.48025 14.4605 2.44898 14.398C1.16727 11.8345 0.5 9.00793 0.5 6.14196V5.7032C0.5 5.59097 0.590974 5.5 0.703196 5.5Z" stroke="#080E16"/>
-								</svg>
-								<div class="sm:flex sm:text-[16px] text-[12px] font-bold">
-									<span class="text-[#F98D78]">PRODUCT</span>&nbsp;ADDED TO CART</div>
-							</div>
-							<a href="{{ cart }}" class="px-[14px] py-[4px] bg-[#5D6FF6] text-[16px] text-white font-bold">
-								{{ text_cart }}
-							</a>
-						</div>
-						<div class="">
-							{% for product in products %}
-								<div class="flex justify-between p-[20px] border-b border-[#6B7A9320] gap-[10px]">
-									<div class="text-center">
-										{% if product.thumb %}
-											<a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-thumbnail"/></a>
-										{% endif %}
-									</div>
-									<div class="w-full flex justify-between">
-										<div class="">
-											<a href="{{ product.href }}" class="font-bold text-[#F98D78]">{{ product.name }}
-												<span class="">x
-													{{ product.quantity }}</span>
-											</a>
-											{% if product.option %}
-												{% for option in product.option %}
-													<br/>
-													<small>
-														-
-														{{ option.name }}
-														{{ option.value }}</small>
-												{% endfor %}
-											{% endif %}
-											{% if product.subscription %}
-												<br/>
-												<small>
-													-
-													{{ text_subscription }}
-													{{ product.subscription }}</small>
-											{% endif %}
-											<div class="">{{ product.total }}</div>
-
-										</div>
-										<div class="flex items-center">
-											<form action="{{ product_remove }}" method="post" data-oc-toggle="ajax" data-oc-load="{{ list }}" data-oc-target="#header-cart">
-												<input type="hidden" name="key" value="{{ product.cart_id }}">
-												<button type="submit" data-bs-toggle="tooltip" title="{{ button_remove }}" class="">
-													<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M1.5 1.5L13.5 13.5M1.5 13.5L13.5 1.5" stroke="#080E16"/>
-													</svg>
-
-												</button>
-											</form>
-										</div>
-									</div>
-								</div>
-							{% endfor %}
-							{% for voucher in vouchers %}
-								<div>
-									<div class="text-center"></div>
-									<div class="text-start">{{ voucher.description }}</div>
-									<div class="">x&nbsp;1</div>
-									<div class="">{{ voucher.amount }}</div>
-									<div class="">
-										<form action="{{ voucher_remove }}" method="post" data-oc-toggle="ajax" data-oc-load="{{ list }}" data-oc-target="#header-cart">
-											<input type="hidden" name="key" value="{{ voucher.key }}"/>
-											<button type="submit" data-bs-toggle="tooltip" title="{{ button_remove }}" class="">
-												<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path d="M1.5 1.5L13.5 13.5M1.5 13.5L13.5 1.5" stroke="#080E16"/>
-												</svg>
-
-											</button>
-										</form>
-									</div>
-								</div>
-							{% endfor %}
-						</div>
-					</li>
-				{% else %}
-					<li class="p-[20px]">
-						<p class="text-center">{{ text_no_results }}</p>
-					</li>
-				{% endif %}
-			</ul>
+{% if products or vouchers %}
+	<li>
+		<div class="p-[20px] border-b border-[#6B7A93] flex justify-between">
+			<div class="flex items-center sm:gap-[18px] gap-[12px]">
+				<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M3.5 5.5L6.5 0.5M8.5 0.5L11.5 5.5M0.703196 5.5H14.2968C14.409 5.5 14.5 5.59097 14.5 5.7032V6.14196C14.5 9.00793 13.8327 11.8345 12.551 14.398C12.5198 14.4605 12.4558 14.5 12.3859 14.5H2.61409C2.54417 14.5 2.48025 14.4605 2.44898 14.398C1.16727 11.8345 0.5 9.00793 0.5 6.14196V5.7032C0.5 5.59097 0.590974 5.5 0.703196 5.5Z" stroke="#080E16"/>
+				</svg>
+				<div class="sm:flex sm:text-[16px] text-[12px] font-bold">
+					<span class="text-[#F98D78]">PRODUCT</span>&nbsp;ADDED TO CART</div>
+			</div>
+			<a href="{{ cart }}" class="px-[14px] py-[4px] bg-[#5D6FF6] text-[16px] text-white font-bold">
+				{{ text_cart }}
+			</a>
 		</div>
-	</div>
-</div>
+		<div class="">
+			{% for product in products %}
+				<div class="flex justify-between p-[20px] border-b border-[#6B7A9320] gap-[10px]">
+					<div class="text-center">
+						{% if product.thumb %}
+							<a href="{{ product.href }}"><img src="{{ product.thumb }}" alt="{{ product.name }}" title="{{ product.name }}" class="img-thumbnail"/></a>
+						{% endif %}
+					</div>
+					<div class="w-full flex justify-between">
+						<div class="">
+							<a href="{{ product.href }}" class="font-bold text-[#F98D78]">{{ product.name }}
+								<span class="">x
+									{{ product.quantity }}</span>
+							</a>
+							{% if product.option %}
+								{% for option in product.option %}
+									<br/>
+									<small>
+										-
+										{{ option.name }}
+										{{ option.value }}</small>
+								{% endfor %}
+							{% endif %}
+							{% if product.subscription %}
+								<br/>
+								<small>
+									-
+									{{ text_subscription }}
+									{{ product.subscription }}</small>
+							{% endif %}
+							<div class="">{{ product.total }}</div>
+
+						</div>
+						<div class="flex items-center">
+							<form action="{{ product_remove }}" method="post" data-oc-toggle="ajax" data-oc-load="{{ list }}" data-oc-target="#cart-dropdown" ">
+								<input type="hidden" name="key" value="{{ product.cart_id }}">
+								<button type="submit" data-bs-toggle="tooltip" title="{{ button_remove }}" class="">
+									<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M1.5 1.5L13.5 13.5M1.5 13.5L13.5 1.5" stroke="#080E16"/>
+									</svg>
+
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+			{% for voucher in vouchers %}
+				<div>
+					<div class="text-center"></div>
+					<div class="text-start">{{ voucher.description }}</div>
+					<div class="">x&nbsp;1</div>
+					<div class="">{{ voucher.amount }}</div>
+					<div class="">
+						<form action="{{ voucher_remove }}" method="post" data-oc-toggle="ajax" data-oc-load="{{ list }}" data-oc-target="#cart-dropdown" ">
+							<input type="hidden" name="key" value="{{ voucher.key }}"/>
+							<button type="submit" data-bs-toggle="tooltip" title="{{ button_remove }}" class="">
+								<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M1.5 1.5L13.5 13.5M1.5 13.5L13.5 1.5" stroke="#080E16"/>
+								</svg>
+
+							</button>
+						</form>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</li>
+{% else %}
+	<li class="p-[20px]">
+		<p class="text-center">{{ text_no_results }}</p>
+	</li>
+{% endif %}

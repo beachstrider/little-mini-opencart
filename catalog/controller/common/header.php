@@ -82,6 +82,9 @@ class Header extends \Opencart\System\Engine\Controller {
 
 		$data['menu'] = $this->load->controller('common/menu');
 
+		$this->load->model('checkout/cart');
+		$data['count'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
+
 		return $this->load->view('common/header', $data);
 	}
 }

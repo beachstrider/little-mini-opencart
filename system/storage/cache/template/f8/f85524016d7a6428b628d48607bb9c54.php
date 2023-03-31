@@ -36,7 +36,7 @@ class __TwigTemplate_fe5a237ef3be50927166f64488fb2711 extends Template
         // line 1
         echo ($context["header"] ?? null);
         echo "
-<div id=\"error-not-found\" class=\"container\">
+<div id=\"error-not-found\" class=\"container mx-auto sm:px-0 px-[20px]\">
   <ul class=\"breadcrumb\">
     ";
         // line 4

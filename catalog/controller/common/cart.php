@@ -98,11 +98,9 @@ class Cart extends \Opencart\System\Engine\Controller {
 		$data['voucher_remove'] = $this->url->link('checkout/voucher|remove', 'language=' . $this->config->get('config_language'));
 
 		$data['cart'] = $this->url->link('checkout/cart', 'language=' . $this->config->get('config_language'));
-		$data['count'] = $this->cart->countProducts() + (isset($this->session->data['vouchers']) ? count($this->session->data['vouchers']) : 0);
 		
 		$data['checkout'] = $this->url->link('checkout/checkout', 'language=' . $this->config->get('config_language'));
 
-		// print_r($data);die();
 		return $this->load->view('common/cart', $data);
 	}
 

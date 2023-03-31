@@ -140,3 +140,8 @@ age\vendor\twig\twig\src\Cache\FilesystemCache.php on line 61
 2023-03-31 07:19:51 - Exception:  Error: Could not call registry key model_checkout_cart! in E:\xampp\htdocs\system\engine\controller.php on line 25
 2023-03-31 07:19:51 - Exception:  Error: Could not call registry key model_checkout_cart! in E:\xampp\htdocs\system\engine\controller.php on line 25
 2023-03-31 07:20:19 - TypeError:  Opencart\Catalog\Model\Checkout\Cart::getTotals(): Argument #1 ($totals) must be of type array, null given in E:\xampp\htdocs\catalog\model\checkout\cart.php on line 118
+2023-03-31 18:30:25 - PHP Warning:  Undefined array key "ajax" in E:\xampp\htdocs\catalog\controller\common\cart.php on line 105
+2023-03-31 18:30:49 - PHP Warning:  Undefined array key "ajax" in E:\xampp\htdocs\catalog\controller\common\cart.php on line 105
+2023-03-31 18:31:42 - PHP Warning:  Undefined array key "ajax" in E:\xampp\htdocs\catalog\controller\common\cart.php on line 105
+2023-03-31 18:39:31 - Twig\Error\SyntaxError:  Unknown "endif" tag. in E:\xampp\htdocs\catalog\view\template\common\cart.twig on line 101
+2023-03-31 18:43:49 - PHP Warning:  Undefined array key "path" in E:\xampp\htdocs\catalog\controller\product\product.php on line 17

@@ -12,8 +12,8 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* catalog/view/template/common/cart.twig */
-class __TwigTemplate_83ddd86cb76ae1ea20137dc41d06d6ed extends Template
+/* catalog/view/template/common/cart_menu_content.twig */
+class __TwigTemplate_57d83b2db51e230f4a64ed01205a0615 extends Template
 {
     private $source;
     private $macros = [];
@@ -152,7 +152,7 @@ class __TwigTemplate_83ddd86cb76ae1ea20137dc41d06d6ed extends Template
                 echo ($context["product_remove"] ?? null);
                 echo "\" method=\"post\" data-oc-toggle=\"ajax\" data-oc-load=\"";
                 echo ($context["list"] ?? null);
-                echo "\" data-oc-target=\"#cart-dropdown\" \">
+                echo "\" data-oc-target=\"#header-cart\">
 \t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"key\" value=\"";
                 // line 50
                 echo twig_get_attribute($this->env, $this->source, $context["product"], "cart_id", [], "any", false, false, false, 50);
@@ -198,7 +198,7 @@ class __TwigTemplate_83ddd86cb76ae1ea20137dc41d06d6ed extends Template
                 echo ($context["voucher_remove"] ?? null);
                 echo "\" method=\"post\" data-oc-toggle=\"ajax\" data-oc-load=\"";
                 echo ($context["list"] ?? null);
-                echo "\" data-oc-target=\"#cart-dropdown\" \">
+                echo "\" data-oc-target=\"#header-cart\">
 \t\t\t\t\t\t\t<input type=\"hidden\" name=\"key\" value=\"";
                 // line 70
                 echo twig_get_attribute($this->env, $this->source, $context["voucher"], "key", [], "any", false, false, false, 70);
@@ -238,7 +238,7 @@ class __TwigTemplate_83ddd86cb76ae1ea20137dc41d06d6ed extends Template
 
     public function getTemplateName()
     {
-        return "catalog/view/template/common/cart.twig";
+        return "catalog/view/template/common/cart_menu_content.twig";
     }
 
     public function isTraitable()
@@ -253,6 +253,6 @@ class __TwigTemplate_83ddd86cb76ae1ea20137dc41d06d6ed extends Template
 
     public function getSourceContext()
     {
-        return new Source("", "catalog/view/template/common/cart.twig", "E:\\xampp\\htdocs\\catalog\\view\\template\\common\\cart.twig");
+        return new Source("", "catalog/view/template/common/cart_menu_content.twig", "E:\\xampp\\htdocs\\catalog\\view\\template\\common\\cart_menu_content.twig");
     }
 }

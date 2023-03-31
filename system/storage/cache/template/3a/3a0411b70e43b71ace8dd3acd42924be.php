@@ -272,10 +272,34 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
         }
         // line 100
         echo "\t\t\t\t\t\t<div id=\"header-cart\">
-\t\t\t\t\t\t\t";
-        // line 101
+\t\t\t\t\t\t\t<div class=\"dropdown\">
+\t\t\t\t\t\t\t\t<button href=\"";
+        // line 102
+        echo ($context["shopping_cart"] ?? null);
+        echo "\" title=\"";
+        echo ($context["text_shopping_cart"] ?? null);
+        echo "\" class=\"flex sm:flex-row flex-col items-center sm:gap-[10px] relative\" data-dropdown-toggle=\"cart-dropdown\" class=\"btn btn-inverse btn-block dropdown-toggle\">
+\t\t\t\t\t\t\t\t\t<div class=\"absolute -top-[4px] left-[16px] bg-[#5D6FF6] rounded-full w-[12px] h-[12px] text-white text-[8px] flex justify-center items-center\">";
+        // line 103
+        echo ($context["count"] ?? null);
+        echo "</div>
+\t\t\t\t\t\t\t\t\t<svg width=\"25\" height=\"25\" viewbox=\"0 0 25 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+\t\t\t\t\t\t\t\t\t\t<circle cx=\"12.5\" cy=\"12.5\" r=\"12\" fill=\"#FFF3E2\" stroke=\"#080E16\"/>
+\t\t\t\t\t\t\t\t\t\t<path d=\"M8.5 9.5L11.5 4.5M13.5 4.5L16.5 9.5M5.7032 9.5H19.2968C19.409 9.5 19.5 9.59097 19.5 9.7032V10.142C19.5 13.0079 18.8327 15.8345 17.551 18.398C17.5198 18.4605 17.4558 18.5 17.3859 18.5H7.61409C7.54417 18.5 7.48025 18.4605 7.44898 18.398C6.16727 15.8345 5.5 13.0079 5.5 10.142V9.7032C5.5 9.59097 5.59097 9.5 5.7032 9.5Z\" stroke=\"#080E16\"/>
+\t\t\t\t\t\t\t\t\t</svg>
+\t\t\t\t\t\t\t\t\t<span>CART</span>
+\t\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t\t<div class=\"absolute left-0 w-full sm:mt-[54px] mt-[21px]\">
+\t\t\t\t\t\t\t\t\t<div class=\"relative container mx-auto sm:px-0 px-[20px] flex justify-end z-[10]\">
+\t\t\t\t\t\t\t\t\t\t<ul id=\"cart-dropdown\" class=\"!relative hidden bg-white dropdown-menu !right-0 sm:w-[400px] w-full border border-darkBlue !transform-none sm:after:right-[36px] after:right-0 after:!left-auto\">
+\t\t\t\t\t\t\t\t\t\t\t";
+        // line 113
         echo ($context["cart"] ?? null);
         echo "
+\t\t\t\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -283,7 +307,7 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 \t\t</header>
 \t\t<main>
 \t\t\t";
-        // line 108
+        // line 124
         echo ($context["menu"] ?? null);
         echo "
 ";
@@ -301,7 +325,7 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  287 => 108,  277 => 101,  274 => 100,  267 => 96,  256 => 91,  250 => 88,  235 => 78,  229 => 75,  218 => 70,  216 => 69,  210 => 66,  207 => 65,  199 => 62,  196 => 61,  184 => 59,  182 => 58,  167 => 45,  158 => 43,  153 => 42,  142 => 40,  137 => 39,  128 => 37,  123 => 36,  110 => 34,  106 => 33,  88 => 18,  84 => 17,  80 => 16,  75 => 15,  69 => 13,  66 => 12,  60 => 10,  58 => 9,  54 => 8,  50 => 7,  40 => 2,  37 => 1,);
+        return array (  311 => 124,  297 => 113,  284 => 103,  278 => 102,  274 => 100,  267 => 96,  256 => 91,  250 => 88,  235 => 78,  229 => 75,  218 => 70,  216 => 69,  210 => 66,  207 => 65,  199 => 62,  196 => 61,  184 => 59,  182 => 58,  167 => 45,  158 => 43,  153 => 42,  142 => 40,  137 => 39,  128 => 37,  123 => 36,  110 => 34,  106 => 33,  88 => 18,  84 => 17,  80 => 16,  75 => 15,  69 => 13,  66 => 12,  60 => 10,  58 => 9,  54 => 8,  50 => 7,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
