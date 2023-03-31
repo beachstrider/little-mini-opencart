@@ -46,7 +46,7 @@
 
 						</div>
 						<div class="flex items-center">
-							<form action="{{ product_remove }}" method="post" data-oc-toggle="ajax" data-oc-load="{{ list }}" data-oc-target="#cart-dropdown" ">
+							<form action="{{ product_remove }}" method="post" data-oc-toggle="ajax" data-oc-load="{{ list }}" data-oc-target="#cart-dropdown">
 								<input type="hidden" name="key" value="{{ product.cart_id }}">
 								<button type="submit" data-bs-toggle="tooltip" title="{{ button_remove }}" class="">
 									<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +66,7 @@
 					<div class="">x&nbsp;1</div>
 					<div class="">{{ voucher.amount }}</div>
 					<div class="">
-						<form action="{{ voucher_remove }}" method="post" data-oc-toggle="ajax" data-oc-load="{{ list }}" data-oc-target="#cart-dropdown" ">
+						<form action="{{ voucher_remove }}" method="post" data-oc-toggle="ajax" data-oc-load="{{ list }}" data-oc-target="#cart-dropdown">
 							<input type="hidden" name="key" value="{{ voucher.key }}"/>
 							<button type="submit" data-bs-toggle="tooltip" title="{{ button_remove }}" class="">
 								<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">

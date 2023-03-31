@@ -152,7 +152,7 @@ class __TwigTemplate_83ddd86cb76ae1ea20137dc41d06d6ed extends Template
                 echo ($context["product_remove"] ?? null);
                 echo "\" method=\"post\" data-oc-toggle=\"ajax\" data-oc-load=\"";
                 echo ($context["list"] ?? null);
-                echo "\" data-oc-target=\"#cart-dropdown\" \">
+                echo "\" data-oc-target=\"#cart-dropdown\">
 \t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"key\" value=\"";
                 // line 50
                 echo twig_get_attribute($this->env, $this->source, $context["product"], "cart_id", [], "any", false, false, false, 50);
@@ -198,7 +198,7 @@ class __TwigTemplate_83ddd86cb76ae1ea20137dc41d06d6ed extends Template
                 echo ($context["voucher_remove"] ?? null);
                 echo "\" method=\"post\" data-oc-toggle=\"ajax\" data-oc-load=\"";
                 echo ($context["list"] ?? null);
-                echo "\" data-oc-target=\"#cart-dropdown\" \">
+                echo "\" data-oc-target=\"#cart-dropdown\">
 \t\t\t\t\t\t\t<input type=\"hidden\" name=\"key\" value=\"";
                 // line 70
                 echo twig_get_attribute($this->env, $this->source, $context["voucher"], "key", [], "any", false, false, false, 70);
