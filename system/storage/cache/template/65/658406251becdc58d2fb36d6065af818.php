@@ -249,40 +249,39 @@ class __TwigTemplate_9c9bf1e5da029c0c60ebe010a1afa4fa extends Template
         echo "\t\t\t";
         if (( !($context["categories"] ?? null) &&  !($context["products"] ?? null))) {
             // line 83
-            echo "\t\t\t\t<p>";
+            echo "        <div class=\"sm:py-[20px] py-[15px] sm:mb-[40px] mb-[30px] pt-2 pd-2 w-100 text-center flex flex-col items-center\">
+          <p>";
+            // line 84
             echo ($context["text_no_results"] ?? null);
             echo "</p>
-\t\t\t\t<div class=\"d-inline-block pt-2 pd-2 w-100\">
-\t\t\t\t\t<div class=\"float-end\">
-\t\t\t\t\t\t<a href=\"";
-            // line 86
+\t\t\t\t\t<a href=\"";
+            // line 85
             echo ($context["continue"] ?? null);
-            echo "\" class=\"btn btn-primary\">";
+            echo "\" class=\"mt-[20px] block w-[198px] px-[26px] py-[12px] bg-indigo text-white font-semibold\">";
             echo ($context["button_continue"] ?? null);
             echo "</a>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
+        </div>
 \t\t\t";
         }
-        // line 90
+        // line 88
         echo "\t\t\t";
         echo ($context["content_bottom"] ?? null);
         echo "</div>
 \t\t";
-        // line 91
+        // line 89
         echo ($context["column_right"] ?? null);
         echo "</div>
 </div>
 ";
-        // line 93
+        // line 91
         echo ($context["section_save_membership"] ?? null);
         echo "
 ";
-        // line 94
+        // line 92
         echo ($context["section_best_deals"] ?? null);
         echo "
 ";
-        // line 95
+        // line 93
         echo ($context["footer"] ?? null);
         echo "
 ";
@@ -300,7 +299,7 @@ class __TwigTemplate_9c9bf1e5da029c0c60ebe010a1afa4fa extends Template
 
     public function getDebugInfo()
     {
-        return array (  286 => 95,  282 => 94,  278 => 93,  273 => 91,  268 => 90,  259 => 86,  252 => 83,  249 => 82,  243 => 79,  239 => 77,  233 => 75,  231 => 74,  226 => 71,  217 => 69,  213 => 68,  207 => 64,  192 => 62,  188 => 61,  182 => 57,  176 => 56,  170 => 54,  167 => 53,  163 => 52,  156 => 48,  150 => 45,  147 => 44,  144 => 43,  141 => 42,  135 => 41,  124 => 39,  119 => 38,  114 => 37,  111 => 36,  100 => 34,  95 => 33,  92 => 32,  90 => 31,  76 => 19,  71 => 17,  66 => 15,  60 => 11,  58 => 10,  51 => 6,  46 => 4,  42 => 3,  37 => 1,);
+        return array (  285 => 93,  281 => 92,  277 => 91,  272 => 89,  267 => 88,  259 => 85,  255 => 84,  252 => 83,  249 => 82,  243 => 79,  239 => 77,  233 => 75,  231 => 74,  226 => 71,  217 => 69,  213 => 68,  207 => 64,  192 => 62,  188 => 61,  182 => 57,  176 => 56,  170 => 54,  167 => 53,  163 => 52,  156 => 48,  150 => 45,  147 => 44,  144 => 43,  141 => 42,  135 => 41,  124 => 39,  119 => 38,  114 => 37,  111 => 36,  100 => 34,  95 => 33,  92 => 32,  90 => 31,  76 => 19,  71 => 17,  66 => 15,  60 => 11,  58 => 10,  51 => 6,  46 => 4,  42 => 3,  37 => 1,);
     }
 
     public function getSourceContext()

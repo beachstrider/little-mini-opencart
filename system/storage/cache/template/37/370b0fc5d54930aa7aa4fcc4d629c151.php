@@ -36,7 +36,7 @@ class __TwigTemplate_485c31a6408d397a59fa3a55e8cf3706 extends Template
         // line 1
         echo ($context["header"] ?? null);
         echo "
-<div id=\"product-search\" class=\"container\">
+<div id=\"product-search\" class=\"container mx-auto sm:px-0 px-[20px]\">
   <ul class=\"breadcrumb\">
     ";
         // line 4

@@ -128,9 +128,9 @@
           </tr>
         </table>
       {% else %}
-        <p>{{ text_no_results }}</p>
-        <div class="d-inline-block pt-2 pd-2 w-100">
-          <div class="float-end"><a href="{{ continue }}" class="btn btn-light">{{ button_continue }}</a></div>
+        <div class="flex sm:py-[20px] py-[15px] sm:mb-[40px] mb-[30px] pt-2 pd-2 w-100">
+          <p>{{ text_no_results }}</p>
+          <div class="float-end"><a href="{{ continue }}" class="px-[26px] py-[12px] bg-indigo text-white font-semibold">{{ button_continue }}</a></div>
         </div>
       {% endif %}
       {{ content_bottom }}</div>

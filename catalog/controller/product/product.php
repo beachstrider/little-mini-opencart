@@ -223,6 +223,7 @@ class Product extends \Opencart\System\Engine\Controller {
 			$this->document->addStyle('catalog/view/javascript/jquery/magnific/magnific-popup.css');
 
 			$data['heading_title'] = $product_info['name'];
+			$data['meta_title'] = $product_info['meta_title'];
 
 			$data['text_minimum'] = sprintf($this->language->get('text_minimum'), $product_info['minimum']);
 			$data['text_login'] = sprintf($this->language->get('text_login'), $this->url->link('account/login', 'language=' . $this->config->get('config_language')), $this->url->link('account/register', 'language=' . $this->config->get('config_language')));
@@ -449,6 +450,8 @@ class Product extends \Opencart\System\Engine\Controller {
 					'product_id'  => $result['product_id'],
 					'thumb'       => $image,
 					'name'        => $result['name'],
+					'model'        => $result['model'],
+					'meta_title'        => $result['meta_title'],
 					'description' => Helper\Utf8\substr(trim(strip_tags(html_entity_decode($result['description'], ENT_QUOTES, 'UTF-8'))), 0, $this->config->get('config_product_description_length')) . '..',
 					'price'       => $price,
 					'special'     => $special,

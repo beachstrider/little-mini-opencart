@@ -80,12 +80,10 @@
 				</div>
 			{% endif %}
 			{% if not categories and not products %}
-				<p>{{ text_no_results }}</p>
-				<div class="d-inline-block pt-2 pd-2 w-100">
-					<div class="float-end">
-						<a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a>
-					</div>
-				</div>
+        <div class="sm:py-[20px] py-[15px] sm:mb-[40px] mb-[30px] pt-2 pd-2 w-100 text-center flex flex-col items-center">
+          <p>{{ text_no_results }}</p>
+					<a href="{{ continue }}" class="mt-[20px] block w-[198px] px-[26px] py-[12px] bg-indigo text-white font-semibold">{{ button_continue }}</a>
+        </div>
 			{% endif %}
 			{{ content_bottom }}</div>
 		{{ column_right }}</div>

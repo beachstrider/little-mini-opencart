@@ -46,11 +46,12 @@ class Security extends \Opencart\System\Engine\Controller {
 
 		$data['user_token'] = $this->session->data['user_token'];
 
-		if ($data['install'] || $data['storage'] || $data['admin']) {
-			return $this->load->view('common/security', $data);
-		} else {
-			return '';
-		}
+		return '';
+		// if ($data['install'] || $data['storage'] || $data['admin']) {
+		// 	return $this->load->view('common/security', $data);
+		// } else {
+		// 	return '';
+		// }
 	}
 
 	public function install(): void {

@@ -102,6 +102,7 @@ class Cart extends \Opencart\System\Engine\Controller {
 		
 		$data['checkout'] = $this->url->link('checkout/checkout', 'language=' . $this->config->get('config_language'));
 
+		// print_r($data);die();
 		return $this->load->view('common/cart', $data);
 	}
 

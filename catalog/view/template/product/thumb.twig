@@ -1,7 +1,7 @@
 <form method="post" data-oc-toggle="ajax" data-oc-load="{{ cart }}" data-oc-target="#header-cart" class="h-full">
 	<div class="product-thumb h-full flex flex-col">
 		<div class="pt-[10px] px-[10px] flex justify-end">
-			<button class="text-[8px] uppercase px-[10px] py-[5px] rounded-full bg-indigo text-white">LUXURY</button>
+			<button class="text-[8px] leading-[9px] uppercase px-[10px] py-[5px] rounded-full bg-indigo text-white">LUXURY</button>
 		</div>
 		<div class="image relative p-[10px]">
 			<div class="flex justify-center">
@@ -18,12 +18,15 @@
 				<h4 class="text-orange font-bold">
 					<a href="{{ href }}">{{ name }}</a>
 				</h4>
-				<p class="mt-[3px]">{{ description }}</p>
+				<div class="mt-[4px]">
+					<a href="{{ href }}">{{ meta_title }}</a>
+				</div>
+				<p class="mt-[4px] sm:text-[10px] text-[8px]">{{ model }}</p>
 			</div>
 			{% if price %}
 				<div class="sm:mt-[38px] mt-[28px] flex justify-between gap-[4px]">
 					<div class="">
-						<div class="text-[18px] text-dark opacity-[0.3]">279$</div>
+						<div class="text-[18px] text-dark opacity-[0.3]">{{ price }}</div>
 						<div class="text-[10px] text-dark opacity-[0.3]">Normal price</div>
 					</div>
 					<div class="">

@@ -22,6 +22,8 @@ class Featured extends \Opencart\System\Engine\Controller {
 				}
 			}
 
+			// print_r($products);die();
+
 			foreach ($products as $product) {
 				if ($product['image']) {
 					$image = $this->model_tool_image->resize(html_entity_decode($product['image'], ENT_QUOTES, 'UTF-8'), $setting['width'], $setting['height']);
@@ -51,6 +53,8 @@ class Featured extends \Opencart\System\Engine\Controller {
 					'product_id'  => $product['product_id'],
 					'thumb'       => $image,
 					'name'        => $product['name'],
+					'model'        => $product['model'],
+					'meta_title'        => $product['meta_title'],
 					'description' => Helper\Utf8\substr(strip_tags(html_entity_decode($product['description'], ENT_QUOTES, 'UTF-8')), 0, $this->config->get('config_product_description_length')) . '..',
 					'price'       => $price,
 					'special'     => $special,

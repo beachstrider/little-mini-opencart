@@ -101,3 +101,16 @@ Line: 87
 2023-03-30 02:02:02 - Exception:  Error: Could not make a database link using root@localhost! in E:\xampp\htdocs\system\library\db\mysqli.php on line 19
 2023-03-30 02:02:24 - Exception:  Error: Could not make a database link using root@localhost! in E:\xampp\htdocs\system\library\db\mysqli.php on line 19
 2023-03-30 19:45:39 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/product/script_product.twig" (looked into: ). in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+2023-03-30 22:35:04 - Twig\Error\SyntaxError:  Unknown "endif" tag. in E:\xampp\htdocs\catalog\view\template\product\product.twig on line 281
+2023-03-31 02:38:38 - PHP Warning:  Undefined variable $product in E:\xampp\htdocs\catalog\controller\product\category.php on line 197
+2023-03-31 02:38:38 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\product\category.php on line 197
+2023-03-31 02:38:38 - PHP Warning:  Undefined variable $product in E:\xampp\htdocs\catalog\controller\product\category.php on line 198
+2023-03-31 02:38:38 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\product\category.php on line 198
+2023-03-31 02:38:38 - PHP Warning:  Undefined variable $product in E:\xampp\htdocs\catalog\controller\product\category.php on line 197
+2023-03-31 02:38:38 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\product\category.php on line 197
+2023-03-31 02:38:38 - PHP Warning:  Undefined variable $product in E:\xampp\htdocs\catalog\controller\product\category.php on line 198
+2023-03-31 02:38:38 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\product\category.php on line 198
+2023-03-31 02:38:38 - PHP Warning:  Undefined variable $product in E:\xampp\htdocs\catalog\controller\product\category.php on line 197
+2023-03-31 02:38:38 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\product\category.php on line 197
+2023-03-31 02:38:38 - PHP Warning:  Undefined variable $product in E:\xampp\htdocs\catalog\controller\product\category.php on line 198
+2023-03-31 02:38:38 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\product\category.php on line 198
