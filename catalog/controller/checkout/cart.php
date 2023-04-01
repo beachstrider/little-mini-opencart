@@ -88,6 +88,7 @@ class Cart extends \Opencart\System\Engine\Controller {
 			$data['column_right'] = $this->load->controller('common/column_right');
 			$data['content_top'] = $this->load->controller('common/content_top');
 			$data['content_bottom'] = $this->load->controller('common/content_bottom');
+			$data['section_customer_review'] = $this->load->view('common/section_customer_review');
 			$data['section_save_membership'] = $this->load->view('common/section_save_membership');
 			$data['section_best_deals'] = $this->load->view('common/section_best_deals');
 			$data['footer'] = $this->load->controller('common/footer');

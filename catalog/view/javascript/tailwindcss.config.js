@@ -19,7 +19,6 @@ tailwind.config = {
     },
     container: {
       center: true,
-      padding: "20px",
       screens: {
         sm: "600px",
         md: "728px",
