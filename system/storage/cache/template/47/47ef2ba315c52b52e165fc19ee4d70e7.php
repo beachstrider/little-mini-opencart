@@ -35,7 +35,7 @@ class __TwigTemplate_6c506844d8a7f9821b3ac922a4718925 extends Template
         $macros = $this->macros;
         // line 1
         echo "<div class=\" border-t border-darkBlue\">
-\t<div class=\"container mx-auto sm:px-0 px-[20px]\">
+\t<div class=\"container\">
 \t\t<div class=\"sm:py-[80px] pt-[34px] pb-[30px]\">
 \t\t\t<div class=\"sm:text-[40px] text-[30px] text-center uppercase font-bold flex justify-center\">
 \t\t\t\t<div class=\"sm:max-w-full max-w-[250px]\">

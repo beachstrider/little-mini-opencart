@@ -132,7 +132,7 @@ class __TwigTemplate_7e3a4d9fe324855c23c385c7d75a843d extends Template
                 }
 
                 if (json['error']) {
-                    \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['error'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
+                    toast({type: 'error', text: json['error']})
                 }
 
                 // Shipping Methods
@@ -212,7 +212,7 @@ class __TwigTemplate_7e3a4d9fe324855c23c385c7d75a843d extends Template
                 }
 
                 if (json['error']) {
-                    \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['error'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
+                    toast({type: 'error', text: json['error']})
                 }
 
                 if (json['success']) {

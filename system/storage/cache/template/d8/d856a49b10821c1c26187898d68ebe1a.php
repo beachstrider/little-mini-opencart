@@ -159,7 +159,7 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
                 }
 
                 if (json['error']) {
-                    \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['error'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
+                      toast({type: 'error', text: json['error']})
 
                     \$('#input-shipping-method').prop('disabled', true);
                 }
@@ -223,14 +223,13 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
                 }
 
                 if (json['error']) {
-                    \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['error'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
+                    toast({type: 'error', text: json['error']})
                 }
 
                 if (json['success']) {
-                    \$('#alert').prepend('<div class=\"alert alert-success alert-dismissible\"><i class=\"fa-solid fa-circle-check\"></i> ' + json['success'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
-
+                    toast({type: 'success', text: json['success']})
                     \$('#checkout-confirm').load('index.php?route=checkout/confirm|confirm&language=";
-        // line 113
+        // line 112
         echo ($context["language"] ?? null);
         echo "');
                 }
@@ -249,7 +248,7 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
     chain.attach(function () {
         return \$.ajax({
             url: 'index.php?route=checkout/payment_method|comment&language=";
-        // line 129
+        // line 128
         echo ($context["language"] ?? null);
         echo "',
             type: 'post',
@@ -268,11 +267,11 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
                 }
 
                 if (json['error']) {
-                    \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['error'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
+                    toast({type: 'error', text: json['error']})
                 }
 
                 if (json['success']) {
-                    \$('#alert').prepend('<div class=\"alert alert-success alert-dismissible\"><i class=\"fa-solid fa-circle-check\"></i> ' + json['success'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
+                    toast({type: 'success', text: json['success']})
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
@@ -289,7 +288,7 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
     chain.attach(function () {
         return \$.ajax({
             url: 'index.php?route=checkout/payment_method|agree&language=";
-        // line 166
+        // line 165
         echo ($context["language"] ?? null);
         echo "',
             type: 'post',
@@ -304,7 +303,7 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
             },
             success: function (json) {
                 \$('#checkout-confirm').load('index.php?route=checkout/confirm|confirm&language=";
-        // line 178
+        // line 177
         echo ($context["language"] ?? null);
         echo "');
             },
@@ -330,7 +329,7 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  308 => 178,  293 => 166,  253 => 129,  234 => 113,  206 => 88,  188 => 73,  169 => 57,  148 => 39,  139 => 32,  129 => 29,  126 => 28,  124 => 27,  117 => 25,  108 => 18,  104 => 16,  89 => 14,  85 => 13,  80 => 12,  78 => 11,  75 => 10,  60 => 8,  56 => 7,  52 => 6,  46 => 5,  41 => 3,  37 => 1,);
+        return array (  307 => 177,  292 => 165,  252 => 128,  233 => 112,  206 => 88,  188 => 73,  169 => 57,  148 => 39,  139 => 32,  129 => 29,  126 => 28,  124 => 27,  117 => 25,  108 => 18,  104 => 16,  89 => 14,  85 => 13,  80 => 12,  78 => 11,  75 => 10,  60 => 8,  56 => 7,  52 => 6,  46 => 5,  41 => 3,  37 => 1,);
     }
 
     public function getSourceContext()

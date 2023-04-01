@@ -367,7 +367,7 @@ $(document).on("submit", "form[data-oc-toggle='ajax']", function (e) {
 
       if (typeof json["error"] == "object") {
         if (json["error"]["warning"]) {
-          toast({ text: json["error"]["warning"] });
+          toast({ type: 'warning', text: json["error"]["warning"] });
         }
 
         for (key in json["error"]) {

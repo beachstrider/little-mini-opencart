@@ -764,11 +764,11 @@ class __TwigTemplate_2d43ea618b7ca97ebc8433ae3d9f8765 extends Template
                 }
 
                 if (json['error']) {
-                    \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['error'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
+                    toast({type: 'error', text: json['error']})
                 }
 
                 if (json['success']) {
-                    \$('#alert').prepend('<div class=\"alert alert-success alert-dismissible\"><i class=\"fa-solid fa-circle-check\"></i> ' + json['success'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
+                    toast({type: 'success', text: json['success']})
 
                     \$('#button-shipping-method').trigger('click');
                 }
@@ -810,7 +810,7 @@ class __TwigTemplate_2d43ea618b7ca97ebc8433ae3d9f8765 extends Template
 
                 if (json['error']) {
                     if (json['error']['warning']) {
-                        \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['error']['warning'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
+                      toast({type: 'warning', text: json['error']['warning']})
                     }
 
                     for (i in json['error']) {

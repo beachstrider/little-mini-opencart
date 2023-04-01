@@ -37,10 +37,11 @@ class Information extends \Opencart\System\Engine\Controller {
 
 			$data['continue'] = $this->url->link('common/home', 'language=' . $this->config->get('config_language'));
 
-			$data['column_left'] = $this->load->controller('common/column_left');
-			$data['column_right'] = $this->load->controller('common/column_right');
-			$data['content_top'] = $this->load->controller('common/content_top');
-			$data['content_bottom'] = $this->load->controller('common/content_bottom');
+			$data['section_members'] = $this->load->view('common/section_members');
+			$data['section_best_deals'] = $this->load->view('common/section_best_deals');
+			$data['section_more_buy'] = $this->load->view('common/section_more_buy');
+			$data['section_how_possible'] = $this->load->view('common/section_how_possible');
+			$data['section_know_more'] = $this->load->view('common/section_know_more');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 

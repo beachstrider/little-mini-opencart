@@ -38,13 +38,15 @@ $('#address').on('click', '.btn-danger', function (e) {
             $('.alert-dismissible').remove();
 
             if (json['error']) {
-                $('#address').before('<div class="alert alert-danger alert-dismissible"><i class="fa-solid fa-circle-exclamation"></i> ' + json['error'] + ' <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>');
+                
+              toast({type: 'error', text: json["error"]})
             }
 
             if (json['success']) {
-                $('#address').before('<div class="alert alert-success alert-dismissible"><i class="fa-solid fa-circle-check"></i> ' + json['success'] + ' <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>');
+                
+              toast({text: json["success"]})
 
-                $('#address').load('index.php?route=account/address|list');
+              $('#address').load('index.php?route=account/address|list');
             }
         },
         error: function (xhr, ajaxOptions, thrownError) {

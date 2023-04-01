@@ -240,7 +240,7 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
 \t\t\t</div>
 \t\t</div>
 \t</div>
-\t<div class=\"border-y border-[#6B7A93] bg-[#f5f5f5]\">
+\t<div class=\"border-t border-[#6B7A93] bg-[#f5f5f5]\">
 \t\t<div class=\"container mx-auto sm:px-0 px-[20px] flex justify-between sm:items-start sm:gap-0 gap-[16px] items-center text-center sm:flex-row flex-col py-[26px] text-[#6B7A93]\">
 \t\t\t<p>";
         // line 107
