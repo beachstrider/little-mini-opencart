@@ -94,14 +94,9 @@
 								</svg>
 								<span>{{ text_account }}</span>
 							</button>
-							
-							<div id="account-dropdown" class="dropdown-menu z-10 hidden bg-white border !border-darkBlue uppercase text-[12px] text-center w-[170px] flex flex-col gap-[8px] sm:!mt-[46px] !mt-[16px]">
-								<div class="hover:fill-orange w-full px-[20px] py-[10px] flex hover:text-orange hover:fill-orange gap-[18px]">
-									<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M13.5 7.5L10.5 10.75M13.5 7.5L10.5 4.5M13.5 7.5L4 7.5M8 13.5H1.5L1.5 1.5L8 1.5" stroke="#080E16"/>
-									</svg>
-									<a href="{{ logout }}" class="block font-bold uppercase">{{ text_logout }}</a>
-								</div>
+
+							<div id="account-dropdown" class="dropdown-menu z-10 hidden bg-white border !border-darkBlue uppercase text-[12px] text-center w-[200px] flex flex-col sm:!mt-[46px] !mt-[16px]">
+								{{ account_dropdown_menu }}
 							</div>
 
 						{% endif %}

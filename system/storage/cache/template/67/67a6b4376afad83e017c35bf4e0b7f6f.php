@@ -41,7 +41,7 @@ class __TwigTemplate_8904d239bbd33d039b293f3f2fd16ea0 extends Template
         echo ($context["menu"] ?? null);
         echo "
 <div class=\"content w-full\">
-\tkkkk
+\t_
 </div></div></div>";
         // line 5
         echo ($context["footer"] ?? null);

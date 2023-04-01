@@ -20,7 +20,7 @@ class Logout extends \Opencart\System\Engine\Controller {
 			unset($this->session->data['vouchers']);
 			unset($this->session->data['customer_token']);
 
-			$this->response->redirect($this->url->link('account/logout', 'language=' . $this->config->get('config_language')));
+			$this->response->redirect($this->url->link('common/home', 'language=' . $this->config->get('config_language')));
 		}
 
 		$this->load->language('account/logout');

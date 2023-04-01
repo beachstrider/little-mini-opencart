@@ -4,15 +4,27 @@
 			<i class="fa-solid fa-circle-check"></i>
 			{{ success }}</div>
 	{% endif %}
-	<div class="sm:text-[40px] text-[30px] font-bold text-orange uppercase">{{ heading_title }}
-		<span class="text-dark">{{ name }}</span>
+	<div class="">
+		<div class="sm:text-[40px] text-[30px] font-bold text-orange uppercase">{{ heading_title }}
+			<span class="text-dark">{{ name }}</span>
+		</div>
 	</div>
 	<div class="sm:pt-[38px] pt-[28px] sm:pb-[28px] pb-[21px] sm:text-[16px] text-[12px]">
-		<div class="">Full name:
-			{{ name }}</div>
-		<div class="">Email:
-			{{ email }}</div>
+		<div class="flex justify-between">
+			<div class="">
+				<div class="">Full name:
+					{{ name }}</div>
+				<div class="">Email:
+					{{ email }}</div>
+			</div>
+			<div class="">{{ text_click_logout }}
+				<div class="flex justify-end">
+					<a href="{{ logout }}" class="block border border-dark px-[16px] py-[3px] mt-[6px]">{{text_btn_logout}}</a>
+				</div>
+			</div>
+		</div>
 	</div>
+
 	<div class="flex gap-[30px] border-t border-darkBlue py-[20px]">
 		<div class="min-w-[180px]">
 			<div class="hover:fill-orange w-full pr-[20px] py-[14px] flex items-center hover:text-orange gap-[18px] last:border-none border-b border-[#6B7A9320]">
@@ -48,72 +60,72 @@
 			</div>
 
 			{# <ul class="list-unstyled">
-										<li>
-											<a href="{{ edit }}">{{ text_edit }}</a>
-										</li>
-										<li>
-											<a href="{{ password }}">{{ text_password }}</a>
-										</li>
-										<li>
-											<a href="{{ address }}">{{ text_address }}</a>
-										</li>
-										<li>
-											<a href="{{ payment_method }}">{{ text_payment_method }}</a>
-										</li>
-										<li>
-											<a href="{{ wishlist }}">{{ text_wishlist }}</a>
-										</li>
-									</ul>
-									<h2>
-										{{ text_my_orders }}
-									</h2>
-									<ul class="list-unstyled">
-										<li>
-											<a href="{{ order }}">{{ text_order }}</a>
-										</li>
-										<li>
-											<a href="{{ subscription }}">{{ text_subscription }}</a>
-										</li>
-										<li>
-											<a href="{{ download }}">{{ text_download }}</a>
-										</li>
-										{% if reward %}
-											<li>
-												<a href="{{ reward }}">{{ text_reward }}</a>
-											</li>
-										{% endif %}
-										<li>
-											<a href="{{ return }}">{{ text_return }}</a>
-										</li>
-										<li>
-											<a href="{{ transaction }}">{{ text_transaction }}</a>
-										</li>
-									</ul>
-									{% if affiliate %}
-										<h2>
-											{{ text_my_affiliate }}
-										</h2>
-										<ul class="list-unstyled">
-											{% if not tracking %}
-												<li>
-													<a href="{{ affiliate }}">{{ text_affiliate_add }}</a>
-												</li>
-											{% else %}
-												<li>
-													<a href="{{ affiliate }}">{{ text_affiliate_edit }}</a>
-												</li>
-												<li>
-													<a href="{{ tracking }}">{{ text_tracking }}</a>
-												</li>
-											{% endif %}
-										</ul>
-									{% endif %}
-									<h2>
-										{{ text_my_newsletter }}
-									</h2>
-									<ul class="list-unstyled">
-										<li>
-											<a href="{{ newsletter }}">{{ text_newsletter }}</a>
-										</li>
-									</ul> #}
+																																																							<li>
+																																																								<a href="{{ edit }}">{{ text_edit }}</a>
+																																																							</li>
+																																																							<li>
+																																																								<a href="{{ password }}">{{ text_password }}</a>
+																																																							</li>
+																																																							<li>
+																																																								<a href="{{ address }}">{{ text_address }}</a>
+																																																							</li>
+																																																							<li>
+																																																								<a href="{{ payment_method }}">{{ text_payment_method }}</a>
+																																																							</li>
+																																																							<li>
+																																																								<a href="{{ wishlist }}">{{ text_wishlist }}</a>
+																																																							</li>
+																																																						</ul>
+																																																						<h2>
+																																																							{{ text_my_orders }}
+																																																						</h2>
+																																																						<ul class="list-unstyled">
+																																																							<li>
+																																																								<a href="{{ order }}">{{ text_order }}</a>
+																																																							</li>
+																																																							<li>
+																																																								<a href="{{ subscription }}">{{ text_subscription }}</a>
+																																																							</li>
+																																																							<li>
+																																																								<a href="{{ download }}">{{ text_download }}</a>
+																																																							</li>
+																																																							{% if reward %}
+																																																								<li>
+																																																									<a href="{{ reward }}">{{ text_reward }}</a>
+																																																								</li>
+																																																							{% endif %}
+																																																							<li>
+																																																								<a href="{{ return }}">{{ text_return }}</a>
+																																																							</li>
+																																																							<li>
+																																																								<a href="{{ transaction }}">{{ text_transaction }}</a>
+																																																							</li>
+																																																						</ul>
+																																																						{% if affiliate %}
+																																																							<h2>
+																																																								{{ text_my_affiliate }}
+																																																							</h2>
+																																																							<ul class="list-unstyled">
+																																																								{% if not tracking %}
+																																																									<li>
+																																																										<a href="{{ affiliate }}">{{ text_affiliate_add }}</a>
+																																																									</li>
+																																																								{% else %}
+																																																									<li>
+																																																										<a href="{{ affiliate }}">{{ text_affiliate_edit }}</a>
+																																																									</li>
+																																																									<li>
+																																																										<a href="{{ tracking }}">{{ text_tracking }}</a>
+																																																									</li>
+																																																								{% endif %}
+																																																							</ul>
+																																																						{% endif %}
+																																																						<h2>
+																																																							{{ text_my_newsletter }}
+																																																						</h2>
+																																																						<ul class="list-unstyled">
+																																																							<li>
+																																																								<a href="{{ newsletter }}">{{ text_newsletter }}</a>
+																																																							</li>
+																																																						</ul> #}
 		</div>

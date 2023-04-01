@@ -1,6 +1,6 @@
 <?php
-namespace Opencart\Catalog\Controller\Account;
-class Menu extends \Opencart\System\Engine\Controller {
+namespace Opencart\Catalog\Controller\Common;
+class AccountDropdownMenu extends \Opencart\System\Engine\Controller {
 	public function index(): string {
 		$this->load->language('account/account');
 		$this->load->language('account/menu');
@@ -45,6 +45,6 @@ class Menu extends \Opencart\System\Engine\Controller {
 		$data['name'] = $this->customer->getFirstName() . ' ' . $this->customer->getLastName();
 		$data['email'] = $this->customer->getEmail();
 
-		return $this->load->view('account/menu', $data);
+		return $this->load->view('common/account_dropdown_menu', $data);
 	}
 }
