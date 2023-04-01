@@ -159,7 +159,7 @@ class __TwigTemplate_5ab372a3a2c2fafc4a90a4cb1ccf9b54 extends Template
 
             if (json['error']) {
               if (json['error']['warning']) {
-                  \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['error']['warning'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
+                    toast({type: 'warning', text: json['error']['warning']})
               }
 
               for (key in json['error']) {
