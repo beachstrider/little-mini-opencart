@@ -175,18 +175,16 @@ $(document).ready(function () {
   });
 
   // Search
-  $(".product-search-input").on("keydown", function (e) {
+  $("#search").on("keydown", function (e) {
     if (e.keyCode == 13) {
       var url =
         $("base").attr("href") +
         "index.php?route=product/search&language=" +
-        $(this).attr("data-lang");
+        $(this).data("lang");
 
-      var value = $(".product-search-input").eq(0).val();
+      var value = $("#search").eq(0).val();
 
-      if (value) {
-        url += "&search=" + encodeURIComponent(value);
-      }
+      url += "&search=" + encodeURIComponent(value);
 
       location = url;
     }
@@ -367,7 +365,7 @@ $(document).on("submit", "form[data-oc-toggle='ajax']", function (e) {
 
       if (typeof json["error"] == "object") {
         if (json["error"]["warning"]) {
-          toast({ type: 'warning', text: json["error"]["warning"] });
+          toast({ type: "warning", text: json["error"]["warning"] });
         }
 
         for (key in json["error"]) {
