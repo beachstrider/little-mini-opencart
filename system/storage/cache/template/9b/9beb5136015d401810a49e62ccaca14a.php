@@ -122,7 +122,7 @@ class __TwigTemplate_02ad692a6588e421a4a7dd32c3a358da extends Template
 \t\t\t\t\t</div>
 \t\t\t\t\t<div class=\"flex justify-between bg-orangeLight mt-[20px] p-[20px]\">
 \t\t\t\t\t\t<div class=\"sm:text-[24px] text-[18px] font-bold uppercase\">YOUR ORDER</div>
-\t\t\t\t\t\t<div class=\"sm:text-[24px] text-[18px] text-orange font-bold\">
+\t\t\t\t\t\t<div id=\"total_price_div\" class=\"sm:text-[24px] text-[18px] text-orange font-bold\">
 \t\t\t\t\t\t\t";
         // line 59
         $context['_parent'] = $context;

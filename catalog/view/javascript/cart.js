@@ -26,7 +26,7 @@ $(document).ready(function () {
       complete: function () {
         $(button).prop("disabled", false).removeClass("loading");
       },
-      success: function (json) {
+      success: async function (json) {
         $("#header-cart").load("index.php?route=common/cart|info");
         buttons.attr("disabled", false);
         console.log(form.attr("additional-action"));
@@ -34,6 +34,15 @@ $(document).ready(function () {
           $.when(form.closest(".cart-item").remove()).then(function () {
             if ($(".cart-item").length === 0) location.href = "/";
           });
+        const data = await (
+          await fetch("/index.php?route=checkout/cart|getTotals")
+        ).json();
+
+        const paymentInfo = {};
+        data.map((el) => {
+          paymentInfo[el.code] = el;
+        });
+        $("#total_price_div").text(paymentInfo.total.text);
       },
       error: function (xhr, ajaxOptions, thrownError) {
         console.log(

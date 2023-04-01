@@ -55,7 +55,7 @@
 					</div>
 					<div class="flex justify-between bg-orangeLight mt-[20px] p-[20px]">
 						<div class="sm:text-[24px] text-[18px] font-bold uppercase">YOUR ORDER</div>
-						<div class="sm:text-[24px] text-[18px] text-orange font-bold">
+						<div id="total_price_div" class="sm:text-[24px] text-[18px] text-orange font-bold">
 							{% for total in totals %}
 								{% if total.code == 'total' %}
 									{{ total.text }}

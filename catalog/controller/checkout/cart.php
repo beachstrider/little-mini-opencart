@@ -362,4 +362,24 @@ class Cart extends \Opencart\System\Engine\Controller {
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));
 	}
+
+	public function getTotals(): void {
+		$this->load->model('checkout/cart');
+
+		$totals = [];
+		$taxes = $this->cart->getTaxes();
+		$total = 0;
+		$data = [];
+		($this->model_checkout_cart->getTotals)($totals, $taxes, $total);
+
+		foreach ($totals as $result) {
+			$data[] = [
+				'code'  => $result['code'],
+				'title' => $result['title'],
+				'text'  => $this->currency->format($result['value'], $this->session->data['currency'])
+			];
+		}
+		
+		$this->response->setOutput(json_encode($data));
+	}
 }
