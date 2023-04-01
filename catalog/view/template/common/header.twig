@@ -87,17 +87,22 @@
 								<span>{{ text_login }}</span>
 							</a>
 						{% else %}
-							<a href="{{ account }}" title="{{ text_account }}" class="flex sm:flex-row flex-col items-center sm:gap-[10px]">
+							<button data-dropdown-toggle="account-dropdown" title="{{ text_account }}" class="flex sm:flex-row flex-col items-center sm:gap-[10px]">
 								<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 3.49804C10.5 5.15396 9.157 6.49609 7.5 6.49609C5.843 6.49609 4.5 5.15396 4.5 3.49804C4.5 1.84212 5.843 0.5 7.5 0.5C9.157 0.5 10.5 1.84212 10.5 3.49804Z" stroke="#080E16" stroke-linecap="square"/>
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 14.4909H2.5C2.5 13.7808 2.5 13.1053 2.5 12.4936C2.5 10.8368 3.84315 9.49414 5.5 9.49414H9.5C11.1569 9.49414 12.5 10.8368 12.5 12.4936C12.5 13.1053 12.5 13.7808 12.5 14.4909Z" stroke="#080E16" stroke-linecap="square"/>
 								</svg>
 								<span>{{ text_account }}</span>
-							</a>
-							<a href="{{ logout }}" title="{{ text_logout }}" class="flex sm:flex-row flex-col items-center sm:gap-[10px]">
-								<svg class="svg-icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M768 106V184c97.2 76 160 194.8 160 328 0 229.6-186.4 416-416 416S96 741.6 96 512c0-133.2 62.8-251.6 160-328V106C121.6 190.8 32 341.2 32 512c0 265.2 214.8 480 480 480s480-214.8 480-480c0-170.8-89.6-321.2-224-406z" fill="" /><path d="M512 32c-17.6 0-32 14.4-32 32v448c0 17.6 14.4 32 32 32s32-14.4 32-32V64c0-17.6-14.4-32-32-32z" fill="" /></svg>	
-								<span>{{ text_logout }}</span>
-							</a>
+							</button>
+							
+							<div id="account-dropdown" class="dropdown-menu z-10 hidden bg-white border !border-darkBlue uppercase text-[12px] text-center w-[170px] flex flex-col gap-[8px] sm:!mt-[46px] !mt-[16px]">
+								<div class="hover:fill-orange w-full px-[20px] py-[10px] flex hover:text-orange hover:fill-orange gap-[18px]">
+									<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.5 7.5L10.5 10.75M13.5 7.5L10.5 4.5M13.5 7.5L4 7.5M8 13.5H1.5L1.5 1.5L8 1.5" stroke="#080E16"/>
+									</svg>
+									<a href="{{ logout }}" class="block font-bold uppercase">{{ text_logout }}</a>
+								</div>
+							</div>
 
 						{% endif %}
 						<div id="header-cart">

@@ -53,7 +53,7 @@ class __TwigTemplate_83ddd86cb76ae1ea20137dc41d06d6ed extends Template
 \t</button>
 \t<div class=\"absolute left-0 w-full sm:mt-[54px] mt-[21px]\">
 \t\t<div class=\"relative container mx-auto sm:px-0 px-[20px] flex justify-end z-[10]\">
-\t\t\t<ul id=\"cart-dropdown\" class=\"!relative hidden bg-white dropdown-menu !right-0 sm:w-[400px] w-full border border-darkBlue !transform-none sm:after:right-[36px] after:right-0 after:!left-auto\">
+\t\t\t<ul id=\"cart-dropdown\" class=\"!relative hidden bg-white dropdown-menu !right-0 sm:w-[400px] w-full border border-darkBlue !transform-none sm:after:right-[46px] after:right-0 after:!left-auto\">
 \t\t\t\t";
         // line 13
         if ((($context["products"] ?? null) || ($context["vouchers"] ?? null))) {

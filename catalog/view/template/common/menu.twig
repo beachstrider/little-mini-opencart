@@ -1,22 +1,7 @@
 {% if categories %}
-	<div class="border-b-[1px] border-[#6B7A93] py-[1px] sm:flex hidden justify-center items-center bg-[#FFF3E2]">
+	<div class="border-b-[1px] border-[#6B7A93] py-[1px] sm:flex hidden justify-center items-center bg-[#FFF3E2] shadow-2xl">
 		{% for category in categories %}
-			{% if category.children %}
-				<a href="{{ category.href }}" class="text-[10px] text-[#080E16] uppercase leading-[12px]">{{ category.name }}</a>
-				{# {% for children in category.children|batch(category.children|length / category.column|round(1, 'ceil')) %}
-																																										<ul class="list-unstyled">
-																																											{% for child in children %}
-																																												<li>
-																																													<a href="{{ child.href }}" class="nav-link">{{ child.name }}</a>
-																																												</li>
-																																											{% endfor %}
-																																										</ul>
-																																									{% endfor %}
-																																								<a href="{{ category.href }}" class="">{{ text_all }}
-																																								{{ category.name }}</a> #}
-			{% else %}
-				<a href="{{ category.href }}" class="text-[10px] text-[#080E16] uppercase leading-[12px]">{{ category.name }}</a>
-			{% endif %}
+			<a href="{{ category.href }}" class="text-[10px] text-[#080E16] uppercase leading-[12px]">{{ category.name }}</a>
 			<div class="px-[14px] last:hidden">⋅</div>
 		{% endfor %}
 	</div>

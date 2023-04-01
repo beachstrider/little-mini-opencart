@@ -83,6 +83,12 @@ class Order extends \Opencart\System\Engine\Controller {
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 
+		$data['logout'] = $this->url->link('account/logout', 'language=' . $this->config->get('config_language'));
+
+		$data['name'] = $this->customer->getFirstName() . ' ' . $this->customer->getLastName();
+		$data['email'] = $this->customer->getEmail();
+		$data['menu'] = $this->load->controller('account/menu', $data);
+
 		$this->response->setOutput($this->load->view('account/order_list', $data));
 	}
 

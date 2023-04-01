@@ -249,9 +249,7 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 \t\t\t\t\t\t";
         } else {
             // line 90
-            echo "\t\t\t\t\t\t\t<a href=\"";
-            echo ($context["account"] ?? null);
-            echo "\" title=\"";
+            echo "\t\t\t\t\t\t\t<button data-dropdown-toggle=\"account-dropdown\" title=\"";
             echo ($context["text_account"] ?? null);
             echo "\" class=\"flex sm:flex-row flex-col items-center sm:gap-[10px]\">
 \t\t\t\t\t\t\t\t<svg width=\"15\" height=\"15\" viewbox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
@@ -262,26 +260,28 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
             // line 95
             echo ($context["text_account"] ?? null);
             echo "</span>
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t<a href=\"";
-            // line 97
+\t\t\t\t\t\t\t</button>
+\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t<div id=\"account-dropdown\" class=\"dropdown-menu z-10 hidden bg-white border !border-darkBlue uppercase text-[12px] text-center w-[170px] flex flex-col gap-[8px] sm:!mt-[46px] !mt-[16px]\">
+\t\t\t\t\t\t\t\t<div class=\"hover:fill-orange w-full px-[20px] py-[10px] flex hover:text-orange hover:fill-orange gap-[18px]\">
+\t\t\t\t\t\t\t\t\t<svg width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+\t\t\t\t\t\t\t\t\t\t<path d=\"M13.5 7.5L10.5 10.75M13.5 7.5L10.5 4.5M13.5 7.5L4 7.5M8 13.5H1.5L1.5 1.5L8 1.5\" stroke=\"#080E16\"/>
+\t\t\t\t\t\t\t\t\t</svg>
+\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 103
             echo ($context["logout"] ?? null);
-            echo "\" title=\"";
+            echo "\" class=\"block font-bold uppercase\">";
             echo ($context["text_logout"] ?? null);
-            echo "\" class=\"flex sm:flex-row flex-col items-center sm:gap-[10px]\">
-\t\t\t\t\t\t\t\t<svg class=\"svg-icon\" style=\"width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;\" viewBox=\"0 0 1024 1024\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M768 106V184c97.2 76 160 194.8 160 328 0 229.6-186.4 416-416 416S96 741.6 96 512c0-133.2 62.8-251.6 160-328V106C121.6 190.8 32 341.2 32 512c0 265.2 214.8 480 480 480s480-214.8 480-480c0-170.8-89.6-321.2-224-406z\" fill=\"\" /><path d=\"M512 32c-17.6 0-32 14.4-32 32v448c0 17.6 14.4 32 32 32s32-14.4 32-32V64c0-17.6-14.4-32-32-32z\" fill=\"\" /></svg>\t
-\t\t\t\t\t\t\t\t<span>";
-            // line 99
-            echo ($context["text_logout"] ?? null);
-            echo "</span>
-\t\t\t\t\t\t\t</a>
+            echo "</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
 
 \t\t\t\t\t\t";
         }
-        // line 103
+        // line 108
         echo "\t\t\t\t\t\t<div id=\"header-cart\">
 \t\t\t\t\t\t\t";
-        // line 104
+        // line 109
         echo ($context["cart"] ?? null);
         echo "
 \t\t\t\t\t\t</div>
@@ -291,7 +291,7 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 \t\t</header>
 \t\t<main>
 \t\t\t";
-        // line 111
+        // line 116
         echo ($context["menu"] ?? null);
         echo "
 ";
@@ -309,7 +309,7 @@ class __TwigTemplate_d178ea71c9360d135dc5a15dd0550af9 extends Template
 
     public function getDebugInfo()
     {
-        return array (  295 => 111,  285 => 104,  282 => 103,  275 => 99,  268 => 97,  263 => 95,  252 => 90,  246 => 87,  231 => 77,  225 => 74,  214 => 69,  212 => 68,  206 => 65,  203 => 64,  195 => 61,  192 => 60,  180 => 58,  178 => 57,  163 => 44,  154 => 42,  149 => 41,  138 => 39,  133 => 38,  124 => 36,  119 => 35,  106 => 33,  102 => 32,  84 => 17,  80 => 16,  75 => 15,  69 => 13,  66 => 12,  60 => 10,  58 => 9,  54 => 8,  50 => 7,  40 => 2,  37 => 1,);
+        return array (  295 => 116,  285 => 109,  282 => 108,  272 => 103,  261 => 95,  252 => 90,  246 => 87,  231 => 77,  225 => 74,  214 => 69,  212 => 68,  206 => 65,  203 => 64,  195 => 61,  192 => 60,  180 => 58,  178 => 57,  163 => 44,  154 => 42,  149 => 41,  138 => 39,  133 => 38,  124 => 36,  119 => 35,  106 => 33,  102 => 32,  84 => 17,  80 => 16,  75 => 15,  69 => 13,  66 => 12,  60 => 10,  58 => 9,  54 => 8,  50 => 7,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
