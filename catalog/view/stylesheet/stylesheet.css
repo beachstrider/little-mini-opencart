@@ -101,6 +101,14 @@ label {
   font-weight: normal;
 }
 
+select {
+  padding: 0.5rem 0.75rem !important;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
 .list-unstyled a {
   text-decoration: none;
 }

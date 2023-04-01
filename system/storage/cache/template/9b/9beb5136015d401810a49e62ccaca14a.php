@@ -204,7 +204,7 @@ class __TwigTemplate_02ad692a6588e421a4a7dd32c3a358da extends Template
         // line 111
         echo ($context["section_best_deals"] ?? null);
         echo "
-<script src=\"catalog/view/javascript/cart.js\"></script>
+<script src=\"/catalog/view/javascript/cart.js\"></script>
 ";
         // line 113
         echo ($context["footer"] ?? null);

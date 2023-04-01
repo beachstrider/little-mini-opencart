@@ -22,23 +22,6 @@ class Checkout extends \Opencart\System\Engine\Controller {
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
-		$data['breadcrumbs'] = [];
-
-		$data['breadcrumbs'][] = [
-			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/home', 'language=' . $this->config->get('config_language'))
-		];
-
-		$data['breadcrumbs'][] = [
-			'text' => $this->language->get('text_cart'),
-			'href' => $this->url->link('checkout/cart', 'language=' . $this->config->get('config_language'))
-		];
-
-		$data['breadcrumbs'][] = [
-			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('checkout/checkout', 'language=' . $this->config->get('config_language'))
-		];
-
 		if (!$this->customer->isLogged()) {
 			$data['register'] = $this->load->controller('checkout/register');
 		} else {
@@ -66,10 +49,8 @@ class Checkout extends \Opencart\System\Engine\Controller {
 		$data['payment_method'] = $this->load->controller('checkout/payment_method');
 		$data['confirm'] = $this->load->controller('checkout/confirm');
 
-		$data['column_left'] = $this->load->controller('common/column_left');
-		$data['column_right'] = $this->load->controller('common/column_right');
-		$data['content_top'] = $this->load->controller('common/content_top');
-		$data['content_bottom'] = $this->load->controller('common/content_bottom');
+		$data['section_save_membership'] = $this->load->view('common/section_save_membership');
+		$data['section_best_deals'] = $this->load->view('common/section_best_deals');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 

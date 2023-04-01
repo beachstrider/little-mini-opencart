@@ -1,9 +1,10 @@
 <?php
 // Heading
-$_['heading_title']           = 'Your Personal Details';
+$_['heading_title']           = 'Enter your information below so that we can notify the shipping company and send off your order.';
 
 // Text
-$_['text_login']              = 'If you already have an account with us, please login at the <a href="%s"><strong>login page</strong></a>.';
+$_['text_login']              = 'Already a member? Then login here:';
+$_['text_btn_login']          = 'Login';
 $_['text_register']           = 'Register Account';
 $_['text_guest']              = 'Guest Checkout';
 $_['text_payment_address']    = 'Payment Address';
@@ -17,19 +18,20 @@ $_['text_success_edit']       = 'Success: Your account has been successfully upd
 $_['entry_customer_group']    = 'Account Type';
 $_['entry_firstname']         = 'First Name';
 $_['entry_lastname']          = 'Last Name';
-$_['entry_email']             = 'E-Mail';
+$_['entry_email']             = 'Email';
 $_['entry_telephone']         = 'Telephone';
 $_['entry_password']          = 'Password';
 $_['entry_confirm']           = 'Password Confirm';
 $_['entry_company']           = 'Company';
-$_['entry_address_1']         = 'Address 1';
+$_['entry_address_1']         = 'House or flatnumber & street';
 $_['entry_address_2']         = 'Address 2';
 $_['entry_postcode']          = 'Post Code';
+$_['entry_postcode_city']          = 'Postal code & city';
 $_['entry_city']              = 'City';
 $_['entry_country']           = 'Country';
 $_['entry_zone']              = 'Region / State';
 $_['entry_match']             = 'My delivery and billing addresses are the same.';
-$_['entry_newsletter']        = 'I wish to subscribe to the %s newsletter.';
+$_['entry_newsletter']        = 'Sign me up for the %s newsletter with similar products.';
 
 // Error
 $_['error_guest']             = 'Warning: Items in your shopping cart require you to register for an account!';
@@ -42,7 +44,7 @@ $_['error_exists']            = 'Warning: E-Mail Address is already registered!'
 $_['error_telephone']         = 'Telephone must be between 3 and 32 characters!';
 $_['error_password']          = 'Password must be between 4 and 20 characters!';
 $_['error_confirm']           = 'Password confirmation does not match password!';
-$_['error_address_1']         = 'Address 1 must be between 3 and 128 characters!';
+$_['error_address_1']         = 'House or flatnumber & street must be between 3 and 128 characters!';
 $_['error_city']              = 'City must be between 2 and 128 characters!';
 $_['error_postcode']          = 'Postcode must be between 2 and 10 characters!';
 $_['error_country']           = 'Please select a country!';

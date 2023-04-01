@@ -24,6 +24,9 @@ class Register extends \Opencart\System\Engine\Controller {
 
 		$data['customer_groups'] = [];
 
+		
+		$data['login'] = $this->url->link('account/login', 'language=' . $this->config->get('config_language'));
+
 		if (is_array($this->config->get('config_customer_group_display'))) {
 			$this->load->model('account/customer_group');
 

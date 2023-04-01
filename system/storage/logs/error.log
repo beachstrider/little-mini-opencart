@@ -226,3 +226,17 @@ age\vendor\twig\twig\src\Cache\FilesystemCache.php on line 61
 2023-03-31 23:55:19 - PHP Warning:  Attempt to read property "title" on array in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 378
 2023-03-31 23:55:19 - PHP Warning:  Attempt to read property "value" on array in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 377
 2023-03-31 23:55:19 - PHP Warning:  Attempt to read property "title" on array in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 378
+2023-04-01 00:46:00 - TypeError:  Opencart\System\Library\Document::setTitle(): Argument #1 ($title) must be of type string, array given, called in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 23 in E:\xampp\htdocs\system\library\document.php on line 27
+2023-04-01 00:46:00 - TypeError:  Opencart\System\Library\Document::setTitle(): Argument #1 ($title) must be of type string, array given, called in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 23 in E:\xampp\htdocs\system\library\document.php on line 27
+2023-04-01 01:12:41 - ParseError:  syntax error, unexpected variable "$this" in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 60
+2023-04-01 01:12:48 - TypeError:  Opencart\System\Library\Response::setOutput(): Argument #1 ($output) must be of type string, array given, called in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 58 in E:\xampp\htdocs\system\library\response.php on line 68
+2023-04-01 01:13:10 - Error:  Call to undefined function Opencart\Catalog\Controller\Checkout\toString() in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 58
+2023-04-01 01:13:10 - Error:  Call to undefined function Opencart\Catalog\Controller\Checkout\toString() in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 58
+2023-04-01 01:13:19 - Error:  Call to undefined function Opencart\Catalog\Controller\Checkout\string() in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 58
+2023-04-01 01:13:20 - Error:  Call to undefined function Opencart\Catalog\Controller\Checkout\string() in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 58
+2023-04-01 01:13:20 - Error:  Call to undefined function Opencart\Catalog\Controller\Checkout\string() in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 58
+2023-04-01 01:17:09 - TypeError:  Opencart\Catalog\Controller\Checkout\Checkout::index(): Return value must be of type string, none returned in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 59
+2023-04-01 01:17:09 - TypeError:  Opencart\Catalog\Controller\Checkout\Checkout::index(): Return value must be of type string, none returned in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 59
+2023-04-01 01:17:13 - TypeError:  Opencart\Catalog\Controller\Checkout\Checkout::index(): Return value must be of type string, null returned in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 58
+2023-04-01 01:17:14 - TypeError:  Opencart\Catalog\Controller\Checkout\Checkout::index(): Return value must be of type string, null returned in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 58
+2023-04-01 01:17:14 - TypeError:  Opencart\Catalog\Controller\Checkout\Checkout::index(): Return value must be of type string, null returned in E:\xampp\htdocs\catalog\controller\checkout\checkout.php on line 58
