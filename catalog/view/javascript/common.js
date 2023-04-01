@@ -91,13 +91,6 @@ $("#form-product").on("submit", function (e) {
 });
 
 $(document).ready(function () {
-  // Tooltip
-  var oc_tooltip = function () {
-    // Apply to all on current page
-    tooltip = bootstrap.Tooltip.getOrCreateInstance(this);
-    tooltip.show();
-  };
-
   $(document).on("mouseenter", "[data-bs-toggle='tooltip']", oc_tooltip);
 
   $(document).on("click", "button", function () {
@@ -238,8 +231,6 @@ $(document).ready(function () {
   // Product Grid
   $("#button-grid").on("click", function () {
     var element = this;
-
-    // What a shame bootstrap does not take into account dynamically loaded columns
 
     $("#button-list").removeClass("active");
     $("#button-grid").addClass("active");

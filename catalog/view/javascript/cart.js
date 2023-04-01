@@ -29,7 +29,6 @@ $(document).ready(function () {
       success: async function (json) {
         $("#header-cart").load("index.php?route=common/cart|info");
         buttons.attr("disabled", false);
-        console.log(form.attr("additional-action"));
         if (form.attr("additional-action") === "remove")
           $.when(form.closest(".cart-item").remove()).then(function () {
             if ($(".cart-item").length === 0) location.href = "/";

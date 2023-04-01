@@ -147,22 +147,18 @@ class __TwigTemplate_26ec2f79a7e740793d6e8f63acde39a8 extends Template
             // line 43
             echo twig_get_attribute($this->env, $this->source, $context["product"], "price", [], "any", false, false, false, 43);
             echo "</div>
-\t\t\t\t\t<div class=\"text-end\">";
-            // line 44
-            echo twig_get_attribute($this->env, $this->source, $context["product"], "total", [], "any", false, false, false, 44);
-            echo "</div>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"text-start\">
 \t\t\t\t\t<form method=\"post\" data-oc-target=\"#shopping-cart\">
 \t\t\t\t\t\t<div class=\"flex items-center\">
 \t\t\t\t\t\t\t<input
 \t\t\t\t\t\t\ttype=\"hidden\" name=\"key\" value=\"";
-            // line 50
-            echo twig_get_attribute($this->env, $this->source, $context["product"], "cart_id", [], "any", false, false, false, 50);
+            // line 49
+            echo twig_get_attribute($this->env, $this->source, $context["product"], "cart_id", [], "any", false, false, false, 49);
             echo "\">
 
 \t\t\t\t\t\t\t";
-            // line 53
+            // line 52
             echo "\t\t\t\t\t\t\t<button type=\"button\" formaction=\"";
             echo ($context["product_edit"] ?? null);
             echo "\" formaction-remove=\"";
@@ -177,11 +173,11 @@ class __TwigTemplate_26ec2f79a7e740793d6e8f63acde39a8 extends Template
 \t\t\t\t\t\t\t</button>
 \t\t\t\t\t\t\t<input
 \t\t\t\t\t\t\ttype=\"text\" name=\"quantity\" value=\"";
-            // line 60
-            echo twig_get_attribute($this->env, $this->source, $context["product"], "quantity", [], "any", false, false, false, 60);
+            // line 59
+            echo twig_get_attribute($this->env, $this->source, $context["product"], "quantity", [], "any", false, false, false, 59);
             echo "\" size=\"1\" class=\"text-[18px] !border-none !ring-0 px-[8px] py-0 text-center\" readonly>
 \t\t\t\t\t\t\t";
-            // line 62
+            // line 61
             echo "\t\t\t\t\t\t\t<button type=\"button\" formaction=\"";
             echo ($context["product_edit"] ?? null);
             echo "\" formaction-remove=\"";
@@ -219,7 +215,7 @@ class __TwigTemplate_26ec2f79a7e740793d6e8f63acde39a8 extends Template
 
     public function getDebugInfo()
     {
-        return array (  185 => 62,  181 => 60,  166 => 53,  161 => 50,  152 => 44,  148 => 43,  135 => 34,  130 => 32,  126 => 31,  123 => 30,  120 => 29,  115 => 27,  111 => 26,  108 => 25,  105 => 24,  102 => 23,  94 => 21,  90 => 20,  85 => 17,  80 => 16,  77 => 15,  73 => 13,  71 => 12,  65 => 11,  59 => 7,  47 => 5,  45 => 4,  41 => 2,  37 => 1,);
+        return array (  181 => 61,  177 => 59,  162 => 52,  157 => 49,  148 => 43,  135 => 34,  130 => 32,  126 => 31,  123 => 30,  120 => 29,  115 => 27,  111 => 26,  108 => 25,  105 => 24,  102 => 23,  94 => 21,  90 => 20,  85 => 17,  80 => 16,  77 => 15,  73 => 13,  71 => 12,  65 => 11,  59 => 7,  47 => 5,  45 => 4,  41 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
