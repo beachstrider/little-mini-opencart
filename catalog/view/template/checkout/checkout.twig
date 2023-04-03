@@ -1,42 +1,19 @@
 {{ header }}
 <div id="checkout-checkout" class="container mx-auto sm:px-0 px-[20px]">
-	<div class="row">
-		<div id="content" class="">
-			<h1 class="sm:mt-[40px] mt-[30px] sm:text-[40px] text-[30px] font-bold flex justify-between">
-				<div class="flex">
-					{{ heading_title_1 }}&nbsp;<span class="text-orange">{{heading_title_2}}</span>
-				</div>
-				<div class="opacity-[0.5]">(1/4)</div>
-			</h1>
-			<div class="row">
-				<div class="col-md-7 mb-3">
-					<div id="checkout-register">{{ register }}</div>
-{# 
-					{% if payment_address %}
-						<div id="checkout-payment-address">{{ payment_address }}</div>
-					{% endif %}
+	<div id="checkout-register">{{ register }}</div>
 
-					{% if shipping_address %}
-						<div id="checkout-shipping-address">{{ shipping_address }}</div>
-					{% endif %} 
-#}
+	{% if payment_address %}
+		<div id="checkout-payment-address">{{ payment_address }}</div>
+	{% endif %}
 
-				</div>
-				<div class="col-md-5">
-{# 
-					{% if shipping_method %}
-						<div id="checkout-shipping-method" class="mb-3">{{ shipping_method }}</div>
-					{% endif %}
-					
+	{% if shipping_address %}
+		<div id="checkout-shipping-address">{{ shipping_address }}</div>
+	{% endif %} 
 
-					<div id="checkout-payment-method" class="mb-4">{{ payment_method }}</div>
-					<div id="checkout-confirm">{{ confirm }}</div>
-  #}
-
-				</div>
-			</div>
-		</div>
-	</div>
+	{% if shipping_method %}
+		<div id="checkout-shipping-method" class="mb-3">{{ shipping_method }}</div>
+	{% endif %}
+	
 </div>
 {{ section_save_membership }}
 {{ section_best_deals }}

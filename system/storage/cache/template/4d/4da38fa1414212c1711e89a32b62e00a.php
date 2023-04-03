@@ -37,48 +37,56 @@ class __TwigTemplate_3e84d41f18cf9580ef8229614e4203ad extends Template
         echo ($context["header"] ?? null);
         echo "
 <div id=\"checkout-checkout\" class=\"container mx-auto sm:px-0 px-[20px]\">
-\t<div class=\"row\">
-\t\t<div id=\"content\" class=\"\">
-\t\t\t<h1 class=\"sm:mt-[40px] mt-[30px] sm:text-[40px] text-[30px] font-bold flex justify-between\">
-\t\t\t\t<div class=\"flex\">
-\t\t\t\t\t";
-        // line 7
-        echo ($context["heading_title_1"] ?? null);
-        echo "&nbsp;<span class=\"text-orange\">";
-        echo ($context["heading_title_2"] ?? null);
-        echo "</span>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"opacity-[0.5]\">(1/4)</div>
-\t\t\t</h1>
-\t\t\t<div class=\"row\">
-\t\t\t\t<div class=\"col-md-7 mb-3\">
-\t\t\t\t\t<div id=\"checkout-register\">";
-        // line 13
+\t<div id=\"checkout-register\">";
+        // line 3
         echo ($context["register"] ?? null);
         echo "</div>
-";
-        // line 23
+
+\t";
+        // line 5
+        if (($context["payment_address"] ?? null)) {
+            // line 6
+            echo "\t\t<div id=\"checkout-payment-address\">";
+            echo ($context["payment_address"] ?? null);
+            echo "</div>
+\t";
+        }
+        // line 8
         echo "
-\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-5\">
-";
-        // line 35
-        echo "
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-\t</div>
+\t";
+        // line 9
+        if (($context["shipping_address"] ?? null)) {
+            // line 10
+            echo "\t\t<div id=\"checkout-shipping-address\">";
+            echo ($context["shipping_address"] ?? null);
+            echo "</div>
+\t";
+        }
+        // line 11
+        echo " 
+
+\t";
+        // line 13
+        if (($context["shipping_method"] ?? null)) {
+            // line 14
+            echo "\t\t<div id=\"checkout-shipping-method\" class=\"mb-3\">";
+            echo ($context["shipping_method"] ?? null);
+            echo "</div>
+\t";
+        }
+        // line 16
+        echo "\t
 </div>
 ";
-        // line 41
+        // line 18
         echo ($context["section_save_membership"] ?? null);
         echo "
 ";
-        // line 42
+        // line 19
         echo ($context["section_best_deals"] ?? null);
         echo "
 ";
-        // line 43
+        // line 20
         echo ($context["footer"] ?? null);
         echo "
 ";
@@ -96,7 +104,7 @@ class __TwigTemplate_3e84d41f18cf9580ef8229614e4203ad extends Template
 
     public function getDebugInfo()
     {
-        return array (  82 => 43,  78 => 42,  74 => 41,  66 => 35,  61 => 23,  57 => 13,  46 => 7,  37 => 1,);
+        return array (  90 => 20,  86 => 19,  82 => 18,  78 => 16,  72 => 14,  70 => 13,  66 => 11,  60 => 10,  58 => 9,  55 => 8,  49 => 6,  47 => 5,  42 => 3,  37 => 1,);
     }
 
     public function getSourceContext()

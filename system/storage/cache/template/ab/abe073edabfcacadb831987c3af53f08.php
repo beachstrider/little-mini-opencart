@@ -87,7 +87,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t\t<div class=\"col-span-2 flex justify-end items-center\">
 \t\t\t\t<label for=\"input-firstname\" class=\"form-label sm:w-[270px] flex items-center\">";
         // line 22
-        echo ($context["entry_firstname"] ?? null);
+        echo ($context["entry_fullname"] ?? null);
         echo ":<div class=\"w-[6px] h-[6px] rounded-full bg-orange ml-[10px]\"></div>
 \t\t\t\t</label>
 \t\t\t</div>
@@ -115,7 +115,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
         // line 36
         echo "\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]\">
 \t\t\t<div class=\"col-span-2 flex justify-end items-center\">
-\t\t\t\t<label for=\"input-firstname\" class=\"form-label sm:w-[270px] flex items-center\">C/O (care of):<div class=\"w-[6px] h-[6px] rounded-full bg-orange ml-[10px]\"></div>
+\t\t\t\t<label for=\"input-c_o\" class=\"form-label sm:w-[270px] flex items-center\">C/O (care of):<div class=\"w-[6px] h-[6px] rounded-full bg-orange ml-[10px]\"></div>
 \t\t\t\t</label>
 \t\t\t</div>
 \t\t\t<div class=\"col-span-2 required flex items-center\">
@@ -354,214 +354,204 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t</div>
 \t</div>
 </form>
+
 <script>
-\t// Customer Group
-\t\$(\"#input-customer-group\").on(\"change\", function () {
-\t\tvar element = this;
+\$('input[name=\\'account\\']').on('click', function () {
+  if (\$(this).val() == 1) {
+    \$('#password').removeClass('d-none');
+  } else {
+    // If guest hide password field
+    \$('#password').addClass('d-none');
+  }
 
-\t\tchain.attach(function () {
-\t\t\treturn \$.ajax({
-\t\t\t\turl:
-\t\t\t\t\t\"index.php?route=account/custom_field&language=";
-        // line 178
+  if (\$(this).val() == 1) {
+    \$('#agree').removeClass('d-none');
+  } else {
+    // If guest hide register agree field
+    \$('#agree').addClass('d-none');
+  }
+});
+
+\$('input[name=\\'account\\']:checked').trigger('click');
+
+// Customer Group
+\$('#input-customer-group').on('change', function () {
+  var element = this;
+
+  chain.attach(function () {
+    return \$.ajax({
+      url: 'index.php?route=account/custom_field&language=";
+        // line 196
         echo ($context["language"] ?? null);
-        echo "&customer_group_id=\" +
-\t\t\t\t\t\$(element).val(),
-\t\t\t\tdataType: \"json\",
-\t\t\t\tbeforeSend: function () {
-\t\t\t\t\t\$(element).prop(\"disabled\", true);
-\t\t\t\t},
-\t\t\t\tcomplete: function () {
-\t\t\t\t\t\$(element).prop(\"disabled\", false);
-\t\t\t\t},
-\t\t\t\tsuccess: function (json) {
-\t\t\t\t\t\$(\".custom-field\").addClass(\"d-none\");
-\t\t\t\t\t\$(\".custom-field\").removeClass(\"required\");
+        echo "&customer_group_id=' + \$(element).val(),
+      dataType: 'json',
+      beforeSend: function () {
+        \$(element).prop('disabled', true);
+      },
+      complete: function () {
+        \$(element).prop('disabled', false);
+      },
+      success: function (json) {
+        \$('.custom-field').addClass('d-none');
+        \$('.custom-field').removeClass('required');
 
-\t\t\t\t\tfor (i = 0; i < json.length; i++) {
-\t\t\t\t\t\tcustom_field = json[i];
+        for (i = 0; i < json.length; i++) {
+          custom_field = json[i];
 
-\t\t\t\t\t\t\$(\".custom-field-\" + custom_field[\"custom_field_id\"]).removeClass(
-\t\t\t\t\t\t\t\"d-none\"
-\t\t\t\t\t\t);
+          \$('.custom-field-' + custom_field['custom_field_id']).removeClass('d-none');
 
-\t\t\t\t\t\tif (custom_field[\"required\"]) {
-\t\t\t\t\t\t\t\$(\".custom-field-\" + custom_field[\"custom_field_id\"]).addClass(
-\t\t\t\t\t\t\t\t\"required\"
-\t\t\t\t\t\t\t);
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-\t\t\t\t},
-\t\t\t\terror: function (xhr, ajaxOptions, thrownError) {
-\t\t\t\t\tconsole.log(
-\t\t\t\t\t\tthrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText
-\t\t\t\t\t);
-\t\t\t\t},
-\t\t\t});
-\t\t});
-\t});
-
-\t\$(\"#input-customer-group\").trigger(\"change\");
-
-\t\$(\"#input-address-match\").on(\"change\", function () {
-\t\tif (\$(this).prop(\"checked\")) {
-\t\t\t\$(\"#shipping-address\").hide();
-\t\t} else {
-\t\t\t\$(\"#shipping-address\").show();
-\t\t}
-\t});
-
-\t\$(\"#form-register\").on(\"submit\", function (e) {
-\t\te.preventDefault();
-
-\t\tvar element = this;
-
-\t\tchain.attach(function () {
-\t\t\treturn \$.ajax({
-\t\t\t\turl: \"index.php?route=checkout/register|save&language=";
-        // line 231
-        echo ($context["language"] ?? null);
-        echo "\",
-\t\t\t\ttype: \"post\",
-\t\t\t\tdataType: \"json\",
-\t\t\t\tdata: \$(\"#form-register\").serialize(),
-\t\t\t\tcontentType: \"application/x-www-form-urlencoded\",
-\t\t\t\tbeforeSend: function () {
-\t\t\t\t\t\$(element).prop(\"disabled\", true).addClass(\"loading\");
-\t\t\t\t},
-\t\t\t\tcomplete: function () {
-\t\t\t\t\t\$(element).prop(\"disabled\", false).removeClass(\"loading\");
-\t\t\t\t},
-\t\t\t\tsuccess: function (json) {
-\t\t\t\t\t\$(\"#form-register\").find(\".is-invalid\").removeClass(\"is-invalid\");
-\t\t\t\t\t\$(\"#form-register\").find(\".text-[12px] text-orange\").removeClass(\"d-block\");
-
-\t\t\t\t\tconsole.log(json);
-
-\t\t\t\t\tif (json[\"redirect\"]) {
-\t\t\t\t\t\tlocation = json[\"redirect\"];
-\t\t\t\t\t}
-
-\t\t\t\t\tif (json[\"error\"]) {
-\t\t\t\t\t\tif (json[\"error\"][\"warning\"]) {
-\t\t\t\t\t\t\ttoast({ type: 'warning', text: json[\"error\"][\"warning\"] });
-\t\t\t\t\t\t}
-
-\t\t\t\t\t\tfor (key in json[\"error\"]) {
-\t\t\t\t\t\t\t\$(\"#input-\" + key.replaceAll(\"_\", \"-\"))
-\t\t\t\t\t\t\t\t.addClass(\"is-invalid\")
-\t\t\t\t\t\t\t\t.find(
-\t\t\t\t\t\t\t\t\t\".form-control, .form-select, .form-check-input, .form-check-label\"
-\t\t\t\t\t\t\t\t)
-\t\t\t\t\t\t\t\t.addClass(\"is-invalid\");
-\t\t\t\t\t\t\t\$(\"#error-\" + key.replaceAll(\"_\", \"-\"))
-\t\t\t\t\t\t\t\t.html(json[\"error\"][key])
-\t\t\t\t\t\t\t\t.addClass(\"d-block\");
-\t\t\t\t\t\t}
-\t\t\t\t\t}
-
-\t\t\t\t\tif (json[\"success\"]) {
-\t\t\t\t\t\ttoast({text: json['success']});
-
-\t\t\t\t\t\tif (\$(\"#input-register\").prop(\"checked\")) {
-\t\t\t\t\t\t\t\$(\"input[name='account']\").prop(\"disabled\", true);
-\t\t\t\t\t\t\t\$(\"#input-customer-group\").prop(\"disabled\", true);
-\t\t\t\t\t\t\t\$(\"#input-password\").prop(\"disabled\", true);
-\t\t\t\t\t\t\t\$(\"#input-captcha\").prop(\"disabled\", true);
-\t\t\t\t\t\t\t\$(\"#input-register-agree\").prop(\"disabled\", true);
-\t\t\t\t\t\t}
-
-\t\t\t\t\t\t";
-        // line 281
-        if (($context["shipping_required"] ?? null)) {
-            // line 282
-            echo "\t\t\t\t\t\t  \$('#button-shipping-method').trigger('click');
-\t\t\t\t\t\t";
-        } else {
-            // line 284
-            echo "\t\t\t\t\t\t  \$('#button-payment-method').trigger('click');
-\t\t\t\t\t\t";
+          if (custom_field['required']) {
+            \$('.custom-field-' + custom_field['custom_field_id']).addClass('required');
+          }
         }
-        // line 286
-        echo "\t\t\t\t\t}
-\t\t\t\t},
-\t\t\t\terror: function (xhr, ajaxOptions, thrownError) {
-\t\t\t\t\tconsole.log(
-\t\t\t\t\t\tthrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText
-\t\t\t\t\t);
-\t\t\t\t},
-\t\t\t});
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
+      }
+    });
+  });
+});
+
+\$('#input-customer-group').trigger('change');
+
+\$('#input-address-match').on('change', function () {
+  if (\$(this).prop('checked')) {
+    \$('#shipping-address').hide();
+  } else {
+    \$('#shipping-address').show();
+  }
+});
+
+\$('#form-register').on('submit', function (e) {
+  e.preventDefault();
+
+  var element = this;
+
+  chain.attach(function () {
+    return \$.ajax({
+      url: 'index.php?route=checkout/register|save&language=";
+        // line 242
+        echo ($context["language"] ?? null);
+        echo "',
+      type: 'post',
+      dataType: 'json',
+      data: \$('#form-register').serialize(),
+      contentType: 'application/x-www-form-urlencoded',
+      beforeSend: function () {
+        \$(element).prop('disabled', true).addClass('loading');
+      },
+      complete: function () {
+        \$(element).prop('disabled', false).removeClass('loading');
+      },
+      success: function (json) {
+        \$('#form-register').find('.is-invalid').removeClass('is-invalid');
+        \$('#form-register').find('.invalid-feedback').removeClass('d-block');
+
+        console.log(json);
+
+        if (json['redirect']) {
+          location = json['redirect'];
+        }
+
+        if (json['error']) {
+          if (json['error']['warning']) {
+            toast({type: 'warning', text: json['error']['warning']})
+          }
+
+          for (key in json['error']) {
+            \$('#input-' + key.replaceAll('_', '-')).addClass('is-invalid').find('.form-control, .form-select, .form-check-input, .form-check-label').addClass('is-invalid');
+            \$('#error-' + key.replaceAll('_', '-')).html(json['error'][key]).addClass('d-block');
+          }
+        }
+
+        if (json['success']) {
+            toast({type: 'success', text: json['success']})
+
+          if (\$('#input-register').prop('checked')) {
+            \$('input[name=\\'account\\']').prop('disabled', true);
+            \$('#input-customer-group').prop('disabled', true);
+            \$('#input-password').prop('disabled', true);
+            \$('#input-captcha').prop('disabled', true);
+            \$('#input-register-agree').prop('disabled', true);
+          }
+
+          ";
+        // line 285
+        if (($context["shipping_required"] ?? null)) {
+            // line 286
+            echo "          \$('#button-shipping-method').trigger('click');
+          ";
+        } else {
+            // line 288
+            echo "\t\t\t\t\t\t\$('#button-payment-method').trigger('click');
+\t\t\t\t\t";
+        }
+        // line 290
+        echo "\t\t\t\t}
+\t\t\t},
+\t\t\terror: function (xhr, ajaxOptions, thrownError) {
+\t\t\t\tconsole.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
+\t\t\t}
 \t\t});
 \t});
+});
 
-\t\$(\"select[name\$='_country_id']\").on(\"change\", function () {
-\t\tvar element = this;
-\t\tvar type = \$(this).attr(\"name\").slice(0, -11);
+\$('select[name\$=\\'_country_id\\']').on('change', function () {
+  var element = this;
+  var type = \$(this).attr('name').slice(0, -11);
 
-\t\tchain.attach(function () {
-\t\t\treturn \$.ajax({
-\t\t\t\turl:
-\t\t\t\t\t\"index.php?route=localisation/country&language=";
-        // line 304
+  chain.attach(function () {
+    return \$.ajax({
+      url: 'index.php?route=localisation/country&language=";
+        // line 305
         echo ($context["language"] ?? null);
-        echo "&country_id=\" +
-\t\t\t\t\t\$(\"#input-\" + type + \"-country\").val(),
-\t\t\t\tdataType: \"json\",
-\t\t\t\tbeforeSend: function () {
-\t\t\t\t\t\$(element).prop(\"disabled\", true);
-\t\t\t\t},
-\t\t\t\tcomplete: function () {
-\t\t\t\t\t\$(element).prop(\"disabled\", false);
-\t\t\t\t},
-\t\t\t\tsuccess: function (json) {
-\t\t\t\t\tif (json[\"postcode_required\"] == \"1\") {
-\t\t\t\t\t\t\$(\"#input-\" + type + \"-postcode\")
-\t\t\t\t\t\t\t.parent()
-\t\t\t\t\t\t\t.addClass(\"required\");
-\t\t\t\t\t} else {
-\t\t\t\t\t\t\$(\"#input-\" + type + \"-postcode\")
-\t\t\t\t\t\t\t.parent()
-\t\t\t\t\t\t\t.removeClass(\"required\");
-\t\t\t\t\t}
+        echo "&country_id=' + \$('#input-' + type + '-country').val(),
+      dataType: 'json',
+      beforeSend: function () {
+        \$(element).prop('disabled', true);
+      },
+      complete: function () {
+        \$(element).prop('disabled', false);
+      },
+      success: function (json) {
+        if (json['postcode_required'] == '1') {
+          \$('#input-' + type + '-postcode').parent().addClass('required');
+        } else {
+          \$('#input-' + type + '-postcode').parent().removeClass('required');
+        }
 
-\t\t\t\t\thtml = '<option value=\"\">";
-        // line 324
+        html = '<option value=\"\">";
+        // line 320
         echo ($context["text_select"] ?? null);
         echo "</option>';
 
-\t\t\t\t\tif (json[\"zone\"] && json[\"zone\"] != \"\") {
-\t\t\t\t\t\tfor (i = 0; i < json[\"zone\"].length; i++) {
-\t\t\t\t\t\t\thtml += '<option value=\"' + json[\"zone\"][i][\"zone_id\"] + '\"';
+        if (json['zone'] && json['zone'] != '') {
+          for (i = 0; i < json['zone'].length; i++) {
+            html += '<option value=\"' + json['zone'][i]['zone_id'] + '\"';
 
-\t\t\t\t\t\t\tif (
-\t\t\t\t\t\t\t\tjson[\"zone\"][i][\"zone_id\"] ==
-\t\t\t\t\t\t\t\t\$(\"#input-\" + type + \"-zone\").attr(\"data-oc-value\")
-\t\t\t\t\t\t\t) {
-\t\t\t\t\t\t\t\thtml += \" selected\";
-\t\t\t\t\t\t\t}
+            if (json['zone'][i]['zone_id'] == \$('#input-' + type + '-zone').attr('data-oc-value')) {
+              html += ' selected';
+            }
 
-\t\t\t\t\t\t\thtml += \">\" + json[\"zone\"][i][\"name\"] + \"</option>\";
-\t\t\t\t\t\t}
-\t\t\t\t\t} else {
-\t\t\t\t\t\thtml += '<option value=\"0\" selected>";
-        // line 340
+            html += '>' + json['zone'][i]['name'] + '</option>';
+          }
+        } else {
+          html += '<option value=\"0\" selected>";
+        // line 333
         echo ($context["text_none"] ?? null);
         echo "</option>';
-\t\t\t\t\t}
+        }
 
-\t\t\t\t\t\$(\"#input-\" + type + \"-zone\").html(html);
-\t\t\t\t},
-\t\t\t\terror: function (xhr, ajaxOptions, thrownError) {
-\t\t\t\t\tconsole.log(
-\t\t\t\t\t\tthrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText
-\t\t\t\t\t);
-\t\t\t\t},
-\t\t\t});
-\t\t});
-\t});
+        \$('#input-' + type + '-zone').html(html);
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
+      }
+    });
+  });
+});
 
-\t\$(\"select[name\$='_country_id']\").trigger(\"change\");
-
+\$('select[name\$=\\'_country_id\\']').trigger('change');
 </script>
 ";
     }
@@ -578,7 +568,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 
     public function getDebugInfo()
     {
-        return array (  548 => 340,  529 => 324,  506 => 304,  486 => 286,  482 => 284,  478 => 282,  476 => 281,  423 => 231,  367 => 178,  351 => 165,  344 => 161,  339 => 158,  333 => 154,  329 => 152,  327 => 151,  320 => 147,  315 => 144,  312 => 143,  305 => 138,  293 => 131,  286 => 127,  282 => 125,  273 => 120,  266 => 116,  258 => 114,  249 => 109,  242 => 105,  238 => 103,  232 => 98,  223 => 95,  214 => 94,  210 => 93,  206 => 92,  198 => 87,  194 => 85,  187 => 80,  180 => 76,  176 => 74,  166 => 68,  158 => 65,  150 => 60,  146 => 58,  139 => 53,  132 => 49,  128 => 47,  116 => 36,  106 => 30,  98 => 27,  90 => 22,  86 => 20,  80 => 15,  65 => 13,  61 => 12,  50 => 6,  46 => 5,  41 => 3,  37 => 1,);
+        return array (  541 => 333,  525 => 320,  507 => 305,  490 => 290,  486 => 288,  482 => 286,  480 => 285,  434 => 242,  385 => 196,  351 => 165,  344 => 161,  339 => 158,  333 => 154,  329 => 152,  327 => 151,  320 => 147,  315 => 144,  312 => 143,  305 => 138,  293 => 131,  286 => 127,  282 => 125,  273 => 120,  266 => 116,  258 => 114,  249 => 109,  242 => 105,  238 => 103,  232 => 98,  223 => 95,  214 => 94,  210 => 93,  206 => 92,  198 => 87,  194 => 85,  187 => 80,  180 => 76,  176 => 74,  166 => 68,  158 => 65,  150 => 60,  146 => 58,  139 => 53,  132 => 49,  128 => 47,  116 => 36,  106 => 30,  98 => 27,  90 => 22,  86 => 20,  80 => 15,  65 => 13,  61 => 12,  50 => 6,  46 => 5,  41 => 3,  37 => 1,);
     }
 
     public function getSourceContext()

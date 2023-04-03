@@ -1,5 +1,7 @@
 {
   "search.exclude": {
-    "system": true
+    "system": true,
+    "opencart4": true,
+    "image": true
   }
 }

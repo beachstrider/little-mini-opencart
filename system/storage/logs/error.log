@@ -318,3 +318,8 @@ age\vendor\twig\twig\src\Cache\FilesystemCache.php on line 61
 2023-04-03 02:17:06 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\account\wishlist.php on line 88
 2023-04-03 02:17:06 - PHP Warning:  Undefined array key "model" in E:\xampp\htdocs\catalog\controller\account\wishlist.php on line 87
 2023-04-03 02:17:06 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\account\wishlist.php on line 88
+2023-04-03 08:38:31 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\system\storage\cache\template\c3\c38835b43e8bae5bbb7edaf35aa094c8.php on line 68
+2023-04-03 09:22:03 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/checkout/shipping_address.twig" (looked into: ). in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+2023-04-03 09:22:33 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/checkout/shipping_address.twig" (looked into: ). in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+2023-04-03 09:22:56 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/checkout/shipping_address.twig" (looked into: ). in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
+2023-04-03 09:39:35 - Twig\Error\SyntaxError:  Unknown "endfor" tag. in E:\xampp\htdocs\catalog\view\template\checkout\shipping_method.twig on line 15

@@ -1,9 +1,10 @@
 <?php
 // Heading
-$_['heading_title']          = 'Shipping Method';
+$_['heading_title']          = 'DELIVERY OPTIONS';
 
 // Text
 $_['text_success']           = 'Success: You have changed shipping method!';
+$_['chose_place']           = 'Choose Place';
 
 // Error
 $_['error_shipping_address'] = 'Warning: Shipping address required!';
