@@ -49,9 +49,12 @@ class __TwigTemplate_83ddd86cb76ae1ea20137dc41d06d6ed extends Template
 \t\t\t<circle cx=\"12.5\" cy=\"12.5\" r=\"12\" fill=\"#FFF3E2\" stroke=\"#080E16\"/>
 \t\t\t<path d=\"M8.5 9.5L11.5 4.5M13.5 4.5L16.5 9.5M5.7032 9.5H19.2968C19.409 9.5 19.5 9.59097 19.5 9.7032V10.142C19.5 13.0079 18.8327 15.8345 17.551 18.398C17.5198 18.4605 17.4558 18.5 17.3859 18.5H7.61409C7.54417 18.5 7.48025 18.4605 7.44898 18.398C6.16727 15.8345 5.5 13.0079 5.5 10.142V9.7032C5.5 9.59097 5.59097 9.5 5.7032 9.5Z\" stroke=\"#080E16\"/>
 \t\t</svg>
-\t\t<span>CART</span>
+\t\t<span>";
+        // line 8
+        echo ($context["text_cart"] ?? null);
+        echo "</span>
 \t</button>
-\t<div class=\"absolute left-0 w-full sm:mt-[54px] mt-[21px]\">
+\t<div class=\"absolute z-20 left-0 w-full sm:mt-[54px] mt-[21px]\">
 \t\t<div class=\"relative container mx-auto sm:px-0 px-[20px] flex justify-end z-[10]\">
 \t\t\t<ul id=\"cart-dropdown\" class=\"!relative hidden bg-white dropdown-menu !right-0 sm:w-[400px] w-full border border-darkBlue !transform-none sm:after:right-[46px] after:right-0 after:!left-auto\">
 \t\t\t\t";
@@ -276,7 +279,7 @@ class __TwigTemplate_83ddd86cb76ae1ea20137dc41d06d6ed extends Template
 
     public function getDebugInfo()
     {
-        return array (  260 => 100,  254 => 97,  251 => 96,  246 => 93,  230 => 83,  226 => 82,  220 => 81,  215 => 79,  210 => 77,  206 => 75,  201 => 74,  184 => 63,  180 => 62,  174 => 61,  166 => 57,  161 => 55,  157 => 54,  152 => 51,  149 => 50,  146 => 49,  138 => 47,  134 => 46,  129 => 43,  124 => 42,  122 => 41,  117 => 39,  110 => 37,  105 => 34,  93 => 32,  91 => 31,  87 => 29,  83 => 28,  76 => 24,  72 => 23,  61 => 14,  59 => 13,  46 => 3,  40 => 2,  37 => 1,);
+        return array (  263 => 100,  257 => 97,  254 => 96,  249 => 93,  233 => 83,  229 => 82,  223 => 81,  218 => 79,  213 => 77,  209 => 75,  204 => 74,  187 => 63,  183 => 62,  177 => 61,  169 => 57,  164 => 55,  160 => 54,  155 => 51,  152 => 50,  149 => 49,  141 => 47,  137 => 46,  132 => 43,  127 => 42,  125 => 41,  120 => 39,  113 => 37,  108 => 34,  96 => 32,  94 => 31,  90 => 29,  86 => 28,  79 => 24,  75 => 23,  64 => 14,  62 => 13,  54 => 8,  46 => 3,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()

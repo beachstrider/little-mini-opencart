@@ -36,7 +36,7 @@ class __TwigTemplate_926ffb414a312f5f39d88b837891dc1a extends Template
         // line 1
         if (($context["categories"] ?? null)) {
             // line 2
-            echo "\t<div class=\"border-b-[1px] border-[#6B7A93] py-[1px] sm:flex hidden justify-center items-center bg-[#FFF3E2] shadow-2xl\">
+            echo "\t<div id=\"menu\" class=\"border-b-[1px] border-[#6B7A93] py-[1px] sm:flex hidden justify-center items-center bg-[#FFF3E2] shadow-2xl\">
 \t\t";
             // line 3
             $context['_parent'] = $context;
@@ -56,6 +56,33 @@ class __TwigTemplate_926ffb414a312f5f39d88b837891dc1a extends Template
             $context = array_intersect_key($context, $_parent) + $_parent;
             // line 7
             echo "\t</div>
+\t<div id=\"mobile-menu\" class=\"hidden absolute z-10 w-full bg-white border-b-[1px] justify-center items-center\">
+\t\t";
+            // line 9
+            $context['_parent'] = $context;
+            $context['_seq'] = twig_ensure_traversable(($context["categories"] ?? null));
+            foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
+                // line 10
+                echo "\t\t\t<div class=\"flex justify-between pl-[25px] pr-[20px] py-[20px] border-b border-[#e1e4e9]\">
+\t\t\t\t<a href=\"";
+                // line 11
+                echo twig_get_attribute($this->env, $this->source, $context["category"], "href", [], "any", false, false, false, 11);
+                echo "\" class=\"text-[16px] text-[#080E16] uppercase leading-[12px]\">";
+                echo twig_get_attribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, false, 11);
+                echo "</a>
+\t\t\t\t<div class=\"px-[14px]\">
+\t\t\t\t\t<svg width=\"15\" height=\"15\" viewbox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+\t\t\t\t\t\t<path d=\"M5 14L12 7.5L5 1\" stroke=\"#080E16\" stroke-linecap=\"square\"/>
+\t\t\t\t\t</svg>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
+            $context = array_intersect_key($context, $_parent) + $_parent;
+            // line 19
+            echo "\t</div>
 ";
         }
     }
@@ -72,7 +99,7 @@ class __TwigTemplate_926ffb414a312f5f39d88b837891dc1a extends Template
 
     public function getDebugInfo()
     {
-        return array (  58 => 7,  46 => 4,  42 => 3,  39 => 2,  37 => 1,);
+        return array (  85 => 19,  69 => 11,  66 => 10,  62 => 9,  58 => 7,  46 => 4,  42 => 3,  39 => 2,  37 => 1,);
     }
 
     public function getSourceContext()

@@ -36,631 +36,645 @@ class __TwigTemplate_51e54d946b0b8bdd8ce974bb716efdae extends Template
         // line 1
         echo ($context["header"] ?? null);
         echo "
-<div id=\"account-register\" class=\"auth-modal\">
-  <div class=\"relative content bg-white sm:w-[770px] w-full sm:px-[36px] sm:py-[30] px-[27px] py-[22px]\">
-    <a class=\"absolute top-0 right-0 block p-[10px]\" href=\"/\">
-      <svg width=\"25\" height=\"25\" viewBox=\"0 0 25 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
-      <circle cx=\"12.5\" cy=\"12.5\" r=\"12\" stroke=\"#080E16\"/>
-        <path d=\"M6.5 6.5L18.5 18.5M6.5 18.5L18.5 6.5\" stroke=\"#080E16\"/>
-      </svg>
-    </a>
-    <div class=\"sm:flex justify-center sm:text-[40px] text-[30px] font-bold uppercase\">
-      <div class=\"text-orange\">REGISTER</div>
-        &nbsp;YOUR ACCOUNT
-    </div>
-    <form id=\"form-register\" action=\"";
+<div id=\"account-register\" class=\"modal\">
+\t<div class=\"relative content bg-white sm:w-[770px] w-full sm:px-[36px] sm:py-[30] px-[27px] py-[22px]\">
+\t\t<a class=\"absolute top-0 right-0 block p-[10px]\" href=\"/\">
+\t\t\t<svg width=\"25\" height=\"25\" viewbox=\"0 0 25 25\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+\t\t\t\t<circle cx=\"12.5\" cy=\"12.5\" r=\"12\" stroke=\"#080E16\"/>
+\t\t\t\t<path d=\"M6.5 6.5L18.5 18.5M6.5 18.5L18.5 6.5\" stroke=\"#080E16\"/>
+\t\t\t</svg>
+\t\t</a>
+\t\t<div class=\"sm:flex justify-center sm:text-[40px] text-[30px] font-bold uppercase\">
+\t\t\t<div class=\"text-orange\">REGISTER</div>
+\t\t\t&nbsp;YOUR ACCOUNT
+\t\t</div>
+\t\t<form id=\"form-register\" action=\"";
         // line 14
         echo ($context["register"] ?? null);
         echo "\" method=\"post\" data-oc-toggle=\"ajax\" class=\"sm:mt-[28px] mt-[22px]\">
-      <fieldset id=\"account\">
-        ";
+\t\t\t<fieldset id=\"account\">
+\t\t\t\t";
         // line 16
         if ((twig_length_filter($this->env, ($context["customer_groups"] ?? null)) > 1)) {
             // line 17
-            echo "        <div class=\"mb-3 required\">
-          <label class=\"\">";
+            echo "\t\t\t\t\t<div class=\"mb-3 required\">
+\t\t\t\t\t\t<label class=\"\">";
             // line 18
             echo ($context["entry_customer_group"] ?? null);
             echo "</label>
-          <div class=\"w-full\">
-            <select name=\"customer_group_id\" id=\"input-customer-group\" class=\"form-select\">
-              ";
+\t\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t\t<select name=\"customer_group_id\" id=\"input-customer-group\" class=\"form-select\">
+\t\t\t\t\t\t\t\t";
             // line 21
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["customer_groups"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["customer_group"]) {
                 // line 22
-                echo "                <option value=\"";
+                echo "\t\t\t\t\t\t\t\t\t<option value=\"";
                 echo twig_get_attribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 22);
-                echo "\"";
+                echo "\" ";
                 if ((twig_get_attribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 22) == ($context["customer_group_id"] ?? null))) {
-                    echo " selected";
+                    echo " selected ";
                 }
                 echo ">";
                 echo twig_get_attribute($this->env, $this->source, $context["customer_group"], "name", [], "any", false, false, false, 22);
                 echo "</option>
-              ";
+\t\t\t\t\t\t\t\t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['customer_group'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
             // line 24
-            echo "            </select>
-          </div>
-        </div>
-        ";
+            echo "\t\t\t\t\t\t\t</select>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t";
         }
         // line 28
-        echo "        <div class=\"mb-3 required\">
-          <label for=\"input-firstname\" class=\"\">";
+        echo "\t\t\t\t<div class=\"mb-3 required\">
+\t\t\t\t\t<label for=\"input-firstname\" class=\"\">";
         // line 29
         echo ($context["entry_firstname"] ?? null);
         echo "</label>
-          <div class=\"w-full\">
-            <input type=\"text\" name=\"firstname\" value=\"\" placeholder=\"";
+\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t<input type=\"text\" name=\"firstname\" value=\"\" placeholder=\"";
         // line 31
         echo ($context["entry_firstname"] ?? null);
         echo "\" id=\"input-firstname\" class=\"w-full\"/>
-            <div id=\"error-firstname\" class=\"invalid-feedback\"></div>
-          </div>
-        </div>
-        <div class=\"mb-3 required\">
-          <label for=\"input-lastname\" class=\"\">";
+\t\t\t\t\t\t<div id=\"error-firstname\" class=\"invalid-feedback\"></div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"mb-3 required\">
+\t\t\t\t\t<label for=\"input-lastname\" class=\"\">";
         // line 36
         echo ($context["entry_lastname"] ?? null);
         echo "</label>
-          <div class=\"w-full\">
-            <input type=\"text\" name=\"lastname\" value=\"\" placeholder=\"";
+\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t<input type=\"text\" name=\"lastname\" value=\"\" placeholder=\"";
         // line 38
         echo ($context["entry_lastname"] ?? null);
         echo "\" id=\"input-lastname\" class=\"w-full\"/>
-            <div id=\"error-lastname\" class=\"invalid-feedback\"></div>
-          </div>
-        </div>
-        <div class=\"mb-3 required\">
-          <label for=\"input-email\" class=\"\">";
+\t\t\t\t\t\t<div id=\"error-lastname\" class=\"invalid-feedback\"></div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"mb-3 required\">
+\t\t\t\t\t<label for=\"input-email\" class=\"\">";
         // line 43
         echo ($context["entry_email"] ?? null);
         echo "</label>
-          <div class=\"w-full\">
-            <input type=\"email\" name=\"email\" value=\"";
+\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t<input type=\"email\" name=\"email\" value=\"";
         // line 45
         echo ($context["initial_email"] ?? null);
         echo "\" placeholder=\"";
         echo ($context["entry_email"] ?? null);
         echo "\" id=\"input-email\" class=\"w-full\"/>
-            <div id=\"error-email\" class=\"invalid-feedback\"></div>
-          </div>
-        </div>
+\t\t\t\t\t\t<div id=\"error-email\" class=\"invalid-feedback\"></div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
 
-        ";
+\t\t\t\t";
         // line 50
         if (($context["config_telephone_display"] ?? null)) {
             // line 51
-            echo "          <div class=\"row mb-3";
+            echo "\t\t\t\t\t<div class=\"row mb-3";
             if (($context["config_telephone_required"] ?? null)) {
                 echo " required";
             }
             echo "\">
-            <label for=\"input-telephone\" class=\"\">";
+\t\t\t\t\t\t<label for=\"input-telephone\" class=\"\">";
             // line 52
             echo ($context["entry_telephone"] ?? null);
             echo "</label>
-            <div class=\"w-full\">
-              <input type=\"tel\" name=\"telephone\" value=\"\" placeholder=\"";
+\t\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t\t<input type=\"tel\" name=\"telephone\" value=\"\" placeholder=\"";
             // line 54
             echo ($context["entry_telephone"] ?? null);
             echo "\" id=\"input-telephone\" class=\"w-full\"/>
-              <div id=\"error-telephone\" class=\"invalid-feedback\"></div>
-            </div>
-          </div>
-        ";
+\t\t\t\t\t\t\t<div id=\"error-telephone\" class=\"invalid-feedback\"></div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t";
         }
         // line 59
         echo "
-        ";
+\t\t\t\t";
         // line 60
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["custom_fields"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["custom_field"]) {
             // line 61
             echo "
-          ";
+\t\t\t\t\t";
             // line 62
             if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 62) == "select")) {
                 // line 63
-                echo "            <div class=\"row mb-3 custom-field custom-field-";
+                echo "\t\t\t\t\t\t<div class=\"row mb-3 custom-field custom-field-";
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 63);
                 echo "\">
-              <label for=\"input-custom-field-";
+\t\t\t\t\t\t\t<label for=\"input-custom-field-";
                 // line 64
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 64);
                 echo "\" class=\"\">";
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 64);
                 echo "</label>
-              <div class=\"w-full\">
-                <select name=\"custom_field[";
+\t\t\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t\t\t<select name=\"custom_field[";
                 // line 66
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 66);
                 echo "]\" id=\"input-custom-field-";
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 66);
                 echo "\" class=\"form-select\">
-                  <option value=\"\">";
+\t\t\t\t\t\t\t\t\t<option value=\"\">";
                 // line 67
                 echo ($context["text_select"] ?? null);
                 echo "</option>
-                  ";
+\t\t\t\t\t\t\t\t\t";
                 // line 68
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_value", [], "any", false, false, false, 68));
                 foreach ($context['_seq'] as $context["_key"] => $context["custom_field_value"]) {
                     // line 69
-                    echo "                    <option value=\"";
+                    echo "\t\t\t\t\t\t\t\t\t\t<option value=\"";
                     echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 69);
                     echo "\">";
                     echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "name", [], "any", false, false, false, 69);
                     echo "</option>
-                  ";
+\t\t\t\t\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['custom_field_value'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
                 // line 71
-                echo "                </select>
-                <div id=\"error-custom-field-";
+                echo "\t\t\t\t\t\t\t\t</select>
+\t\t\t\t\t\t\t\t<div id=\"error-custom-field-";
                 // line 72
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 72);
                 echo "\" class=\"invalid-feedback\"></div>
-              </div>
-            </div>
-          ";
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t";
             }
             // line 76
             echo "
-          ";
+\t\t\t\t\t";
             // line 77
             if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 77) == "radio")) {
                 // line 78
-                echo "            <div class=\"row mb-3 custom-field custom-field-";
+                echo "\t\t\t\t\t\t<div class=\"row mb-3 custom-field custom-field-";
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 78);
                 echo "\">
-              <label class=\"\">";
+\t\t\t\t\t\t\t<label class=\"\">";
                 // line 79
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 79);
                 echo "</label>
-              <div class=\"w-full\">
-                <div id=\"input-custom-field-";
+\t\t\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t\t\t<div id=\"input-custom-field-";
                 // line 81
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 81);
                 echo "\">
-                  ";
+\t\t\t\t\t\t\t\t\t";
                 // line 82
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_value", [], "any", false, false, false, 82));
                 foreach ($context['_seq'] as $context["_key"] => $context["custom_field_value"]) {
                     // line 83
-                    echo "                    <div class=\"form-check\">
-                      <input type=\"radio\" name=\"custom_field[";
+                    echo "\t\t\t\t\t\t\t\t\t\t<div class=\"form-check\">
+\t\t\t\t\t\t\t\t\t\t\t<input type=\"radio\" name=\"custom_field[";
                     // line 84
                     echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 84);
                     echo "]\" value=\"";
                     echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 84);
                     echo "\" id=\"input-custom-value-";
                     echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 84);
-                    echo "\" class=\"form-check-input\"/> <label for=\"input-custom-value-";
-                    echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 84);
+                    echo "\" class=\"form-check-input\"/>
+\t\t\t\t\t\t\t\t\t\t\t<label for=\"input-custom-value-";
+                    // line 85
+                    echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 85);
                     echo "\" class=\"form-check-label\">";
-                    echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "name", [], "any", false, false, false, 84);
+                    echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "name", [], "any", false, false, false, 85);
                     echo "</label>
-                    </div>
-                  ";
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['custom_field_value'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 87
-                echo "                </div>
-                <div id=\"error-custom-field-";
                 // line 88
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 88);
+                echo "\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div id=\"error-custom-field-";
+                // line 89
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 89);
                 echo "\" class=\"invalid-feedback\"></div>
-              </div>
-            </div>
-          ";
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t";
             }
-            // line 92
-            echo "
-          ";
             // line 93
-            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 93) == "checkbox")) {
-                // line 94
-                echo "            <div class=\"row mb-3 custom-field custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 94);
-                echo "\">
-              <label class=\"\">";
+            echo "
+\t\t\t\t\t";
+            // line 94
+            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 94) == "checkbox")) {
                 // line 95
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 95);
-                echo "</label>
-              <div class=\"w-full\">
-                <div id=\"input-custom-field-";
-                // line 97
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 97);
+                echo "\t\t\t\t\t\t<div class=\"row mb-3 custom-field custom-field-";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 95);
                 echo "\">
-                  ";
+\t\t\t\t\t\t\t<label class=\"\">";
+                // line 96
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 96);
+                echo "</label>
+\t\t\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t\t\t<div id=\"input-custom-field-";
                 // line 98
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 98);
+                echo "\">
+\t\t\t\t\t\t\t\t\t";
+                // line 99
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_value", [], "any", false, false, false, 98));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_value", [], "any", false, false, false, 99));
                 foreach ($context['_seq'] as $context["_key"] => $context["custom_field_value"]) {
-                    // line 99
-                    echo "                    <div class=\"form-check\">
-                      <input type=\"checkbox\" name=\"custom_field[";
                     // line 100
-                    echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 100);
+                    echo "\t\t\t\t\t\t\t\t\t\t<div class=\"form-check\">
+\t\t\t\t\t\t\t\t\t\t\t<input type=\"checkbox\" name=\"custom_field[";
+                    // line 101
+                    echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 101);
                     echo "][]\" value=\"";
-                    echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 100);
+                    echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 101);
                     echo "\" id=\"input-custom-value-";
-                    echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 100);
-                    echo "\" class=\"form-check-input\"/> <label for=\"input-custom-value-";
-                    echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 100);
+                    echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 101);
+                    echo "\" class=\"form-check-input\"/>
+\t\t\t\t\t\t\t\t\t\t\t<label for=\"input-custom-value-";
+                    // line 102
+                    echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "custom_field_value_id", [], "any", false, false, false, 102);
                     echo "\" class=\"form-check-label\">";
-                    echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "name", [], "any", false, false, false, 100);
+                    echo twig_get_attribute($this->env, $this->source, $context["custom_field_value"], "name", [], "any", false, false, false, 102);
                     echo "</label>
-                    </div>
-                  ";
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['custom_field_value'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 103
-                echo "                </div>
-                <div id=\"error-custom-field-";
-                // line 104
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 104);
+                // line 105
+                echo "\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div id=\"error-custom-field-";
+                // line 106
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 106);
                 echo "\" class=\"invalid-feedback\"></div>
-              </div>
-            </div>
-          ";
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t";
             }
-            // line 108
+            // line 110
             echo "
-          ";
-            // line 109
-            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 109) == "text")) {
-                // line 110
-                echo "            <div class=\"row mb-3 custom-field custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 110);
+\t\t\t\t\t";
+            // line 111
+            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 111) == "text")) {
+                // line 112
+                echo "\t\t\t\t\t\t<div class=\"row mb-3 custom-field custom-field-";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 112);
                 echo "\">
-              <label for=\"input-custom-field-";
-                // line 111
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 111);
-                echo "\" class=\"\">";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 111);
-                echo "</label>
-              <div class=\"w-full\">
-                <input type=\"text\" name=\"custom_field[";
+\t\t\t\t\t\t\t<label for=\"input-custom-field-";
                 // line 113
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 113);
-                echo "]\" value=\"";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 113);
-                echo "\" placeholder=\"";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 113);
-                echo "\" id=\"input-custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 113);
-                echo "\" class=\"w-full\"/>
-                <div id=\"error-custom-field-";
-                // line 114
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 114);
-                echo "\" class=\"invalid-feedback\"></div>
-              </div>
-            </div>
-          ";
-            }
-            // line 118
-            echo "
-          ";
-            // line 119
-            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 119) == "textarea")) {
-                // line 120
-                echo "            <div class=\"row mb-3 custom-field custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 120);
-                echo "\">
-              <label for=\"input-custom-field-";
-                // line 121
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 121);
                 echo "\" class=\"\">";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 121);
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 113);
                 echo "</label>
-              <div class=\"w-full\">
-                <textarea name=\"custom_field[";
+\t\t\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t\t\t<input type=\"text\" name=\"custom_field[";
+                // line 115
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 115);
+                echo "]\" value=\"";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 115);
+                echo "\" placeholder=\"";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 115);
+                echo "\" id=\"input-custom-field-";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 115);
+                echo "\" class=\"w-full\"/>
+\t\t\t\t\t\t\t\t<div id=\"error-custom-field-";
+                // line 116
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 116);
+                echo "\" class=\"invalid-feedback\"></div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t";
+            }
+            // line 120
+            echo "
+\t\t\t\t\t";
+            // line 121
+            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 121) == "textarea")) {
+                // line 122
+                echo "\t\t\t\t\t\t<div class=\"row mb-3 custom-field custom-field-";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 122);
+                echo "\">
+\t\t\t\t\t\t\t<label for=\"input-custom-field-";
                 // line 123
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 123);
-                echo "]\" rows=\"5\" placeholder=\"";
+                echo "\" class=\"\">";
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 123);
-                echo "\" id=\"input-custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 123);
-                echo "\" class=\"w-full\">";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 123);
-                echo "</textarea>
-                <div id=\"error-custom-field-";
-                // line 124
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 124);
-                echo "\" class=\"invalid-feedback\"></div>
-              </div>
-            </div>
-          ";
-            }
-            // line 128
-            echo "
-          ";
-            // line 129
-            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 129) == "file")) {
-                // line 130
-                echo "            <div class=\"row mb-3 custom-field custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 130);
-                echo "\">
-              <label class=\"\">";
-                // line 131
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 131);
                 echo "</label>
-              <div class=\"w-full\">
-                <div>
-                  <button type=\"button\" data-oc-toggle=\"upload\" data-oc-url=\"";
-                // line 134
+\t\t\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t\t\t<textarea name=\"custom_field[";
+                // line 125
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 125);
+                echo "]\" rows=\"5\" placeholder=\"";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 125);
+                echo "\" id=\"input-custom-field-";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 125);
+                echo "\" class=\"w-full\">";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 125);
+                echo "</textarea>
+\t\t\t\t\t\t\t\t<div id=\"error-custom-field-";
+                // line 126
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 126);
+                echo "\" class=\"invalid-feedback\"></div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t";
+            }
+            // line 130
+            echo "
+\t\t\t\t\t";
+            // line 131
+            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 131) == "file")) {
+                // line 132
+                echo "\t\t\t\t\t\t<div class=\"row mb-3 custom-field custom-field-";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 132);
+                echo "\">
+\t\t\t\t\t\t\t<label class=\"\">";
+                // line 133
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 133);
+                echo "</label>
+\t\t\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t\t\t<div>
+\t\t\t\t\t\t\t\t\t<button type=\"button\" data-oc-toggle=\"upload\" data-oc-url=\"";
+                // line 136
                 echo ($context["upload"] ?? null);
                 echo "\" data-oc-size-max=\"";
                 echo ($context["config_file_max_size"] ?? null);
                 echo "\" data-oc-size-error=\"";
                 echo ($context["error_upload_size"] ?? null);
                 echo "\" data-oc-target=\"#input-custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 134);
-                echo "\" class=\"btn btn-light\"><i class=\"fa-solid fa-upload\"></i> ";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 136);
+                echo "\" class=\"btn btn-light\">
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa-solid fa-upload\"></i>
+\t\t\t\t\t\t\t\t\t\t";
+                // line 138
                 echo ($context["button_upload"] ?? null);
                 echo "</button>
-                  <input type=\"hidden\" name=\"custom_field[";
-                // line 135
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 135);
+\t\t\t\t\t\t\t\t\t<input type=\"hidden\" name=\"custom_field[";
+                // line 139
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 139);
                 echo "]\" value=\"\" id=\"input-custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 135);
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 139);
                 echo "\"/>
-                </div>
-                <div id=\"error-custom-field-";
-                // line 137
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 137);
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div id=\"error-custom-field-";
+                // line 141
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 141);
                 echo "\" class=\"invalid-feedback\"></div>
-              </div>
-            </div>
-          ";
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t";
             }
-            // line 141
+            // line 145
             echo "
-          ";
-            // line 142
-            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 142) == "date")) {
-                // line 143
-                echo "            <div class=\"row mb-3 custom-field custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 143);
-                echo "\">
-              <label for=\"input-custom-field-";
-                // line 144
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 144);
-                echo "\" class=\"\">";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 144);
-                echo "</label>
-              <div class=\"w-full\">
-                <div class=\"input-group\">
-                  <input type=\"text\" name=\"custom_field[";
+\t\t\t\t\t";
+            // line 146
+            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 146) == "date")) {
                 // line 147
+                echo "\t\t\t\t\t\t<div class=\"row mb-3 custom-field custom-field-";
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 147);
-                echo "]\" value=\"";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 147);
-                echo "\" placeholder=\"";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 147);
-                echo "\" id=\"input-custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 147);
-                echo "\" class=\"form-control date\"/>
-                  <div class=\"input-group-text\"><i class=\"fa-regular fa-calendar\"></i></div>
-                </div>
-                <div id=\"error-custom-field-";
-                // line 150
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 150);
-                echo "\" class=\"invalid-feedback\"></div>
-              </div>
-            </div>
-          ";
-            }
-            // line 154
-            echo "
-          ";
-            // line 155
-            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 155) == "time")) {
-                // line 156
-                echo "            <div class=\"row mb-3 custom-field custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 156);
                 echo "\">
-              <label for=\"input-custom-field-";
-                // line 157
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 157);
+\t\t\t\t\t\t\t<label for=\"input-custom-field-";
+                // line 148
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 148);
                 echo "\" class=\"\">";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 157);
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 148);
                 echo "</label>
-              <div class=\"w-full\">
-                <div class=\"input-group\">
-                  <input type=\"text\" name=\"custom_field[";
-                // line 160
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 160);
+\t\t\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"custom_field[";
+                // line 151
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 151);
                 echo "]\" value=\"";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 160);
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 151);
                 echo "\" placeholder=\"";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 160);
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 151);
                 echo "\" id=\"input-custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 160);
-                echo "\" class=\"form-control time\"/>
-                  <div class=\"input-group-text\"><i class=\"fa-regular fa-calendar\"></i></div>
-                </div>
-                <div id=\"error-custom-field-";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 151);
+                echo "\" class=\"form-control date\"/>
+\t\t\t\t\t\t\t\t\t<div class=\"input-group-text\">
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa-regular fa-calendar\"></i>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div id=\"error-custom-field-";
+                // line 156
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 156);
+                echo "\" class=\"invalid-feedback\"></div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t";
+            }
+            // line 160
+            echo "
+\t\t\t\t\t";
+            // line 161
+            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 161) == "time")) {
+                // line 162
+                echo "\t\t\t\t\t\t<div class=\"row mb-3 custom-field custom-field-";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 162);
+                echo "\">
+\t\t\t\t\t\t\t<label for=\"input-custom-field-";
                 // line 163
                 echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 163);
-                echo "\" class=\"invalid-feedback\"></div>
-              </div>
-            </div>
-          ";
-            }
-            // line 167
-            echo "
-          ";
-            // line 168
-            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 168) == "datetime")) {
-                // line 169
-                echo "            <div class=\"row mb-3 custom-field custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 169);
-                echo "\">
-              <label for=\"input-custom-field-";
-                // line 170
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 170);
                 echo "\" class=\"\">";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 170);
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 163);
                 echo "</label>
-              <div class=\"w-full\">
-                <div class=\"input-group\">
-                  <input type=\"text\" name=\"custom_field[";
-                // line 173
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 173);
+\t\t\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"custom_field[";
+                // line 166
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 166);
                 echo "]\" value=\"";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 173);
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 166);
                 echo "\" placeholder=\"";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 173);
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 166);
                 echo "\" id=\"input-custom-field-";
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 173);
-                echo "\" class=\"form-control datetime\"/>
-                  <div class=\"input-group-text\"><i class=\"fa-regular fa-calendar\"></i></div>
-                </div>
-                <div id=\"error-custom-field-";
-                // line 176
-                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 176);
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 166);
+                echo "\" class=\"form-control time\"/>
+\t\t\t\t\t\t\t\t\t<div class=\"input-group-text\">
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa-regular fa-calendar\"></i>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div id=\"error-custom-field-";
+                // line 171
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 171);
                 echo "\" class=\"invalid-feedback\"></div>
-              </div>
-            </div>
-          ";
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t";
             }
-            // line 180
+            // line 175
             echo "
-        ";
+\t\t\t\t\t";
+            // line 176
+            if ((twig_get_attribute($this->env, $this->source, $context["custom_field"], "type", [], "any", false, false, false, 176) == "datetime")) {
+                // line 177
+                echo "\t\t\t\t\t\t<div class=\"row mb-3 custom-field custom-field-";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 177);
+                echo "\">
+\t\t\t\t\t\t\t<label for=\"input-custom-field-";
+                // line 178
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 178);
+                echo "\" class=\"\">";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 178);
+                echo "</label>
+\t\t\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t\t\t<input type=\"text\" name=\"custom_field[";
+                // line 181
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 181);
+                echo "]\" value=\"";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "value", [], "any", false, false, false, 181);
+                echo "\" placeholder=\"";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "name", [], "any", false, false, false, 181);
+                echo "\" id=\"input-custom-field-";
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 181);
+                echo "\" class=\"form-control datetime\"/>
+\t\t\t\t\t\t\t\t\t<div class=\"input-group-text\">
+\t\t\t\t\t\t\t\t\t\t<i class=\"fa-regular fa-calendar\"></i>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t<div id=\"error-custom-field-";
+                // line 186
+                echo twig_get_attribute($this->env, $this->source, $context["custom_field"], "custom_field_id", [], "any", false, false, false, 186);
+                echo "\" class=\"invalid-feedback\"></div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t";
+            }
+            // line 190
+            echo "
+\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['custom_field'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 182
-        echo "      </fieldset>
+        // line 192
+        echo "\t\t\t</fieldset>
 
-      <fieldset>
-        <div class=\"mb-3 required\">
-          <label for=\"input-password\" class=\"\">";
-        // line 186
+\t\t\t<fieldset>
+\t\t\t\t<div class=\"mb-3 required\">
+\t\t\t\t\t<label for=\"input-password\" class=\"\">";
+        // line 196
         echo ($context["entry_password"] ?? null);
         echo "</label>
-          <div class=\"w-full\">
-            <input type=\"password\" name=\"password\" value=\"\" placeholder=\"";
-        // line 188
+\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t<input type=\"password\" name=\"password\" value=\"\" placeholder=\"";
+        // line 198
         echo ($context["entry_password"] ?? null);
         echo "\" id=\"input-password\" class=\"w-full\"/>
-            <div id=\"error-password\" class=\"invalid-feedback\"></div>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class=\"hidden\">
-        <legend>";
-        // line 194
+\t\t\t\t\t\t<div id=\"error-password\" class=\"invalid-feedback\"></div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</fieldset>
+\t\t\t<fieldset class=\"hidden\">
+\t\t\t\t<legend>";
+        // line 204
         echo ($context["text_newsletter"] ?? null);
         echo "</legend>
-        <div class=\"row mb-3\">
-          <label class=\"\">";
-        // line 196
+\t\t\t\t<div class=\"row mb-3\">
+\t\t\t\t\t<label class=\"\">";
+        // line 206
         echo ($context["entry_newsletter"] ?? null);
         echo "</label>
-          <div class=\"w-full\">
-            <div class=\"form-check form-check-inline\">
-              <input type=\"radio\" name=\"newsletter\" value=\"1\" id=\"input-newsletter-yes\" class=\"form-check-input\"/>
-              <label for=\"input-newsletter-yes\" class=\"form-check-label\">";
-        // line 200
+\t\t\t\t\t<div class=\"w-full\">
+\t\t\t\t\t\t<div class=\"form-check form-check-inline\">
+\t\t\t\t\t\t\t<input type=\"radio\" name=\"newsletter\" value=\"1\" id=\"input-newsletter-yes\" class=\"form-check-input\"/>
+\t\t\t\t\t\t\t<label for=\"input-newsletter-yes\" class=\"form-check-label\">";
+        // line 210
         echo ($context["text_yes"] ?? null);
         echo "</label>
-            </div>
-            <div class=\"form-check form-check-inline\">
-              <input type=\"radio\" name=\"newsletter\" value=\"0\" id=\"input-newsletter-no\" class=\"form-check-input\" checked/>
-              <label for=\"input-newsletter-no\" class=\"form-check-label\">";
-        // line 204
+\t\t\t\t\t\t</div>
+\t\t\t\t\t\t<div class=\"form-check form-check-inline\">
+\t\t\t\t\t\t\t<input type=\"radio\" name=\"newsletter\" value=\"0\" id=\"input-newsletter-no\" class=\"form-check-input\" checked/>
+\t\t\t\t\t\t\t<label for=\"input-newsletter-no\" class=\"form-check-label\">";
+        // line 214
         echo ($context["text_no"] ?? null);
         echo "</label>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      ";
-        // line 209
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t</fieldset>
+\t\t\t";
+        // line 219
         echo ($context["captcha"] ?? null);
         echo "
 
-      <div class=\"d-inline-block pt-2 pd-2 w-100\">
-        <div class=\"\">
-          ";
-        // line 213
+\t\t\t<div class=\"d-inline-block pt-2 pd-2 w-100\">
+\t\t\t\t<div class=\"\">
+\t\t\t\t\t";
+        // line 223
         if (($context["text_agree"] ?? null)) {
-            // line 214
-            echo "            <div class=\"flex items-center gap-[10px]\">
-              <input type=\"checkbox\" name=\"agree\" value=\"1\" class=\"\"/>
-              <label class=\"\">";
-            // line 216
+            // line 224
+            echo "\t\t\t\t\t\t<div class=\"flex items-center gap-[10px]\">
+\t\t\t\t\t\t\t<input type=\"checkbox\" name=\"agree\" value=\"1\" class=\"\"/>
+\t\t\t\t\t\t\t<label class=\"\">";
+            // line 226
             echo ($context["text_agree"] ?? null);
             echo "</label>
-            </div>
-          ";
+\t\t\t\t\t\t</div>
+\t\t\t\t\t";
         }
-        // line 219
-        echo "          <button type=\"submit\" class=\"mt-[12px] w-[170px] font-bold bg-indigo py-[12px] text-white uppercase\">";
+        // line 229
+        echo "\t\t\t\t\t<button type=\"submit\" class=\"mt-[12px] w-[170px] font-bold bg-indigo py-[12px] text-white uppercase\">";
         echo ($context["button_continue"] ?? null);
         echo "</button>
-        </div>
-      </div>
-    </form>
-  </div>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t</form>
+\t</div>
 </div>
 <style>
-  #alert{
-    top: 20px !important;
-  }
+\t#alert {
+\t\ttop: 20px !important;
+\t}
 </style>
-<script type=\"text/javascript\"><!--
-\$('#input-customer-group').on('change', function () {
-    \$.ajax({
-        url: 'index.php?route=account/custom_field&customer_group_id=' + this.value + '&language=";
-        // line 233
+<script
+\ttype=\"text/javascript\">
+\t<!--
+\t\$('#input-customer-group').on('change', function () {
+\$.ajax({
+url: 'index.php?route=account/custom_field&customer_group_id=' + this.value + '&language= ";
+        // line 245
         echo ($context["language"] ?? null);
         echo "',
-        dataType: 'json',
-        success: function (json) {
-            \$('.custom-field').hide();
-            \$('.custom-field').removeClass('required');
+dataType: 'json',
+success: function (json) {
+\$('.custom-field').hide();
+\$('.custom-field').removeClass('required');
 
-            for (i = 0; i < json.length; i++) {
-                custom_field = json[i];
+for (i = 0; i < json.length; i ++) {
+custom_field = json[i];
 
-                \$('.custom-field-' + custom_field['custom_field_id']).show();
+\$('.custom-field-' + custom_field['custom_field_id']).show();
 
-                if (custom_field['required']) {
-                    \$('.custom-field-' + custom_field['custom_field_id']).addClass('required');
-                }
-            }
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            // console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
-        }
-    });
+if (custom_field['required']) {
+\$('.custom-field-' + custom_field['custom_field_id']).addClass('required');
+}
+}
+},
+error: function (xhr, ajaxOptions, thrownError) { // console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
+}
+});
 });
 
 \$('#input-customer-group').trigger('change');
 //--></script>
 ";
-        // line 257
+        // line 268
         echo ($context["footer"] ?? null);
         echo "
 ";
@@ -678,7 +692,7 @@ class __TwigTemplate_51e54d946b0b8bdd8ce974bb716efdae extends Template
 
     public function getDebugInfo()
     {
-        return array (  664 => 257,  637 => 233,  619 => 219,  613 => 216,  609 => 214,  607 => 213,  600 => 209,  592 => 204,  585 => 200,  578 => 196,  573 => 194,  564 => 188,  559 => 186,  553 => 182,  546 => 180,  539 => 176,  527 => 173,  519 => 170,  514 => 169,  512 => 168,  509 => 167,  502 => 163,  490 => 160,  482 => 157,  477 => 156,  475 => 155,  472 => 154,  465 => 150,  453 => 147,  445 => 144,  440 => 143,  438 => 142,  435 => 141,  428 => 137,  421 => 135,  409 => 134,  403 => 131,  398 => 130,  396 => 129,  393 => 128,  386 => 124,  376 => 123,  369 => 121,  364 => 120,  362 => 119,  359 => 118,  352 => 114,  342 => 113,  335 => 111,  330 => 110,  328 => 109,  325 => 108,  318 => 104,  315 => 103,  298 => 100,  295 => 99,  291 => 98,  287 => 97,  282 => 95,  277 => 94,  275 => 93,  272 => 92,  265 => 88,  262 => 87,  245 => 84,  242 => 83,  238 => 82,  234 => 81,  229 => 79,  224 => 78,  222 => 77,  219 => 76,  212 => 72,  209 => 71,  198 => 69,  194 => 68,  190 => 67,  184 => 66,  177 => 64,  172 => 63,  170 => 62,  167 => 61,  163 => 60,  160 => 59,  152 => 54,  147 => 52,  140 => 51,  138 => 50,  128 => 45,  123 => 43,  115 => 38,  110 => 36,  102 => 31,  97 => 29,  94 => 28,  88 => 24,  73 => 22,  69 => 21,  63 => 18,  60 => 17,  58 => 16,  53 => 14,  37 => 1,);
+        return array (  678 => 268,  652 => 245,  632 => 229,  626 => 226,  622 => 224,  620 => 223,  613 => 219,  605 => 214,  598 => 210,  591 => 206,  586 => 204,  577 => 198,  572 => 196,  566 => 192,  559 => 190,  552 => 186,  538 => 181,  530 => 178,  525 => 177,  523 => 176,  520 => 175,  513 => 171,  499 => 166,  491 => 163,  486 => 162,  484 => 161,  481 => 160,  474 => 156,  460 => 151,  452 => 148,  447 => 147,  445 => 146,  442 => 145,  435 => 141,  428 => 139,  424 => 138,  413 => 136,  407 => 133,  402 => 132,  400 => 131,  397 => 130,  390 => 126,  380 => 125,  373 => 123,  368 => 122,  366 => 121,  363 => 120,  356 => 116,  346 => 115,  339 => 113,  334 => 112,  332 => 111,  329 => 110,  322 => 106,  319 => 105,  308 => 102,  300 => 101,  297 => 100,  293 => 99,  289 => 98,  284 => 96,  279 => 95,  277 => 94,  274 => 93,  267 => 89,  264 => 88,  253 => 85,  245 => 84,  242 => 83,  238 => 82,  234 => 81,  229 => 79,  224 => 78,  222 => 77,  219 => 76,  212 => 72,  209 => 71,  198 => 69,  194 => 68,  190 => 67,  184 => 66,  177 => 64,  172 => 63,  170 => 62,  167 => 61,  163 => 60,  160 => 59,  152 => 54,  147 => 52,  140 => 51,  138 => 50,  128 => 45,  123 => 43,  115 => 38,  110 => 36,  102 => 31,  97 => 29,  94 => 28,  88 => 24,  73 => 22,  69 => 21,  63 => 18,  60 => 17,  58 => 16,  53 => 14,  37 => 1,);
     }
 
     public function getSourceContext()

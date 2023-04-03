@@ -34,7 +34,7 @@ class __TwigTemplate_b8e30a351792e02feb0228f52cccf658 extends Template
     {
         $macros = $this->macros;
         // line 1
-        echo "<div class=\"sm:h-[calc(100vh-194px)] h-[calc(100vh-83px)] bg-[url('/image/catalog/demo/banners/_banner.jpg')] bg-cover\">
+        echo "<div class=\"sm:h-[calc(100vh-194px)] h-[calc(100vh-115px)] bg-[url('/image/catalog/demo/banners/_banner.jpg')] bg-cover\">
 \t<div class=\"container mx-auto sm:px-0 px-[20px] h-full\">
 \t\t<div class=\"h-full flex justify-center items-center\">
 \t\t\t<div class=\"max-w-[570px]\">

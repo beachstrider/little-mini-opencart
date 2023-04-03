@@ -1,8 +1,20 @@
 {% if categories %}
-	<div class="border-b-[1px] border-[#6B7A93] py-[1px] sm:flex hidden justify-center items-center bg-[#FFF3E2] shadow-2xl">
+	<div id="menu" class="border-b-[1px] border-[#6B7A93] py-[1px] sm:flex hidden justify-center items-center bg-[#FFF3E2] shadow-2xl">
 		{% for category in categories %}
 			<a href="{{ category.href }}" class="text-[10px] text-[#080E16] uppercase leading-[12px]">{{ category.name }}</a>
 			<div class="px-[14px] last:hidden">⋅</div>
+		{% endfor %}
+	</div>
+	<div id="mobile-menu" class="hidden absolute z-10 w-full bg-white border-b-[1px] justify-center items-center">
+		{% for category in categories %}
+			<div class="flex justify-between pl-[25px] pr-[20px] py-[20px] border-b border-[#e1e4e9]">
+				<a href="{{ category.href }}" class="text-[16px] text-[#080E16] uppercase leading-[12px]">{{ category.name }}</a>
+				<div class="px-[14px]">
+					<svg width="15" height="15" viewbox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M5 14L12 7.5L5 1" stroke="#080E16" stroke-linecap="square"/>
+					</svg>
+				</div>
+			</div>
 		{% endfor %}
 	</div>
 {% endif %}

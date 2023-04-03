@@ -49,14 +49,15 @@ class __TwigTemplate_2d934ae5e4be4387358f1757583b8ff3 extends Template
         }
         // line 7
         echo "\t<div class=\"\">
-\t\t<div class=\"sm:text-[40px] text-[30px] font-bold text-orange uppercase\">";
-        // line 8
-        echo ($context["heading_title"] ?? null);
-        echo "
-\t\t\t<span class=\"text-dark\">";
+\t\t<div class=\"sm:flex sm:text-[40px] text-[30px] font-bold text-orange uppercase\">
+\t\t\t";
         // line 9
+        echo ($context["heading_title"] ?? null);
+        echo "&nbsp;
+\t\t\t<div class=\"text-dark\">";
+        // line 10
         echo ($context["name"] ?? null);
-        echo "</span>
+        echo "</div>
 \t\t</div>
 \t</div>
 \t<div class=\"sm:pt-[38px] pt-[28px] sm:pb-[28px] pb-[21px] sm:text-[16px] text-[12px]\">
@@ -64,22 +65,22 @@ class __TwigTemplate_2d934ae5e4be4387358f1757583b8ff3 extends Template
 \t\t\t<div class=\"\">
 \t\t\t\t<div class=\"\">Full name:
 \t\t\t\t\t";
-        // line 16
+        // line 17
         echo ($context["name"] ?? null);
         echo "</div>
 \t\t\t\t<div class=\"\">Email:
 \t\t\t\t\t";
-        // line 18
+        // line 19
         echo ($context["email"] ?? null);
         echo "</div>
 \t\t\t</div>
 \t\t\t<div class=\"\">";
-        // line 20
+        // line 21
         echo ($context["text_click_logout"] ?? null);
         echo "
 \t\t\t\t<div class=\"flex justify-end\">
 \t\t\t\t\t<a href=\"";
-        // line 22
+        // line 23
         echo ($context["logout"] ?? null);
         echo "\" class=\"block border border-dark px-[16px] py-[3px] mt-[6px]\">";
         echo ($context["text_btn_logout"] ?? null);
@@ -90,13 +91,13 @@ class __TwigTemplate_2d934ae5e4be4387358f1757583b8ff3 extends Template
 \t</div>
 
 \t<div class=\"flex gap-[30px] border-t border-darkBlue py-[20px]\">
-\t\t<div class=\"min-w-[180px]\">
+\t\t<div class=\"sm:block hidden min-w-[180px]\">
 \t\t\t<div class=\"hover:fill-orange w-full pr-[20px] py-[14px] flex items-center hover:text-orange gap-[18px] last:border-none border-b border-[#6B7A9320]\">
 \t\t\t\t<svg width=\"15\" height=\"15\" viewbox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
 \t\t\t\t\t<path d=\"M0.5 3.49805L7.5 0.5L14.5 3.49805M0.5 3.49805L7.5 6.49609M0.5 3.49805V3.5M14.5 3.49805L7.5 6.49609M14.5 3.49805V11.5L7.5 14.5M14.5 3.49805L7.5 6.5V14.5M7.5 6.49609V14.5M7.5 6.49609L0.5 3.5M7.5 14.5L0.5 11.5V3.5\" stroke=\"#080E16\" stroke-linejoin=\"round\"/>
 \t\t\t\t</svg>
 \t\t\t\t<a href=\"";
-        // line 34
+        // line 35
         echo ($context["order"] ?? null);
         echo "\" class=\"block font-bold uppercase\">";
         echo ($context["text_my_orders"] ?? null);
@@ -108,7 +109,7 @@ class __TwigTemplate_2d934ae5e4be4387358f1757583b8ff3 extends Template
 \t\t\t\t\t<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.5 14.4909H2.5C2.5 13.7808 2.5 13.1053 2.5 12.4936C2.5 10.8368 3.84315 9.49414 5.5 9.49414H9.5C11.1569 9.49414 12.5 10.8368 12.5 12.4936C12.5 13.1053 12.5 13.7808 12.5 14.4909Z\" stroke=\"#080E16\" stroke-linecap=\"square\"/>
 \t\t\t\t</svg>
 \t\t\t\t<a href=\"";
-        // line 41
+        // line 42
         echo ($context["edit"] ?? null);
         echo "\" class=\"block font-bold uppercase\">";
         echo ($context["text_my_account"] ?? null);
@@ -119,7 +120,7 @@ class __TwigTemplate_2d934ae5e4be4387358f1757583b8ff3 extends Template
 \t\t\t\t\t<path d=\"M4.9 8.7L4.6 8.3L3.8 8.9L4.1 9.3L4.9 8.7ZM10.9 9.3L11.2 8.9L10.4 8.3L10.1 8.7L10.9 9.3ZM7.5 14C3.91015 14 1 11.0899 1 7.5H0C0 11.6421 3.35786 15 7.5 15V14ZM14 7.5C14 11.0899 11.0899 14 7.5 14V15C11.6421 15 15 11.6421 15 7.5H14ZM7.5 1C11.0899 1 14 3.91015 14 7.5H15C15 3.35786 11.6421 0 7.5 0V1ZM7.5 0C3.35786 0 0 3.35786 0 7.5H1C1 3.91015 3.91015 1 7.5 1V0ZM4 6H5V5H4V6ZM10 6H11V5H10V6ZM10.1 8.7C8.8 10.4333 6.2 10.4333 4.9 8.7L4.1 9.3C5.8 11.5667 9.2 11.5667 10.9 9.3L10.1 8.7Z\" fill=\"#080E16\"/>
 \t\t\t\t</svg>
 \t\t\t\t<a href=\"";
-        // line 47
+        // line 48
         echo ($context["subscription"] ?? null);
         echo "\" class=\"block font-bold uppercase\">";
         echo ($context["text_subscription"] ?? null);
@@ -130,7 +131,7 @@ class __TwigTemplate_2d934ae5e4be4387358f1757583b8ff3 extends Template
 \t\t\t\t\t<path d=\"M1.53553 6.53553L7.5 12.5L13.4645 6.53553C14.1275 5.87249 14.5 4.97322 14.5 4.03553C14.5 2.08291 12.9171 0.5 10.9645 0.5C10.0268 0.5 9.12751 0.872492 8.46447 1.53553L7.5 2.5L6.53553 1.53553C5.87249 0.872493 4.97322 0.5 4.03553 0.5C2.08291 0.5 0.5 2.08291 0.5 4.03553C0.5 4.97322 0.872491 5.87249 1.53553 6.53553Z\" stroke=\"#080E16\" stroke-linejoin=\"round\"/>
 \t\t\t\t</svg>
 \t\t\t\t<a href=\"";
-        // line 53
+        // line 54
         echo ($context["wishlist"] ?? null);
         echo "\" class=\"block font-bold uppercase\">";
         echo ($context["text_wishlist"] ?? null);
@@ -141,7 +142,7 @@ class __TwigTemplate_2d934ae5e4be4387358f1757583b8ff3 extends Template
 \t\t\t\t\t<path d=\"M13.5 7.5L10.5 10.75M13.5 7.5L10.5 4.5M13.5 7.5L4 7.5M8 13.5H1.5L1.5 1.5L8 1.5\" stroke=\"#080E16\"/>
 \t\t\t\t</svg>
 \t\t\t\t<a href=\"";
-        // line 59
+        // line 60
         echo ($context["logout"] ?? null);
         echo "\" class=\"block font-bold uppercase\">";
         echo ($context["text_logout"] ?? null);
@@ -149,7 +150,7 @@ class __TwigTemplate_2d934ae5e4be4387358f1757583b8ff3 extends Template
 \t\t\t</div>
 
 \t\t\t";
-        // line 131
+        // line 132
         echo "\t\t</div>
 ";
     }
@@ -166,7 +167,7 @@ class __TwigTemplate_2d934ae5e4be4387358f1757583b8ff3 extends Template
 
     public function getDebugInfo()
     {
-        return array (  153 => 131,  145 => 59,  134 => 53,  123 => 47,  112 => 41,  100 => 34,  83 => 22,  78 => 20,  73 => 18,  68 => 16,  58 => 9,  54 => 8,  51 => 7,  46 => 5,  42 => 3,  40 => 2,  37 => 1,);
+        return array (  154 => 132,  146 => 60,  135 => 54,  124 => 48,  113 => 42,  101 => 35,  84 => 23,  79 => 21,  74 => 19,  69 => 17,  59 => 10,  55 => 9,  51 => 7,  46 => 5,  42 => 3,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
