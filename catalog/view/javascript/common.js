@@ -1,3 +1,5 @@
+const language = $("html").attr("language");
+
 function getURLVar(key) {
   var value = [];
 
@@ -34,7 +36,7 @@ $("#form-product").on("submit", function (e) {
   e.preventDefault();
 
   $.ajax({
-    url: "index.php?route=checkout/cart|add&language={{ language }}",
+    url: `index.php?route=checkout/cart|add&language=${language}`,
     type: "post",
     data: $("#form-product").serialize(),
     dataType: "json",
@@ -180,7 +182,7 @@ $(document).ready(function () {
       var url =
         $("base").attr("href") +
         "index.php?route=product/search&language=" +
-        $(this).data("lang");
+        language;
 
       var value = $("#search").eq(0).val();
 
@@ -348,7 +350,7 @@ $(document).on("submit", "form[data-oc-toggle='ajax']", function (e) {
     complete: function () {
       $(button).prop("disabled", false).removeClass("loading");
     },
-    success: function (json) {
+    success: async function (json) {
       $(".alert-dismissible").remove();
       $(form).find(".is-invalid").removeClass("is-invalid");
       $(form).find(".invalid-feedback").removeClass("d-block");
@@ -384,11 +386,27 @@ $(document).on("submit", "form[data-oc-toggle='ajax']", function (e) {
       if (json["success"]) {
         toast({ text: json["success"] });
         // Refresh
-        var url = $(form).attr("data-oc-load");
-        var target = $(form).attr("data-oc-target");
+        // var url = $(form).attr("data-oc-load");
+        // var target = $(form).attr("data-oc-target");
 
-        if (url !== undefined && target !== undefined) {
-          $(target).load(url);
+        const urls = $(form).attr("data-oc-load").split(" ");
+        const targets = $(form).attr("data-oc-target").split(" ");
+
+        console.log("urls, targets", urls, targets);
+
+        if (urls.length !== targets.length) {
+          throw new Error("Arrays must have the same length");
+        }
+
+        for (let i = 0; i < urls.length; i++) {
+          const target = targets[i];
+          const url = urls[i];
+
+          console.log("---", target, url);
+
+          if (url !== undefined && target !== undefined) {
+            await $(target).load(url);
+          }
         }
       }
 
@@ -637,7 +655,7 @@ function toast({ type = "success", text }) {
     dark: "gray",
   };
 
-  let duration = 5000;
+  let duration = 2000;
 
   $("#alert").prepend(`
     <div id="toast-${my_toast_id}" class="alert-item sm:min-w-[400px] flex p-4 mb-4 text-${colors[type]}-800 border-t-4 border-${colors[type]}-300 bg-${colors[type]}-50 dark:text-${colors[type]}-400 dark:bg-gray-800 dark:border-${colors[type]}-800" role="alert">
@@ -655,4 +673,36 @@ function toast({ type = "success", text }) {
   setTimeout(function () {
     $(`#toast-${my_toast_id}`).remove();
   }, duration);
+}
+
+$(document).ready(function () {
+  const isRead = localStorage.getItem("is_read_start_ad");
+  if (isRead === null) {
+    $("body").prepend(`
+      <div id="start_ad" class="modal">
+        <div class="relative content bg-white sm:w-[770px] w-full sm:px-[36px] sm:py-[30] px-[27px] py-[22px]">
+          <div class="sm:flex justify-center sm:text-[40px] text-[30px] font-bold uppercase">
+            <div class="text-orange">LUXURY</div>
+            &nbsp;AT MEMBERS PRICE
+          </div>
+          <div class="sm:text-[18px] text-[14px] mt-[16px] mb-[28px]">
+            <span class="font-bold">LittleMini offers huge savings</span>
+            on everything from makeup, perfumes, shampoo to personal care products, but it is exclusively for members.
+            <br>
+            <br>
+            Are you ready to say goodbye to overpriced gods? Buy at members price, and we'll automatically create a membership with your first order. The first month is free. After that, it's only DKK 89,-per month - and you can cancel your membership at the end of each membership period.
+            <a href="#" class="underline">Read more</a>
+          </div>
+          <div class="flex justify-center mt-[30px]">
+            <button onclick="closeStartAd()" class="bg-indigo text-white font-semibold px-[10px] py-[5px]">SOUNDS GOOD</button>
+          </div>
+        </div>
+      </div>
+    `);
+  }
+});
+
+function closeStartAd() {
+  localStorage.setItem("is_read_start_ad", true);
+  $("#start_ad").remove();
 }

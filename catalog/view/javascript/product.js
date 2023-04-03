@@ -17,7 +17,7 @@ $("#form-product").on("submit", function (e) {
   }
 
   $.ajax({
-    url: "index.php?route=checkout/cart|add&language={{ language }}",
+    url: `index.php?route=checkout/cart|add&language=${language}`,
     type: "post",
     data,
     dataType: "json",
@@ -51,7 +51,9 @@ $("#form-product").on("submit", function (e) {
       if (json["success"]) {
         toast({ text: json["success"] });
 
-        $("#header-cart").load("index.php?route=common/cart|info");
+        $("#header-cart").load(
+          `/index.php?route=common/cart|info?language=${language}`
+        );
       }
     },
     error: function (xhr, ajaxOptions, thrownError) {

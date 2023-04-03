@@ -10,7 +10,7 @@ class ContentBanner extends \Opencart\System\Engine\Controller {
 			$route = 'common/home';
 		}
 
-		$data[] = "";
+		$data['about'] = $this->url->link('information/information', 'language=' . $this->config->get('config_language') . '&information_id=1');
 
 		return $this->load->view('common/content_banner', $data);
 	}

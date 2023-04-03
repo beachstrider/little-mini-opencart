@@ -40,7 +40,7 @@ class __TwigTemplate_954b94bd953c5bc4388b0f3ac44aa8be extends Template
         // line 2
         echo ($context["menu"] ?? null);
         echo "
-<div class=\"content w-full\">
+<div id=\"wishlist\" class=\"content w-full\">
 \t";
         // line 4
         echo ($context["list"] ?? null);

@@ -310,3 +310,11 @@ age\vendor\twig\twig\src\Cache\FilesystemCache.php on line 61
 2023-04-01 20:38:30 - PHP Warning:  Undefined array key "customer_token" in E:\xampp\htdocs\catalog\controller\common\account_dropdown_menu.php on line 24
 2023-04-01 20:38:30 - PHP Warning:  Undefined array key "customer_token" in E:\xampp\htdocs\catalog\controller\common\account_dropdown_menu.php on line 25
 2023-04-01 20:38:30 - PHP Warning:  Undefined array key "customer_token" in E:\xampp\htdocs\catalog\controller\common\account_dropdown_menu.php on line 28
+2023-04-03 02:02:42 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\system\storage\cache\template\0f\0f00259d80cb0383495839700828ec7f.php on line 49
+2023-04-03 02:02:42 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\system\storage\cache\template\0f\0f00259d80cb0383495839700828ec7f.php on line 49
+2023-04-03 02:02:57 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\system\storage\cache\template\0f\0f00259d80cb0383495839700828ec7f.php on line 49
+2023-04-03 02:02:57 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\system\storage\cache\template\0f\0f00259d80cb0383495839700828ec7f.php on line 49
+2023-04-03 02:17:06 - PHP Warning:  Undefined array key "model" in E:\xampp\htdocs\catalog\controller\account\wishlist.php on line 87
+2023-04-03 02:17:06 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\account\wishlist.php on line 88
+2023-04-03 02:17:06 - PHP Warning:  Undefined array key "model" in E:\xampp\htdocs\catalog\controller\account\wishlist.php on line 87
+2023-04-03 02:17:06 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\account\wishlist.php on line 88
