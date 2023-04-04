@@ -17,9 +17,14 @@
         </div>
     </div>
 </form>
+<button type="button" id="button-shipping-method" class="hidden"></button>
+
 <script type="text/javascript">
+
 // Shipping Methods
-async function refreshShippingMethod(){
+$('#button-shipping-method').on('click', function () {
+    var element = this;
+
     chain.attach(function () {
         return $.ajax({
             url: 'index.php?route=checkout/shipping_method|getMethods&language={{ language }}',
@@ -79,7 +84,7 @@ async function refreshShippingMethod(){
             }
         });
     });
-};
+});
 
 // Shipping Method
 $('#form-shipping-method').on('submit', function (e) {
@@ -117,4 +122,4 @@ $('#form-shipping-method').on('submit', function (e) {
         });
     });
 });
-//--></script>
+</script>

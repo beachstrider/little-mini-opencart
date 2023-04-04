@@ -60,37 +60,37 @@ class __TwigTemplate_f53167db5cd690b7bad033239e6f82d1 extends Template
         echo "</button>
   </div>
 </fieldset>
-<script type=\"text/javascript\"><!--
+<script type=\"text/javascript\">
 \$('#button-confirm').on('click', function () {
-    var element = this;
+  var element = this;
 
-    \$.ajax({
-        url: 'index.php?route=extension/opencart/payment/bank_transfer|confirm&language=";
+  \$.ajax({
+    url: 'index.php?route=extension/opencart/payment/bank_transfer|confirm&language=";
         // line 17
         echo ($context["language"] ?? null);
         echo "',
-        dataType: 'json',
-        beforeSend: function () {
-            \$(element).prop('disabled', true).addClass('loading');
-        },
-        complete: function () {
-            \$(element).prop('disabled', false).removeClass('loading');
-        },
-        success: function (json) {
-            if (json['error']) {
-                \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['error'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
-            }
+    dataType: 'json',
+    beforeSend: function () {
+      \$(element).prop('disabled', true).addClass('loading');
+    },
+    complete: function () {
+      \$(element).prop('disabled', false).removeClass('loading');
+    },
+    success: function (json) {
+      if (json['error']) {
+        toast({type: 'error', text: json['error']})
+      }
 
-            if (json['redirect']) {
-                location = json['redirect'];
-            }
-        },
-        error: function (xhr, ajaxOptions, thrownError) {
-            console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
-        }
-    });
+      if (json['redirect']) {
+        location = json['redirect'];
+      }
+    },
+    error: function (xhr, ajaxOptions, thrownError) {
+      console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
+    }
+  });
 });
-//--></script>
+</script>
 ";
     }
 

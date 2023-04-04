@@ -81,13 +81,18 @@ class __TwigTemplate_7e3a4d9fe324855c23c385c7d75a843d extends Template
         echo "        </div>
     </div>
 </form>
+<button type=\"button\" id=\"button-shipping-method\" class=\"hidden\"></button>
+
 <script type=\"text/javascript\">
+
 // Shipping Methods
-async function refreshShippingMethod(){
+\$('#button-shipping-method').on('click', function () {
+    var element = this;
+
     chain.attach(function () {
         return \$.ajax({
             url: 'index.php?route=checkout/shipping_method|getMethods&language=";
-        // line 25
+        // line 30
         echo ($context["language"] ?? null);
         echo "',
             dataType: 'json',
@@ -107,7 +112,7 @@ async function refreshShippingMethod(){
 
                 // Shipping Methods
                 html = '<option value=\"\">";
-        // line 42
+        // line 47
         echo ($context["text_select"] ?? null);
         echo "</option>';
 
@@ -143,7 +148,7 @@ async function refreshShippingMethod(){
                 \$('#input-shipping-method').html(html);
 
                 \$('#checkout-confirm').load('index.php?route=checkout/confirm|confirm&language=";
-        // line 75
+        // line 80
         echo ($context["language"] ?? null);
         echo "');
             },
@@ -152,7 +157,7 @@ async function refreshShippingMethod(){
             }
         });
     });
-};
+});
 
 // Shipping Method
 \$('#form-shipping-method').on('submit', function (e) {
@@ -162,7 +167,7 @@ async function refreshShippingMethod(){
     chain.attach(function () {
         return \$.ajax({
             url: 'index.php?route=checkout/shipping_method|save&language=";
-        // line 91
+        // line 96
         echo ($context["language"] ?? null);
         echo "',
             type: 'post',
@@ -193,7 +198,7 @@ async function refreshShippingMethod(){
         });
     });
 });
-//--></script>";
+</script>";
     }
 
     public function getTemplateName()
@@ -208,7 +213,7 @@ async function refreshShippingMethod(){
 
     public function getDebugInfo()
     {
-        return array (  166 => 91,  147 => 75,  111 => 42,  91 => 25,  81 => 17,  69 => 13,  65 => 12,  59 => 9,  55 => 7,  51 => 6,  45 => 3,  37 => 1,);
+        return array (  171 => 96,  152 => 80,  116 => 47,  96 => 30,  81 => 17,  69 => 13,  65 => 12,  59 => 9,  55 => 7,  51 => 6,  45 => 3,  37 => 1,);
     }
 
     public function getSourceContext()

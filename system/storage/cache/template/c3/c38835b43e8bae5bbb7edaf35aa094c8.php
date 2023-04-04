@@ -415,6 +415,7 @@ class __TwigTemplate_2d43ea618b7ca97ebc8433ae3d9f8765 extends Template
                   \$('#btn-change-address').removeClass('bg-darkBlue');
                   \$('#btn-change-address').removeClass('text-white');
                   \$('#btn-change-address').text('Change');
+                  \$('#button-shipping-method').trigger('click');
               }
           },
           error: function (xhr, ajaxOptions, thrownError) {
@@ -430,7 +431,7 @@ class __TwigTemplate_2d43ea618b7ca97ebc8433ae3d9f8765 extends Template
     chain.attach(function () {
         return \$.ajax({
             url: 'index.php?route=localisation/country&language=";
-        // line 262
+        // line 263
         echo ($context["language"] ?? null);
         echo "&country_id=' + \$('#input-shipping-country').val(),
             dataType: 'json',
@@ -448,7 +449,7 @@ class __TwigTemplate_2d43ea618b7ca97ebc8433ae3d9f8765 extends Template
                 }
 
                 html = '<option value=\"\">";
-        // line 277
+        // line 278
         echo ($context["text_select"] ?? null);
         echo "</option>';
 
@@ -457,7 +458,7 @@ class __TwigTemplate_2d43ea618b7ca97ebc8433ae3d9f8765 extends Template
                         html += '<option value=\"' + json['zone'][i]['zone_id'] + '\"';
 
                         if (json['zone'][i]['zone_id'] == '";
-        // line 283
+        // line 284
         echo ($context["zone_id"] ?? null);
         echo "') {
                             html += ' selected';
@@ -467,7 +468,7 @@ class __TwigTemplate_2d43ea618b7ca97ebc8433ae3d9f8765 extends Template
                     }
                 } else {
                     html += '<option value=\"0\" selected>";
-        // line 290
+        // line 291
         echo ($context["text_none"] ?? null);
         echo "</option>';
                 }
@@ -498,7 +499,7 @@ class __TwigTemplate_2d43ea618b7ca97ebc8433ae3d9f8765 extends Template
 
     public function getDebugInfo()
     {
-        return array (  471 => 290,  461 => 283,  452 => 277,  434 => 262,  362 => 193,  323 => 157,  290 => 127,  284 => 123,  278 => 118,  269 => 115,  260 => 114,  256 => 113,  252 => 112,  244 => 107,  240 => 105,  229 => 96,  225 => 94,  215 => 88,  207 => 85,  199 => 80,  195 => 78,  188 => 73,  181 => 69,  177 => 67,  165 => 56,  155 => 50,  147 => 47,  139 => 42,  135 => 40,  129 => 35,  114 => 33,  110 => 32,  98 => 27,  92 => 24,  84 => 19,  80 => 18,  68 => 15,  63 => 13,  52 => 9,  41 => 3,  37 => 1,);
+        return array (  472 => 291,  462 => 284,  453 => 278,  435 => 263,  362 => 193,  323 => 157,  290 => 127,  284 => 123,  278 => 118,  269 => 115,  260 => 114,  256 => 113,  252 => 112,  244 => 107,  240 => 105,  229 => 96,  225 => 94,  215 => 88,  207 => 85,  199 => 80,  195 => 78,  188 => 73,  181 => 69,  177 => 67,  165 => 56,  155 => 50,  147 => 47,  139 => 42,  135 => 40,  129 => 35,  114 => 33,  110 => 32,  98 => 27,  92 => 24,  84 => 19,  80 => 18,  68 => 15,  63 => 13,  52 => 9,  41 => 3,  37 => 1,);
     }
 
     public function getSourceContext()

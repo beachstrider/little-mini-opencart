@@ -87,7 +87,7 @@ class __TwigTemplate_ff204ef993bda38470d341e31db1d2c4 extends Template
         },
         success: function (json) {
             if (json['error']) {
-                \$('#alert').prepend('<div class=\"alert alert-danger alert-dismissible\"><i class=\"fa-solid fa-circle-exclamation\"></i> ' + json['error'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
+                toast({type: 'error', text: json['error']})
             }
 
             if (json['redirect']) {

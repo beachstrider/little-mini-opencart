@@ -123,6 +123,8 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
         }
 
         \$('#btn-group-payment-method').html(html);
+        \$('#checkout-confirm').hide();
+        \$('#checkout-payment-method').show();
       },
       error: function (xhr, ajaxOptions, thrownError) {
         console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
@@ -133,40 +135,43 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
 
 // Payment Method
 \$(document).on('click', '.btn-payment-method', async function (e) {
-    \$('#input-payment-method').val(\$(e.target).val());
+  \$('#input-payment-method').val(\$(e.target).val());
 
-    chain.attach(function () {
-        return \$.ajax({
-            url: 'index.php?route=checkout/payment_method|save&language=";
-        // line 81
+  chain.attach(function () {
+    return \$.ajax({
+      url: 'index.php?route=checkout/payment_method|save&language=";
+        // line 83
         echo ($context["language"] ?? null);
         echo "',
-            type: 'post',
-            data: \$('#form-payment-method').serialize(),
-            dataType: 'json',
-            contentType: 'application/x-www-form-urlencoded',
-            success: function (json) {
-                console.log(json);
+      type: 'post',
+      data: \$('#form-payment-method').serialize(),
+      dataType: 'json',
+      contentType: 'application/x-www-form-urlencoded',
+      success: function (json) {
+        console.log(json);
 
-                if (json['redirect']) {
-                    location = json['redirect'];
-                }
+        if (json['redirect']) {
+          location = json['redirect'];
+        }
 
-                if (json['error']) {
-                    toast({type: 'error', text: json['error']})
-                }
+        if (json['error']) {
+          toast({type: 'error', text: json['error']})
+        }
 
-                if (json['success']) {
-                  \$('#checkout-payment').html(json['payment'])
-                }
-                
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
-            }
-        });
+        if (json['success']) {
+          \$('#checkout-payment').html(json['payment']);
+          \$('#checkout-confirm').load('index.php?route=checkout/confirm|confirm&language=";
+        // line 101
+        echo ($context["language"] ?? null);
+        echo "');
+        }
+        
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
+      }
     });
-
+  });
 });
 
 </script>
@@ -185,7 +190,7 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  142 => 81,  99 => 41,  84 => 28,  78 => 26,  76 => 25,  72 => 23,  66 => 20,  63 => 19,  61 => 18,  41 => 3,  37 => 1,);
+        return array (  165 => 101,  144 => 83,  99 => 41,  84 => 28,  78 => 26,  76 => 25,  72 => 23,  66 => 20,  63 => 19,  61 => 18,  41 => 3,  37 => 1,);
     }
 
     public function getSourceContext()

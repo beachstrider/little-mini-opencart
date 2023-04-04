@@ -391,3 +391,12 @@ Line: 22
 2023-04-04 02:55:34 - TypeError:  Opencart\Catalog\Model\Checkout\Order::getOrder(): Argument #1 ($order_id) must be of type int, null given in E:\xampp\htdocs\catalog\model\checkout\order.php on line 169
 2023-04-04 02:55:39 - PHP Warning:  Undefined array key "order_id" in E:\xampp\htdocs\extension\opcreditcardfour\catalog\controller\payment\op_creditcard.php on line 22
 2023-04-04 02:55:39 - TypeError:  Opencart\Catalog\Model\Checkout\Order::getOrder(): Argument #1 ($order_id) must be of type int, null given in E:\xampp\htdocs\catalog\model\checkout\order.php on line 169
+2023-04-04 07:43:32 - PHP Warning:  Undefined variable $data in E:\xampp\htdocs\extension\opencart\catalog\controller\payment\bank_transfer.php on line 20
+2023-04-04 07:47:39 - PHP Warning:  Undefined array key "order_id" in E:\xampp\htdocs\extension\opencart\catalog\controller\payment\bank_transfer.php on line 20
+2023-04-04 07:53:26 - PHP Warning:  Undefined array key "order_id" in E:\xampp\htdocs\catalog\controller\checkout\confirm.php on line 286
+2023-04-04 07:53:30 - PHP Warning:  Undefined array key "order_id" in E:\xampp\htdocs\catalog\controller\checkout\confirm.php on line 286
+2023-04-04 07:54:32 - PHP Warning:  Undefined variable $order_info in E:\xampp\htdocs\catalog\controller\checkout\confirm.php on line 286
+2023-04-04 08:07:49 - PHP Warning:  Undefined variable $order_data in E:\xampp\htdocs\catalog\controller\checkout\payment_method.php on line 319
+2023-04-04 08:07:49 - TypeError:  Opencart\Catalog\Model\Checkout\Order::editOrder(): Argument #2 ($data) must be of type array, null given in E:\xampp\htdocs\catalog\model\checkout\order.php on line 74
+2023-04-04 08:45:37 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\checkout\shipping_method.php on line 168
+2023-04-04 08:50:31 - PHP Warning:  Undefined array key "shipping_methods" in E:\xampp\htdocs\catalog\controller\checkout\shipping_method.php on line 168

@@ -245,6 +245,7 @@ $('#form-shipping-address').on('submit', function (e) {
                   $('#btn-change-address').removeClass('bg-darkBlue');
                   $('#btn-change-address').removeClass('text-white');
                   $('#btn-change-address').text('Change');
+                  $('#button-shipping-method').trigger('click');
               }
           },
           error: function (xhr, ajaxOptions, thrownError) {
