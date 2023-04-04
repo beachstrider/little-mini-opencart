@@ -361,3 +361,33 @@ Line: 41
 2023-04-03 19:38:25 - PHP Warning:  rename(E:\xampp\htdocs\system\storage\cache\template\d8\d85FF28.tmp,E:/xampp/htdocs/system/storage/cache/template/d8/d856a49b10821c1c26187898d68ebe1a.php): Access is denied (code: 5) in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 61
 2023-04-03 19:38:25 - RuntimeException:  Failed to write cache file "E:/xampp/htdocs/system/storage/cache/template/d8/d856a49b10821c1c26187898d68ebe1a.php". in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 76
 2023-04-04 00:07:53 - PHP Warning:  Undefined variable $status in E:\xampp\htdocs\catalog\controller\checkout\payment_method.php on line 439
+2023-04-04 01:35:18 - PHP Warning: Undefined array key "message"
+File: E:\xampp\htdocs\extension\paypal\admin\controller\payment\paypal.php
+Line: 393
+
+2023-04-04 01:35:18 - PHP Warning: Undefined array key "message"
+File: E:\xampp\htdocs\extension\paypal\admin\controller\payment\paypal.php
+Line: 396
+
+2023-04-04 01:35:18 - TypeError:  Opencart\Admin\Model\Extension\PayPal\Payment\PayPal::log(): Argument #2 ($title) must be of type string, null given
+File: E:\xampp\htdocs\extension\paypal\admin\model\payment\paypal.php
+Line: 22
+
+2023-04-04 01:35:22 - PHP Warning: Undefined array key "message"
+File: E:\xampp\htdocs\extension\paypal\admin\controller\payment\paypal.php
+Line: 393
+
+2023-04-04 01:35:22 - PHP Warning: Undefined array key "message"
+File: E:\xampp\htdocs\extension\paypal\admin\controller\payment\paypal.php
+Line: 396
+
+2023-04-04 01:35:22 - TypeError:  Opencart\Admin\Model\Extension\PayPal\Payment\PayPal::log(): Argument #2 ($title) must be of type string, null given
+File: E:\xampp\htdocs\extension\paypal\admin\model\payment\paypal.php
+Line: 22
+
+2023-04-04 02:55:12 - PHP Warning:  Undefined array key "order_id" in E:\xampp\htdocs\extension\opcreditcardfour\catalog\controller\payment\op_creditcard.php on line 22
+2023-04-04 02:55:12 - TypeError:  Opencart\Catalog\Model\Checkout\Order::getOrder(): Argument #1 ($order_id) must be of type int, null given in E:\xampp\htdocs\catalog\model\checkout\order.php on line 169
+2023-04-04 02:55:34 - PHP Warning:  Undefined array key "order_id" in E:\xampp\htdocs\extension\opcreditcardfour\catalog\controller\payment\op_creditcard.php on line 22
+2023-04-04 02:55:34 - TypeError:  Opencart\Catalog\Model\Checkout\Order::getOrder(): Argument #1 ($order_id) must be of type int, null given in E:\xampp\htdocs\catalog\model\checkout\order.php on line 169
+2023-04-04 02:55:39 - PHP Warning:  Undefined array key "order_id" in E:\xampp\htdocs\extension\opcreditcardfour\catalog\controller\payment\op_creditcard.php on line 22
+2023-04-04 02:55:39 - TypeError:  Opencart\Catalog\Model\Checkout\Order::getOrder(): Argument #1 ($order_id) must be of type int, null given in E:\xampp\htdocs\catalog\model\checkout\order.php on line 169

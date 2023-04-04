@@ -210,6 +210,7 @@ class __TwigTemplate_9bbc825651b84980e73cbbcd4e0a3ec5 extends Template
 
 <script>
   \$('#approve_purchase').on('click', function(){
+    \$('#btn-refetch-payment-method').trigger('click');
     \$('#checkout-review').hide();
     \$('#checkout-payment-method').show();
   });

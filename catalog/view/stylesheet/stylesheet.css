@@ -308,7 +308,14 @@ footer a {
 }
 
 /* menu */
-#menu {}
+#button-confirm {
+  background-color: #569F67;
+  color: white;
+  min-width: 270px;
+  padding: 12px 0;
+  font-family: 'avenir-semibold';
+  text-transform: uppercase;
+}
 
 #menu.navbar {
   padding: 0 1rem;

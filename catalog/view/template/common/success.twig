@@ -1,18 +1,16 @@
 {{ header }}
-<div id="common-success" class="container mx-auto sm:px-0 px-[20px]">
-  <ul class="breadcrumb">
-    {% for breadcrumb in breadcrumbs %}
-      <li class="breadcrumb-item"><a href="{{ breadcrumb.href }}">{{ breadcrumb.text }}</a></li>
-    {% endfor %}
-  </ul>
-  <div class="row">{{ column_left }}
-    <div id="content" class="col">{{ content_top }}
-      <h1>{{ heading_title }}</h1>
-      {{ text_message }}
-      <div class="d-inline-block pt-2 pd-2 w-100">
-        <div class="float-end"><a href="{{ continue }}" class="btn btn-primary">{{ button_continue }}</a></div>
-      </div>
-      {{ content_bottom }}</div>
-    {{ column_right }}</div>
+
+<div id="error-not-found" class="container mx-auto sm:px-0 px-[20px]">
+	<div class="flex justify-center items-center sm:py-[40px] py-[30px]">
+		<div id="content" class="col">
+			<h1 class="sm:text-[20px] text-[15px] font-bold">{{ heading_title }}</h1>
+			<p class="sm:mt-[12px] mt-[9px]">{{ text_message }}</p>
+			<div class="sm:mt-[20px] mt-[15px]">
+				<div class="flex">
+					<a href="{{ continue }}" class="block text-center min-w-[170px] py-[12px] bg-indigo text-[white] font-semibold uppercase">{{ button_continue }}</a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 {{ footer }}

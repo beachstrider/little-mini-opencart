@@ -5,92 +5,76 @@
     <div class="opacity-[0.5]">(4/4)</div>
 </h1>
 
-<form id="form-payment-method">
-  <fieldset>
-    <legend>{{ heading_title }}</legend>
-    <div class="input-group">
-      <select name="payment_method" id="input-payment-method" class="form-select"{% if not payment_methods %} disabled{% endif %}>
-        <option value="">{{ text_select }}</option>
-        {% for payment_method in payment_methods %}
-          <option value="{{ payment_method.code }}"{% if payment_method.code == code %} selected{% endif %}>{{ payment_method.title }}</option>
-        {% endfor %}
+<div class="sm:grid grid-cols-5 gap-[30px] sm:py-[40px] py-[30px]">
+  <div class="col-span-3">
+    <form id="form-payment-method">
+      <div id="btn-group-payment-method"></div>
+      
+      <div class="input-group">
+        <input type="hidden" name="payment_method" id="input-payment-method">
+        <button type="button" id="btn-refetch-payment-method" class="btn btn-light hidden"><i class="fa-solid fa-rotate"></i></button>
+      </div>
+    </form>
+    {% if text_agree %}
+      <div class="mb-2">
+        <div class="text-end">{{ text_agree }} <input type="hidden" name="agree" value="1" id="input-agree" /></div>
+      </div>
+    {% endif %}
 
-        {% if stores %}
-          <optgroup label="{{ text_stored }}">
-            {% for store in stores %}
-              <option value="{{ store.code }}"{% if store.code == code %} selected{% endif %}>{{ store.name }}</option>
-            {% endfor %}
-          </optgroup>
-        {% endif %}
-      </select>
-      <button type="button" id="button-payment-method" class="btn btn-light"><i class="fa-solid fa-rotate"></i></button>
+    <div id="checkout-payment" class="mt-[40px]">
+      {% if payment %}
+        {{ payment }}
+      {% endif %}
     </div>
-  </fieldset>
-</form>
-<br/>
-{% if text_agree %}
-  <div class="mb-2">
-    <div class="text-end">{{ text_agree }} <input type="hidden" name="agree" value="1" id="input-agree" /></div>
+  
   </div>
-{% endif %}
-
-<div id="checkout-payment">
-  {% if payment %}
-    {{ payment }}
-  {% endif %}
 </div>
+<br/>
 
 <script type="text/javascript">
 // Payment Methods
-$('#button-payment-method').on('click', function () {
-    var element = this;
+$('#btn-refetch-payment-method').on('click', function () {
+  var element = this;
 
-    chain.attach(function () {
-        return $.ajax({
-            url: 'index.php?route=checkout/payment_method|getMethods&language={{ language }}',
-            dataType: 'json',
-            beforeSend: function () {
-                $('#input-payment-method').prop('disabled', true);
-            },
-            success: function (json) {
-                console.log(json);
+  chain.attach(function () {
+    return $.ajax({
+      url: 'index.php?route=checkout/payment_method|getMethods&language={{ language }}',
+      dataType: 'json',
+      success: function (json) {
+        console.log(json);
 
-                if (json['redirect']) {
-                    location = json['redirect'];
-                }
+        if (json['redirect']) {
+          location = json['redirect'];
+        }
 
-                if (json['error']) {
-                      toast({type: 'error', text: json['error']})
+        if (json['error']) {
+          toast({type: 'error', text: json['error']})
+        }
 
-                    $('#input-shipping-method').prop('disabled', true);
-                }
+        html = '';
 
-                html = '<option value="">{{ text_select }}</option>';
+        if (json['payment_methods']) {
+          for (i in json['payment_methods']) {
+            html += `
+              <div class="sm:py-[20px] py-[15px] border-b border-darkBlue flex gap-[30px]">
+                <button type="button" value="${json['payment_methods'][i]['code']}" class="btn-payment-method min-w-[270px] py-[12px] bg-orangeGray text-indigo font-semibold uppercase" ${json['payment_methods'][i]['code'] == $('#input-payment-method').val() ? 'selected' : ''}>${json['payment_methods'][i]['title']}</button>
+              </div>
+            `;
+          }
+        }
 
-                if (json['payment_methods']) {
-                    for (i in json['payment_methods']) {
-                        if (json['payment_methods'][i]['code'] == $('#input-payment-method').val()) {
-                            html += '<option value="' + json['payment_methods'][i]['code'] + '" selected>' + json['payment_methods'][i]['title'] + '</option>';
-                        } else {
-                            html += '<option value="' + json['payment_methods'][i]['code'] + '">' + json['payment_methods'][i]['title'] + '</option>';
-                        }
-                    }
-
-                    $('#input-payment-method').prop('disabled', false);
-                }
-
-                $('#input-payment-method').html(html);
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
-            }
-        });
+        $('#btn-group-payment-method').html(html);
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+      }
     });
+  });
 });
 
 // Payment Method
-$('#input-payment-method').on('change', async function () {
-    var element = this;
+$(document).on('click', '.btn-payment-method', async function (e) {
+    $('#input-payment-method').val($(e.target).val());
 
     chain.attach(function () {
         return $.ajax({
@@ -99,12 +83,6 @@ $('#input-payment-method').on('change', async function () {
             data: $('#form-payment-method').serialize(),
             dataType: 'json',
             contentType: 'application/x-www-form-urlencoded',
-            beforeSend: function () {
-                $(element).prop('disabled', true);
-            },
-            complete: function () {
-                $(element).prop('disabled', false);
-            },
             success: function (json) {
                 console.log(json);
 
@@ -117,10 +95,9 @@ $('#input-payment-method').on('change', async function () {
                 }
 
                 if (json['success']) {
-                    toast({type: 'success', text: json['success']})
+                  $('#checkout-payment').html(json['payment'])
                 }
                 
-                $('#checkout-payment').html(json['payment'])
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 console.log(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);

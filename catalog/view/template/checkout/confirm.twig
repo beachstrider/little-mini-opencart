@@ -116,6 +116,7 @@
 
 <script>
   $('#approve_purchase').on('click', function(){
+    $('#btn-refetch-payment-method').trigger('click');
     $('#checkout-review').hide();
     $('#checkout-payment-method').show();
   });

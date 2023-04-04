@@ -46,184 +46,105 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
     <div class=\"opacity-[0.5]\">(4/4)</div>
 </h1>
 
-<form id=\"form-payment-method\">
-  <fieldset>
-    <legend>";
-        // line 10
-        echo ($context["heading_title"] ?? null);
-        echo "</legend>
-    <div class=\"input-group\">
-      <select name=\"payment_method\" id=\"input-payment-method\" class=\"form-select\"";
-        // line 12
-        if ( !($context["payment_methods"] ?? null)) {
-            echo " disabled";
-        }
-        echo ">
-        <option value=\"\">";
-        // line 13
-        echo ($context["text_select"] ?? null);
-        echo "</option>
-        ";
-        // line 14
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["payment_methods"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["payment_method"]) {
-            // line 15
-            echo "          <option value=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["payment_method"], "code", [], "any", false, false, false, 15);
-            echo "\"";
-            if ((twig_get_attribute($this->env, $this->source, $context["payment_method"], "code", [], "any", false, false, false, 15) == ($context["code"] ?? null))) {
-                echo " selected";
-            }
-            echo ">";
-            echo twig_get_attribute($this->env, $this->source, $context["payment_method"], "title", [], "any", false, false, false, 15);
-            echo "</option>
-        ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['payment_method'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 17
-        echo "
-        ";
+<div class=\"sm:grid grid-cols-5 gap-[30px] sm:py-[40px] py-[30px]\">
+  <div class=\"col-span-3\">
+    <form id=\"form-payment-method\">
+      <div id=\"btn-group-payment-method\"></div>
+      
+      <div class=\"input-group\">
+        <input type=\"hidden\" name=\"payment_method\" id=\"input-payment-method\">
+        <button type=\"button\" id=\"btn-refetch-payment-method\" class=\"btn btn-light hidden\"><i class=\"fa-solid fa-rotate\"></i></button>
+      </div>
+    </form>
+    ";
         // line 18
-        if (($context["stores"] ?? null)) {
-            // line 19
-            echo "          <optgroup label=\"";
-            echo ($context["text_stored"] ?? null);
-            echo "\">
-            ";
-            // line 20
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(($context["stores"] ?? null));
-            foreach ($context['_seq'] as $context["_key"] => $context["store"]) {
-                // line 21
-                echo "              <option value=\"";
-                echo twig_get_attribute($this->env, $this->source, $context["store"], "code", [], "any", false, false, false, 21);
-                echo "\"";
-                if ((twig_get_attribute($this->env, $this->source, $context["store"], "code", [], "any", false, false, false, 21) == ($context["code"] ?? null))) {
-                    echo " selected";
-                }
-                echo ">";
-                echo twig_get_attribute($this->env, $this->source, $context["store"], "name", [], "any", false, false, false, 21);
-                echo "</option>
-            ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['store'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 23
-            echo "          </optgroup>
-        ";
-        }
-        // line 25
-        echo "      </select>
-      <button type=\"button\" id=\"button-payment-method\" class=\"btn btn-light\"><i class=\"fa-solid fa-rotate\"></i></button>
-    </div>
-  </fieldset>
-</form>
-<br/>
-";
-        // line 31
         if (($context["text_agree"] ?? null)) {
-            // line 32
-            echo "  <div class=\"mb-2\">
-    <div class=\"text-end\">";
-            // line 33
+            // line 19
+            echo "      <div class=\"mb-2\">
+        <div class=\"text-end\">";
+            // line 20
             echo ($context["text_agree"] ?? null);
             echo " <input type=\"hidden\" name=\"agree\" value=\"1\" id=\"input-agree\" /></div>
-  </div>
-";
+      </div>
+    ";
         }
-        // line 36
+        // line 23
         echo "
-<div id=\"checkout-payment\">
-  ";
-        // line 38
+    <div id=\"checkout-payment\" class=\"mt-[40px]\">
+      ";
+        // line 25
         if (($context["payment"] ?? null)) {
-            // line 39
-            echo "    ";
+            // line 26
+            echo "        ";
             echo ($context["payment"] ?? null);
             echo "
-  ";
+      ";
         }
-        // line 41
-        echo "</div>
+        // line 28
+        echo "    </div>
+  
+  </div>
+</div>
+<br/>
 
 <script type=\"text/javascript\">
 // Payment Methods
-\$('#button-payment-method').on('click', function () {
-    var element = this;
+\$('#btn-refetch-payment-method').on('click', function () {
+  var element = this;
 
-    chain.attach(function () {
-        return \$.ajax({
-            url: 'index.php?route=checkout/payment_method|getMethods&language=";
-        // line 50
+  chain.attach(function () {
+    return \$.ajax({
+      url: 'index.php?route=checkout/payment_method|getMethods&language=";
+        // line 41
         echo ($context["language"] ?? null);
         echo "',
-            dataType: 'json',
-            beforeSend: function () {
-                \$('#input-payment-method').prop('disabled', true);
-            },
-            success: function (json) {
-                console.log(json);
+      dataType: 'json',
+      success: function (json) {
+        console.log(json);
 
-                if (json['redirect']) {
-                    location = json['redirect'];
-                }
+        if (json['redirect']) {
+          location = json['redirect'];
+        }
 
-                if (json['error']) {
-                      toast({type: 'error', text: json['error']})
+        if (json['error']) {
+          toast({type: 'error', text: json['error']})
+        }
 
-                    \$('#input-shipping-method').prop('disabled', true);
-                }
+        html = '';
 
-                html = '<option value=\"\">";
-        // line 68
-        echo ($context["text_select"] ?? null);
-        echo "</option>';
+        if (json['payment_methods']) {
+          for (i in json['payment_methods']) {
+            html += `
+              <div class=\"sm:py-[20px] py-[15px] border-b border-darkBlue flex gap-[30px]\">
+                <button type=\"button\" value=\"\${json['payment_methods'][i]['code']}\" class=\"btn-payment-method min-w-[270px] py-[12px] bg-orangeGray text-indigo font-semibold uppercase\" \${json['payment_methods'][i]['code'] == \$('#input-payment-method').val() ? 'selected' : ''}>\${json['payment_methods'][i]['title']}</button>
+              </div>
+            `;
+          }
+        }
 
-                if (json['payment_methods']) {
-                    for (i in json['payment_methods']) {
-                        if (json['payment_methods'][i]['code'] == \$('#input-payment-method').val()) {
-                            html += '<option value=\"' + json['payment_methods'][i]['code'] + '\" selected>' + json['payment_methods'][i]['title'] + '</option>';
-                        } else {
-                            html += '<option value=\"' + json['payment_methods'][i]['code'] + '\">' + json['payment_methods'][i]['title'] + '</option>';
-                        }
-                    }
-
-                    \$('#input-payment-method').prop('disabled', false);
-                }
-
-                \$('#input-payment-method').html(html);
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
-            }
-        });
+        \$('#btn-group-payment-method').html(html);
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+        console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
+      }
     });
+  });
 });
 
 // Payment Method
-\$('#input-payment-method').on('change', async function () {
-    var element = this;
+\$(document).on('click', '.btn-payment-method', async function (e) {
+    \$('#input-payment-method').val(\$(e.target).val());
 
     chain.attach(function () {
         return \$.ajax({
             url: 'index.php?route=checkout/payment_method|save&language=";
-        // line 97
+        // line 81
         echo ($context["language"] ?? null);
         echo "',
             type: 'post',
             data: \$('#form-payment-method').serialize(),
             dataType: 'json',
             contentType: 'application/x-www-form-urlencoded',
-            beforeSend: function () {
-                \$(element).prop('disabled', true);
-            },
-            complete: function () {
-                \$(element).prop('disabled', false);
-            },
             success: function (json) {
                 console.log(json);
 
@@ -236,10 +157,9 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
                 }
 
                 if (json['success']) {
-                    toast({type: 'success', text: json['success']})
+                  \$('#checkout-payment').html(json['payment'])
                 }
                 
-                \$('#checkout-payment').html(json['payment'])
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
@@ -265,7 +185,7 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  215 => 97,  183 => 68,  162 => 50,  151 => 41,  145 => 39,  143 => 38,  139 => 36,  133 => 33,  130 => 32,  128 => 31,  120 => 25,  116 => 23,  101 => 21,  97 => 20,  92 => 19,  90 => 18,  87 => 17,  72 => 15,  68 => 14,  64 => 13,  58 => 12,  53 => 10,  41 => 3,  37 => 1,);
+        return array (  142 => 81,  99 => 41,  84 => 28,  78 => 26,  76 => 25,  72 => 23,  66 => 20,  63 => 19,  61 => 18,  41 => 3,  37 => 1,);
     }
 
     public function getSourceContext()

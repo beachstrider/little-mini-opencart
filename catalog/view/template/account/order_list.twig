@@ -3,30 +3,28 @@
 <div class="content">
 	{% if orders %}
 		<div class="table-responsive">
-			<table class="table table-bordered table-hover">
+			<table class="table table-bordered table-hover sm:text-[14px] text-[10px]">
 				<thead>
-					<tr>
-						<td class="text-end">{{ column_order_id }}</td>
-						<td class="text-start">{{ column_customer }}</td>
-						<td class="text-end">{{ column_product }}</td>
-						<td class="text-start">{{ column_status }}</td>
-						<td class="text-end">{{ column_total }}</td>
-						<td class="text-start">{{ column_date_added }}</td>
+					<tr class="bg-orangeLight uppercase">
+						<td class="text-end sm:px-[20px] sm:py-[12px] px-[10px] py-[6px]">{{ column_order_id }}</td>
+						<td class="text-start sm:px-[20px] sm:py-[12px] px-[10px] py-[6px]">{{ column_customer }}</td>
+						<td class="text-end sm:px-[20px] sm:py-[12px] px-[10px] py-[6px]">{{ column_product }}</td>
+						<td class="text-start sm:px-[20px] sm:py-[12px] px-[10px] py-[6px]">{{ column_status }}</td>
+						<td class="text-start sm:px-[20px] sm:py-[12px] px-[10px] py-[6px]">{{ column_date_added }}</td>
 						<td></td>
 					</tr>
 				</thead>
 				<tbody>
 					{% for order in orders %}
 						<tr>
-							<td class="text-end">#{{ order.order_id }}</td>
-							<td class="text-start">{{ order.name }}</td>
-							<td class="text-end">{{ order.products }}</td>
-							<td class="text-start">{{ order.status }}</td>
-							<td class="text-end">{{ order.total }}</td>
-							<td class="text-start">{{ order.date_added }}</td>
-							<td class="text-end">
-								<a href="{{ order.view }}" data-bs-toggle="tooltip" title="{{ button_view }}" class="btn btn-info">
-									<i class="fa-solid fa-eye"></i>
+							<td class="text-end sm:px-[20px] sm:py-[12px] px-[10px] py-[6px]">#{{ order.order_id }}</td>
+							<td class="text-start sm:px-[20px] sm:py-[12px] px-[10px] py-[6px]">{{ order.name }}</td>
+							<td class="text-end sm:px-[20px] sm:py-[12px] px-[10px] py-[6px]">{{ order.products }}</td>
+							<td class="text-start sm:px-[20px] sm:py-[12px] px-[10px] py-[6px]">{{ order.status }}</td>
+							<td class="text-start sm:px-[20px] sm:py-[12px] px-[10px] py-[6px]">{{ order.date_added }}</td>
+							<td class="text-end sm:px-[20px] sm:py-[12px] px-[10px] py-[6px]">
+								<a href="#" data-bs-toggle="tooltip" title="{{ button_view }}" class="btn btn-info">
+									{# <i class="fa-solid fa-eye"></i> #}
 								</a>
 							</td>
 						</tr>
@@ -34,9 +32,9 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="row">
+		<div class="flex justify-between mt-[30px]">
+			<div class="col-sm-6 text-end"></div>
 			<div class="col-sm-6 text-start">{{ pagination }}</div>
-			<div class="col-sm-6 text-end">{{ results }}</div>
 		</div>
 	{% else %}
 		<p>{{ text_no_results }}</p>
