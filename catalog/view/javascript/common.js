@@ -655,7 +655,7 @@ function toast({ type = "success", text }) {
     dark: "gray",
   };
 
-  let duration = 2000;
+  let duration = 500;
 
   $("#alert").prepend(`
     <div id="toast-${my_toast_id}" class="alert-item sm:min-w-[400px] flex p-4 mb-4 text-${colors[type]}-800 border-t-4 border-${colors[type]}-300 bg-${colors[type]}-50 dark:text-${colors[type]}-400 dark:bg-gray-800 dark:border-${colors[type]}-800" role="alert">

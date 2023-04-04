@@ -34,19 +34,31 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
     {
         $macros = $this->macros;
         // line 1
-        echo "<form id=\"form-register\" class=\"sm:mt-[38px] mt-[28px]\">
+        echo "<h1 class=\"sm:mt-[40px] mt-[30px] sm:text-[40px] text-[30px] font-bold flex justify-between\">
+\t<div class=\"flex\">
+\t\t";
+        // line 3
+        echo ($context["heading_title_1"] ?? null);
+        echo "&nbsp;<span class=\"text-orange\">";
+        echo ($context["heading_title_2"] ?? null);
+        echo "</span>
+\t</div>
+\t<div class=\"opacity-[0.5]\">(1/4)</div>
+</h1>
+
+<form id=\"form-register\" class=\"sm:mt-[38px] mt-[28px]\">
 \t<div class=\"flex justify-between sm:text-[16px] text-[12px]\">
 \t\t<div>";
-        // line 3
+        // line 10
         echo ($context["heading_title"] ?? null);
         echo "</div>
 \t\t<div class=\"flex flex-col items-end\">
 \t\t\t<p>";
-        // line 5
+        // line 12
         echo ($context["text_login"] ?? null);
         echo "</p>
 \t\t\t<a href=\"";
-        // line 6
+        // line 13
         echo ($context["login"] ?? null);
         echo "\" class=\"block border border-dark px-[16px] py-[3px] mt-[6px]\">";
         echo ($context["text_btn_login"] ?? null);
@@ -57,36 +69,36 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t<div class=\"hidden\">
 \t\t\t<select name=\"customer_group_id\" id=\"input-customer-group\" class=\"form-select\">
 \t\t\t\t";
-        // line 12
+        // line 19
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["customer_groups"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["customer_group"]) {
-            // line 13
+            // line 20
             echo "\t\t\t\t\t<option value=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 13);
+            echo twig_get_attribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 20);
             echo "\" ";
-            if ((twig_get_attribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 13) == ($context["customer_group_id"] ?? null))) {
+            if ((twig_get_attribute($this->env, $this->source, $context["customer_group"], "customer_group_id", [], "any", false, false, false, 20) == ($context["customer_group_id"] ?? null))) {
                 echo " selected ";
             }
             echo ">";
-            echo twig_get_attribute($this->env, $this->source, $context["customer_group"], "name", [], "any", false, false, false, 13);
+            echo twig_get_attribute($this->env, $this->source, $context["customer_group"], "name", [], "any", false, false, false, 20);
             echo "</option>
 \t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['customer_group'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 15
+        // line 22
         echo "\t\t\t</select>
 \t\t\t<input type=\"hidden\" name=\"account\" value=\"1\" id=\"input-register\" class=\"form-check-input\"/>
 \t\t</div>
 
 \t\t";
-        // line 20
+        // line 27
         echo "\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]\">
 \t\t\t<div class=\"col-span-2 flex justify-end items-center\">
 \t\t\t\t<label for=\"input-firstname\" class=\"form-label sm:w-[270px] flex items-center\">";
-        // line 22
+        // line 29
         echo ($context["entry_fullname"] ?? null);
         echo ":<div class=\"w-[6px] h-[6px] rounded-full bg-orange ml-[10px]\"></div>
 \t\t\t\t</label>
@@ -94,7 +106,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t\t<div class=\"col-span-2 required grid grid-cols-2 gap-[20px]\">
 \t\t\t\t<div class=\"\">
 \t\t\t\t\t<input type=\"text\" name=\"firstname\" value=\"";
-        // line 27
+        // line 34
         echo ($context["firstname"] ?? null);
         echo "\" placeholder=\"";
         echo ($context["entry_firstname"] ?? null);
@@ -102,7 +114,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t\t\t</div>
 \t\t\t\t<div class=\"\">
 \t\t\t\t\t<input type=\"text\" name=\"lastname\" value=\"";
-        // line 30
+        // line 37
         echo ($context["lastname"] ?? null);
         echo "\" placeholder=\"";
         echo ($context["entry_lastname"] ?? null);
@@ -112,7 +124,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t\t<div id=\"error-firstname\" class=\"text-[12px] text-orange flex items-center\"></div>
 \t\t</div>
 \t\t";
-        // line 36
+        // line 43
         echo "\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]\">
 \t\t\t<div class=\"col-span-2 flex justify-end items-center\">
 \t\t\t\t<label for=\"input-c_o\" class=\"form-label sm:w-[270px] flex items-center\">C/O (care of):<div class=\"w-[6px] h-[6px] rounded-full bg-orange ml-[10px]\"></div>
@@ -124,29 +136,29 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t\t<div id=\"error-c_o\" class=\"text-[12px] text-orange flex items-center\"></div>
 \t\t</div>
 \t\t";
-        // line 47
+        // line 54
         echo "\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]\">
 \t\t\t<div class=\"col-span-2 flex justify-end items-center\">
 \t\t\t\t<label for=\"input-shipping-address-1\" class=\"form-label sm:w-[270px] flex items-center\">";
-        // line 49
+        // line 56
         echo ($context["entry_address_1"] ?? null);
         echo ":<div class=\"w-[6px] h-[6px] rounded-full bg-orange ml-[10px]\"></div>
 \t\t\t\t</label>
 \t\t\t</div>
 \t\t\t<div class=\"col-span-2 required flex items-center\">
 \t\t\t\t<input type=\"text\" name=\"shipping_address_1\" value=\"";
-        // line 53
+        // line 60
         echo ($context["shipping_address_1"] ?? null);
         echo "\" placeholder=\"...\" id=\"input-shipping-address-1\" class=\"w-full\"/>
 \t\t\t</div>
 \t\t\t<div id=\"error-shipping-address-1\" class=\"text-[12px] text-orange flex items-center\"></div>
 \t\t</div>
 \t\t";
-        // line 58
+        // line 65
         echo "\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]\">
 \t\t\t<div class=\"col-span-2 flex justify-end items-center\">
 \t\t\t\t<label for=\"input-shipping-postcode\" class=\"form-label sm:w-[270px] flex items-center\">";
-        // line 60
+        // line 67
         echo ($context["entry_postcode_city"] ?? null);
         echo ":<div class=\"w-[6px] h-[6px] rounded-full bg-orange ml-[10px]\"></div>
 \t\t\t\t</label>
@@ -154,7 +166,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t\t<div class=\"col-span-2 required grid grid-cols-5 gap-[30px]\">
 \t\t\t\t<div class=\"col-span-2\">
 \t\t\t\t\t<input type=\"text\" name=\"shipping_postcode\" value=\"";
-        // line 65
+        // line 72
         echo ($context["shipping_postcode"] ?? null);
         echo "\" placeholder=\"";
         echo ($context["entry_postcode"] ?? null);
@@ -162,7 +174,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t\t\t</div>
 \t\t\t\t<div class=\"col-span-3\">
 \t\t\t\t\t<input type=\"text\" name=\"shipping_city\" value=\"";
-        // line 68
+        // line 75
         echo ($context["shipping_city"] ?? null);
         echo "\" placeholder=\"";
         echo ($context["entry_city"] ?? null);
@@ -172,29 +184,29 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t\t<div id=\"error-shipping-postcode\" class=\"text-[12px] text-orange flex items-center\"></div>
 \t\t</div>
 \t\t";
-        // line 74
+        // line 81
         echo "\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]\">
 \t\t\t<div class=\"col-span-2 flex justify-end items-center\">
 \t\t\t\t<label for=\"input-shipping-zone\" class=\"form-label sm:w-[270px] flex items-center\">";
-        // line 76
+        // line 83
         echo ($context["entry_zone"] ?? null);
         echo ":<div class=\"w-[6px] h-[6px] rounded-full bg-orange ml-[10px]\"></div>
 \t\t\t\t</label>
 \t\t\t</div>
 \t\t\t<div class=\"col-span-2 required flex items-center\">
 \t\t\t\t<select name=\"shipping_zone_id\" id=\"input-shipping-zone\" class=\"w-full\" data-oc-value=\"";
-        // line 80
+        // line 87
         echo ($context["shipping_zone_id"] ?? null);
         echo "\"></select>
 \t\t\t</div>
 \t\t\t<div id=\"error-shipping-zone\" class=\"text-[12px] text-orange flex items-center\"></div>
 \t\t</div>
 \t\t";
-        // line 85
+        // line 92
         echo "\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]\">
 \t\t\t<div class=\"col-span-2 flex justify-end items-center\">
 \t\t\t\t<label for=\"input-shipping-country\" class=\"form-label sm:w-[270px] flex items-center\">";
-        // line 87
+        // line 94
         echo ($context["entry_country"] ?? null);
         echo ":<div class=\"w-[6px] h-[6px] rounded-full bg-orange ml-[10px]\"></div>
 \t\t\t\t</label>
@@ -202,25 +214,25 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t\t<div class=\"col-span-2 required flex items-center\">
 \t\t\t\t<select name=\"shipping_country_id\" id=\"input-shipping-country\" class=\"w-full\">
 \t\t\t\t\t<option value=\"\">";
-        // line 92
+        // line 99
         echo ($context["text_select"] ?? null);
         echo "</option>
 \t\t\t\t\t";
-        // line 93
+        // line 100
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["countries"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["country"]) {
-            // line 94
+            // line 101
             echo "\t\t\t\t\t\t<option value=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["country"], "country_id", [], "any", false, false, false, 94);
+            echo twig_get_attribute($this->env, $this->source, $context["country"], "country_id", [], "any", false, false, false, 101);
             echo "\" ";
-            if ((twig_get_attribute($this->env, $this->source, $context["country"], "country_id", [], "any", false, false, false, 94) == ($context["shipping_country_id"] ?? null))) {
+            if ((twig_get_attribute($this->env, $this->source, $context["country"], "country_id", [], "any", false, false, false, 101) == ($context["shipping_country_id"] ?? null))) {
                 echo " selected ";
             }
             echo ">
 \t\t\t\t\t\t\t";
-            // line 95
-            echo twig_get_attribute($this->env, $this->source, $context["country"], "name", [], "any", false, false, false, 95);
+            // line 102
+            echo twig_get_attribute($this->env, $this->source, $context["country"], "name", [], "any", false, false, false, 102);
             echo "
 \t\t\t\t\t\t</option>
 \t\t\t\t\t";
@@ -228,24 +240,24 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['country'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 98
+        // line 105
         echo "\t\t\t\t</select>
 \t\t\t</div>
 \t\t\t<div id=\"error-shipping-country\" class=\"text-[12px] text-orange flex items-center\"></div>
 \t\t</div>
 \t\t";
-        // line 103
+        // line 110
         echo "\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]\">
 \t\t\t<div class=\"col-span-2 flex justify-end items-center\">
 \t\t\t\t<label for=\"input-email\" class=\"form-label sm:w-[270px] flex items-center\">";
-        // line 105
+        // line 112
         echo ($context["entry_email"] ?? null);
         echo ":<div class=\"w-[6px] h-[6px] rounded-full bg-orange ml-[10px]\"></div>
 \t\t\t\t</label>
 \t\t\t</div>
 \t\t\t<div class=\"col-span-2 required flex items-center\">
 \t\t\t\t<input type=\"text\" name=\"email\" value=\"";
-        // line 109
+        // line 116
         echo ($context["email"] ?? null);
         echo "\" placeholder=\"";
         echo ($context["entry_email"] ?? null);
@@ -254,7 +266,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t\t<div id=\"error-email\" class=\"text-[12px] text-orange flex items-center\"></div>
 \t\t</div>
 \t\t";
-        // line 114
+        // line 121
         echo "\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]";
         if (($context["config_telephone_required"] ?? null)) {
             echo " required";
@@ -262,14 +274,14 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
         echo "\">
 \t\t\t<div class=\"col-span-2 flex justify-end items-center\">
 \t\t\t\t<label for=\"input-shipping-postcode\" class=\"form-label sm:w-[270px] flex items-center\">";
-        // line 116
+        // line 123
         echo ($context["entry_telephone"] ?? null);
         echo ":<div class=\"w-[6px] h-[6px] rounded-full bg-orange ml-[10px]\"></div>
 \t\t\t\t</label>
 \t\t\t</div>
 \t\t\t<div class=\"col-span-2 required gap-[30px]\">
 \t\t\t\t<input type=\"text\" name=\"telephone\" value=\"";
-        // line 120
+        // line 127
         echo ($context["telephone"] ?? null);
         echo "\" placeholder=\"";
         echo ($context["entry_telephone"] ?? null);
@@ -278,18 +290,18 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t\t<div id=\"error-telephone\" class=\"text-[12px] text-orange flex items-center\"></div>
 \t\t</div>
 \t\t";
-        // line 125
+        // line 132
         echo "\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]\">
 \t\t\t<div class=\"col-span-2 flex justify-end items-center\">
 \t\t\t\t<label for=\"input-password\" class=\"form-label sm:w-[270px] flex items-center\">";
-        // line 127
+        // line 134
         echo ($context["text_password"] ?? null);
         echo ":<div class=\"w-[6px] h-[6px] rounded-full bg-orange ml-[10px]\"></div>
 \t\t\t\t</label>
 \t\t\t</div>
 \t\t\t<div class=\"col-span-2 required flex items-center\">
 \t\t\t\t<input type=\"password\" name=\"password\" value=\"";
-        // line 131
+        // line 138
         echo ($context["firstname"] ?? null);
         echo "\" placeholder=\"";
         echo ($context["entry_password"] ?? null);
@@ -301,53 +313,53 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 \t\t\t<div class=\"col-start-3 col-span-2 required flex items-center\">
 \t\t\t\t<input type=\"checkbox\" name=\"newsletter\" value=\"1\" id=\"input-newsletter\" class=\"\"/>
 \t\t\t\t<div for=\"input-newsletter\" class=\"form-check-label\">";
-        // line 138
+        // line 145
         echo ($context["entry_newsletter"] ?? null);
         echo "</div>
 \t\t\t</div>
 \t\t</div>
 
 \t\t";
-        // line 143
+        // line 150
         echo "\t\t";
         if (($context["text_agree"] ?? null)) {
-            // line 144
+            // line 151
             echo "\t\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]\">
 \t\t\t\t<div class=\"col-start-3 col-span-2 required flex items-center\">
 \t\t\t\t\t<input type=\"checkbox\" name=\"agree\" value=\"1\" id=\"input-register-agree\" class=\"form-check-input\"/>
 \t\t\t\t\t<div for=\"input-register-agree\" class=\"form-check-label\">";
-            // line 147
+            // line 154
             echo ($context["text_agree"] ?? null);
             echo "</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t";
         }
-        // line 151
+        // line 158
         echo "\t\t";
-        // line 152
+        // line 159
         echo "\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]\">
 \t\t\t<div class=\"col-start-3 col-span-2 required flex items-center\">
 \t\t\t\t<div class=\"required\">";
-        // line 154
+        // line 161
         echo ($context["captcha"] ?? null);
         echo "</div>
 \t\t\t</div>
 \t\t</div>
 \t\t";
-        // line 158
+        // line 165
         echo "\t\t<div class=\"sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]\">
 \t\t\t<div class=\"col-span-2 flex justify-end\">
 \t\t\t\t<div class=\"min-w-[270px]\">
 \t\t\t\t\t<button type=\"button\" id=\"button-back\" class=\"min-w-[170px] border border-darkBlue text-center uppercase font-bold py-[14px]\">";
-        // line 161
+        // line 168
         echo ($context["button_back"] ?? null);
         echo "</button>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t<div class=\"col-span-2 required flex justify-end\">
 \t\t\t\t<button type=\"submit\" id=\"button-register\" class=\"min-w-[170px] bg-indigo text-center text-[white] uppercase font-bold py-[14px]\">";
-        // line 165
+        // line 172
         echo ($context["button_continue"] ?? null);
         echo "</button>
 \t\t\t</div>
@@ -381,7 +393,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
   chain.attach(function () {
     return \$.ajax({
       url: 'index.php?route=account/custom_field&language=";
-        // line 196
+        // line 203
         echo ($context["language"] ?? null);
         echo "&customer_group_id=' + \$(element).val(),
       dataType: 'json',
@@ -430,7 +442,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
   chain.attach(function () {
     return \$.ajax({
       url: 'index.php?route=checkout/register|save&language=";
-        // line 242
+        // line 249
         echo ($context["language"] ?? null);
         echo "',
       type: 'post',
@@ -465,29 +477,10 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
         }
 
         if (json['success']) {
-            toast({type: 'success', text: json['success']})
+\t\t\t\t\ttoast({type: 'success', text: json['success']});
 
-          if (\$('#input-register').prop('checked')) {
-            \$('input[name=\\'account\\']').prop('disabled', true);
-            \$('#input-customer-group').prop('disabled', true);
-            \$('#input-password').prop('disabled', true);
-            \$('#input-captcha').prop('disabled', true);
-            \$('#input-register-agree').prop('disabled', true);
-          }
-
-          ";
-        // line 285
-        if (($context["shipping_required"] ?? null)) {
-            // line 286
-            echo "          \$('#button-shipping-method').trigger('click');
-          ";
-        } else {
-            // line 288
-            echo "\t\t\t\t\t\t\$('#button-payment-method').trigger('click');
-\t\t\t\t\t";
-        }
-        // line 290
-        echo "\t\t\t\t}
+\t\t\t\t\tlocation.reload();
+\t\t\t\t}
 \t\t\t},
 \t\t\terror: function (xhr, ajaxOptions, thrownError) {
 \t\t\t\tconsole.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
@@ -503,7 +496,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
   chain.attach(function () {
     return \$.ajax({
       url: 'index.php?route=localisation/country&language=";
-        // line 305
+        // line 300
         echo ($context["language"] ?? null);
         echo "&country_id=' + \$('#input-' + type + '-country').val(),
       dataType: 'json',
@@ -521,7 +514,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
         }
 
         html = '<option value=\"\">";
-        // line 320
+        // line 315
         echo ($context["text_select"] ?? null);
         echo "</option>';
 
@@ -537,7 +530,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
           }
         } else {
           html += '<option value=\"0\" selected>";
-        // line 333
+        // line 328
         echo ($context["text_none"] ?? null);
         echo "</option>';
         }
@@ -568,7 +561,7 @@ class __TwigTemplate_14101c0bf7e280ea44011c28f399a616 extends Template
 
     public function getDebugInfo()
     {
-        return array (  541 => 333,  525 => 320,  507 => 305,  490 => 290,  486 => 288,  482 => 286,  480 => 285,  434 => 242,  385 => 196,  351 => 165,  344 => 161,  339 => 158,  333 => 154,  329 => 152,  327 => 151,  320 => 147,  315 => 144,  312 => 143,  305 => 138,  293 => 131,  286 => 127,  282 => 125,  273 => 120,  266 => 116,  258 => 114,  249 => 109,  242 => 105,  238 => 103,  232 => 98,  223 => 95,  214 => 94,  210 => 93,  206 => 92,  198 => 87,  194 => 85,  187 => 80,  180 => 76,  176 => 74,  166 => 68,  158 => 65,  150 => 60,  146 => 58,  139 => 53,  132 => 49,  128 => 47,  116 => 36,  106 => 30,  98 => 27,  90 => 22,  86 => 20,  80 => 15,  65 => 13,  61 => 12,  50 => 6,  46 => 5,  41 => 3,  37 => 1,);
+        return array (  534 => 328,  518 => 315,  500 => 300,  446 => 249,  397 => 203,  363 => 172,  356 => 168,  351 => 165,  345 => 161,  341 => 159,  339 => 158,  332 => 154,  327 => 151,  324 => 150,  317 => 145,  305 => 138,  298 => 134,  294 => 132,  285 => 127,  278 => 123,  270 => 121,  261 => 116,  254 => 112,  250 => 110,  244 => 105,  235 => 102,  226 => 101,  222 => 100,  218 => 99,  210 => 94,  206 => 92,  199 => 87,  192 => 83,  188 => 81,  178 => 75,  170 => 72,  162 => 67,  158 => 65,  151 => 60,  144 => 56,  140 => 54,  128 => 43,  118 => 37,  110 => 34,  102 => 29,  98 => 27,  92 => 22,  77 => 20,  73 => 19,  62 => 13,  58 => 12,  53 => 10,  41 => 3,  37 => 1,);
     }
 
     public function getSourceContext()

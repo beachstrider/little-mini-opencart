@@ -1,6 +1,7 @@
 <?php
 // Heading
-$_['heading_title']         = 'Payment Method';
+$_['heading_title_1']          = 'Choose';
+$_['heading_title_2']          = 'Payment method';
 
 // Text
 $_['text_stored']           = 'Stored payment methods';

@@ -34,109 +34,123 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
     {
         $macros = $this->macros;
         // line 1
-        echo "<form id=\"form-payment-method\">
+        echo "<h1 class=\"sm:mt-[40px] mt-[30px] sm:text-[40px] text-[30px] font-bold flex justify-between uppercase\">
+    <div class=\"flex\">
+        ";
+        // line 3
+        echo ($context["heading_title_1"] ?? null);
+        echo "&nbsp;<span class=\"text-orange\">";
+        echo ($context["heading_title_2"] ?? null);
+        echo "</span>
+    </div>
+    <div class=\"opacity-[0.5]\">(4/4)</div>
+</h1>
+
+<form id=\"form-payment-method\">
   <fieldset>
     <legend>";
-        // line 3
+        // line 10
         echo ($context["heading_title"] ?? null);
         echo "</legend>
     <div class=\"input-group\">
       <select name=\"payment_method\" id=\"input-payment-method\" class=\"form-select\"";
-        // line 5
+        // line 12
         if ( !($context["payment_methods"] ?? null)) {
             echo " disabled";
         }
         echo ">
         <option value=\"\">";
-        // line 6
+        // line 13
         echo ($context["text_select"] ?? null);
         echo "</option>
         ";
-        // line 7
+        // line 14
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["payment_methods"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["payment_method"]) {
-            // line 8
+            // line 15
             echo "          <option value=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["payment_method"], "code", [], "any", false, false, false, 8);
+            echo twig_get_attribute($this->env, $this->source, $context["payment_method"], "code", [], "any", false, false, false, 15);
             echo "\"";
-            if ((twig_get_attribute($this->env, $this->source, $context["payment_method"], "code", [], "any", false, false, false, 8) == ($context["code"] ?? null))) {
+            if ((twig_get_attribute($this->env, $this->source, $context["payment_method"], "code", [], "any", false, false, false, 15) == ($context["code"] ?? null))) {
                 echo " selected";
             }
             echo ">";
-            echo twig_get_attribute($this->env, $this->source, $context["payment_method"], "title", [], "any", false, false, false, 8);
+            echo twig_get_attribute($this->env, $this->source, $context["payment_method"], "title", [], "any", false, false, false, 15);
             echo "</option>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['payment_method'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 10
+        // line 17
         echo "
         ";
-        // line 11
+        // line 18
         if (($context["stores"] ?? null)) {
-            // line 12
+            // line 19
             echo "          <optgroup label=\"";
             echo ($context["text_stored"] ?? null);
             echo "\">
             ";
-            // line 13
+            // line 20
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["stores"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["store"]) {
-                // line 14
+                // line 21
                 echo "              <option value=\"";
-                echo twig_get_attribute($this->env, $this->source, $context["store"], "code", [], "any", false, false, false, 14);
+                echo twig_get_attribute($this->env, $this->source, $context["store"], "code", [], "any", false, false, false, 21);
                 echo "\"";
-                if ((twig_get_attribute($this->env, $this->source, $context["store"], "code", [], "any", false, false, false, 14) == ($context["code"] ?? null))) {
+                if ((twig_get_attribute($this->env, $this->source, $context["store"], "code", [], "any", false, false, false, 21) == ($context["code"] ?? null))) {
                     echo " selected";
                 }
                 echo ">";
-                echo twig_get_attribute($this->env, $this->source, $context["store"], "name", [], "any", false, false, false, 14);
+                echo twig_get_attribute($this->env, $this->source, $context["store"], "name", [], "any", false, false, false, 21);
                 echo "</option>
             ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['store'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 16
+            // line 23
             echo "          </optgroup>
         ";
         }
-        // line 18
+        // line 25
         echo "      </select>
       <button type=\"button\" id=\"button-payment-method\" class=\"btn btn-light\"><i class=\"fa-solid fa-rotate\"></i></button>
     </div>
   </fieldset>
 </form>
 <br/>
-<div class=\"mb-2\">
-  <label for=\"input-comment\" class=\"form-label\"><strong>";
-        // line 25
-        echo ($context["text_comments"] ?? null);
-        echo "</strong></label> <textarea name=\"comment\" rows=\"3\" id=\"input-comment\" class=\"form-control\">";
-        echo ($context["comment"] ?? null);
-        echo "</textarea>
-</div>
 ";
-        // line 27
+        // line 31
         if (($context["text_agree"] ?? null)) {
-            // line 28
+            // line 32
             echo "  <div class=\"mb-2\">
     <div class=\"text-end\">";
-            // line 29
+            // line 33
             echo ($context["text_agree"] ?? null);
-            echo " <input type=\"checkbox\" name=\"agree\" value=\"1\" id=\"input-agree\" class=\"form-check-input\"";
-            if (($context["agree"] ?? null)) {
-                echo " checked";
-            }
-            echo "/></div>
+            echo " <input type=\"hidden\" name=\"agree\" value=\"1\" id=\"input-agree\" /></div>
   </div>
 ";
         }
-        // line 32
-        echo "<script type=\"text/javascript\"><!--
+        // line 36
+        echo "
+<div id=\"checkout-payment\">
+  ";
+        // line 38
+        if (($context["payment"] ?? null)) {
+            // line 39
+            echo "    ";
+            echo ($context["payment"] ?? null);
+            echo "
+  ";
+        }
+        // line 41
+        echo "</div>
+
+<script type=\"text/javascript\">
 // Payment Methods
 \$('#button-payment-method').on('click', function () {
     var element = this;
@@ -144,7 +158,7 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
     chain.attach(function () {
         return \$.ajax({
             url: 'index.php?route=checkout/payment_method|getMethods&language=";
-        // line 39
+        // line 50
         echo ($context["language"] ?? null);
         echo "',
             dataType: 'json',
@@ -165,7 +179,7 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
                 }
 
                 html = '<option value=\"\">";
-        // line 57
+        // line 68
         echo ($context["text_select"] ?? null);
         echo "</option>';
 
@@ -182,11 +196,6 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
                 }
 
                 \$('#input-payment-method').html(html);
-
-                \$('#checkout-confirm').load('index.php?route=checkout/confirm|confirm&language=";
-        // line 73
-        echo ($context["language"] ?? null);
-        echo "');
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
@@ -196,13 +205,13 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
 });
 
 // Payment Method
-\$('#input-payment-method').on('change', function () {
+\$('#input-payment-method').on('change', async function () {
     var element = this;
 
     chain.attach(function () {
         return \$.ajax({
             url: 'index.php?route=checkout/payment_method|save&language=";
-        // line 88
+        // line 97
         echo ($context["language"] ?? null);
         echo "',
             type: 'post',
@@ -228,92 +237,19 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
 
                 if (json['success']) {
                     toast({type: 'success', text: json['success']})
-                    \$('#checkout-confirm').load('index.php?route=checkout/confirm|confirm&language=";
-        // line 112
-        echo ($context["language"] ?? null);
-        echo "');
                 }
+                
+                \$('#checkout-payment').html(json['payment'])
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
             }
         });
     });
+
 });
 
-// Comment
-\$('#input-comment').on('focusout', function () {
-    var element = this;
-
-    chain.attach(function () {
-        return \$.ajax({
-            url: 'index.php?route=checkout/payment_method|comment&language=";
-        // line 128
-        echo ($context["language"] ?? null);
-        echo "',
-            type: 'post',
-            data: \$('#input-comment').serialize(),
-            dataType: 'json',
-            contentType: 'application/x-www-form-urlencoded',
-            beforeSend: function () {
-                \$(element).prop('disabled', true);
-            },
-            complete: function () {
-                \$(element).prop('disabled', false);
-            },
-            success: function (json) {
-                if (json['redirect']) {
-                    location = json['redirect'];
-                }
-
-                if (json['error']) {
-                    toast({type: 'error', text: json['error']})
-                }
-
-                if (json['success']) {
-                    toast({type: 'success', text: json['success']})
-                }
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
-            }
-        });
-    });
-});
-
-/* Agree to Terms */
-\$('#input-agree').on('change', function () {
-    var element = this;
-
-    chain.attach(function () {
-        return \$.ajax({
-            url: 'index.php?route=checkout/payment_method|agree&language=";
-        // line 165
-        echo ($context["language"] ?? null);
-        echo "',
-            type: 'post',
-            data: \$('#input-agree').serialize(),
-            dataType: 'json',
-            contentType: 'application/x-www-form-urlencoded',
-            beforeSend: function () {
-                \$(element).prop('disabled', true);
-            },
-            complete: function () {
-                \$(element).prop('disabled', false);
-            },
-            success: function (json) {
-                \$('#checkout-confirm').load('index.php?route=checkout/confirm|confirm&language=";
-        // line 177
-        echo ($context["language"] ?? null);
-        echo "');
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                console.log(thrownError + \"\\r\\n\" + xhr.statusText + \"\\r\\n\" + xhr.responseText);
-            }
-        });
-    });
-});
-//--></script>
+</script>
 ";
     }
 
@@ -329,7 +265,7 @@ class __TwigTemplate_60e6d49f9d35631023832cb1803fb9b0 extends Template
 
     public function getDebugInfo()
     {
-        return array (  307 => 177,  292 => 165,  252 => 128,  233 => 112,  206 => 88,  188 => 73,  169 => 57,  148 => 39,  139 => 32,  129 => 29,  126 => 28,  124 => 27,  117 => 25,  108 => 18,  104 => 16,  89 => 14,  85 => 13,  80 => 12,  78 => 11,  75 => 10,  60 => 8,  56 => 7,  52 => 6,  46 => 5,  41 => 3,  37 => 1,);
+        return array (  215 => 97,  183 => 68,  162 => 50,  151 => 41,  145 => 39,  143 => 38,  139 => 36,  133 => 33,  130 => 32,  128 => 31,  120 => 25,  116 => 23,  101 => 21,  97 => 20,  92 => 19,  90 => 18,  87 => 17,  72 => 15,  68 => 14,  64 => 13,  58 => 12,  53 => 10,  41 => 3,  37 => 1,);
     }
 
     public function getSourceContext()

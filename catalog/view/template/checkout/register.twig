@@ -279,21 +279,9 @@ $('#form-register').on('submit', function (e) {
         }
 
         if (json['success']) {
-            toast({type: 'success', text: json['success']})
+					toast({type: 'success', text: json['success']});
 
-          if ($('#input-register').prop('checked')) {
-            $('input[name=\'account\']').prop('disabled', true);
-            $('#input-customer-group').prop('disabled', true);
-            $('#input-password').prop('disabled', true);
-            $('#input-captcha').prop('disabled', true);
-            $('#input-register-agree').prop('disabled', true);
-          }
-
-          {% if shipping_required %}
-          $('#button-shipping-method').trigger('click');
-          {% else %}
-						$('#button-payment-method').trigger('click');
-					{% endif %}
+					location.reload();
 				}
 			},
 			error: function (xhr, ajaxOptions, thrownError) {

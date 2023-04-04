@@ -7,55 +7,54 @@ class Confirm extends \Opencart\System\Engine\Controller {
 		if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
 			$status = false;
 		}
-
 		// Order Totals
 		$totals = [];
 		$taxes = $this->cart->getTaxes();
 		$total = 0;
-
+		
 		$this->load->model('checkout/cart');
-
+		
 		($this->model_checkout_cart->getTotals)($totals, $taxes, $total);
-
+		
 		$status = true;
-
+		
 		// Validate customer data is set
 		if (!isset($this->session->data['customer'])) {
 			$status = false;
 		}
-
+		
 		// Validate cart has products and has stock.
 		if ((!$this->cart->hasProducts() && empty($this->session->data['vouchers'])) || (!$this->cart->hasStock() && !$this->config->get('config_stock_checkout'))) {
 			$status = false;
 		}
-
+		
 		// Validate minimum quantity requirements.
 		$products = $this->model_checkout_cart->getProducts();
-
+		
 		foreach ($products as $product) {
 			if (!$product['minimum']) {
 				$status = false;
-
+				
 				break;
 			}
 		}
-
+		
 		// Validate if payment address has been set.
 		if ($this->config->get('config_checkout_address') && !isset($this->session->data['payment_address'])) {
 			$status = false;
 		}
-
+		
 		// Shipping
 		if ($this->cart->hasShipping()) {
 			// Validate shipping address
 			if (!isset($this->session->data['shipping_address'])) {
 				$status = false;
 			}
-
+			
 			// Validate shipping method
 			if (isset($this->session->data['shipping_method']) && isset($this->session->data['shipping_methods'])) {
 				$shipping = explode('.', $this->session->data['shipping_method']);
-
+				
 				if (!isset($shipping[0]) || !isset($shipping[1]) || !isset($this->session->data['shipping_methods'][$shipping[0]]['quote'][$shipping[1]])) {
 					$status = false;
 				}
@@ -67,11 +66,12 @@ class Confirm extends \Opencart\System\Engine\Controller {
 			unset($this->session->data['shipping_method']);
 			unset($this->session->data['shipping_methods']);
 		}
-
+		
 		// Validate Payment methods
 		if (!isset($this->session->data['payment_method']) || !isset($this->session->data['payment_methods']) || !isset($this->session->data['payment_methods'][$this->session->data['payment_method']])) {
 			$status = false;
 		}
+		// var_dump($status);die();
 
 		// Validate checkout terms
 		if ($this->config->get('config_checkout_id') && !isset($this->session->data['agree'])) {
@@ -356,21 +356,6 @@ class Confirm extends \Opencart\System\Engine\Controller {
 				'title' => $total['title'],
 				'text'  => $this->currency->format($total['value'], $this->session->data['currency'])
 			];
-		}
-
-		// Validate if payment method has been set.
-		if (isset($this->session->data['payment_method'])) {
-			$code = $this->session->data['payment_method'];
-		} else {
-			$code = '';
-		}
-
-		$extension_info = $this->model_setting_extension->getExtensionByCode('payment', $code);
-
-		if ($status && $extension_info) {
-			$data['payment'] = $this->load->controller('extension/' . $extension_info['extension'] . '/payment/' . $extension_info['code']);
-		} else {
-			$data['payment'] = '';
 		}
 
 		return $this->load->view('checkout/confirm', $data);

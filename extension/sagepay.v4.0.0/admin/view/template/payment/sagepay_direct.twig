@@ -1,0 +1,183 @@
+{{ header }}{{ column_left }}
+<div id="content">
+	<div class="page-header">
+		<div class="container-fluid">
+			<div class="float-end">
+				<button type="submit" form="form_payment" data-bs-toggle="tooltip" title="{{ button_save }}" class="btn btn-primary"><i class="fas fa-save"></i></button>
+				<a href="{{ back }}" data-bs-toggle="tooltip" title="{{ button_back }}" class="btn btn-light"><i class="fas fa-reply"></i></a>
+			</div>
+			<h1>{{ heading_title }}</h1>
+			<ul class="breadcrumb">
+				{% for breadcrumb in breadcrumbs %}
+				<li class="breadcrumb-item"><a href="{{ breadcrumb['href'] }}">{{ breadcrumb['text'] }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="container-fluid">
+		{% if error_warning %}
+		<div class="alert alert-danger alert-dismissible"><i class="fas fa-exclamation-circle"></i> {{ error_warning }}
+			<button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+		</div>
+		{% endif %}
+		<div class="card">
+			<div class="card-header"><i class="fas fa-pencil-alt"></i> {{ text_edit }}</div>
+			<div class="card-body">
+				<form action="{{ save }}" method="post" enctype="multipart/form-data" id="form_payment" data-oc-toggle="ajax">
+					<div class="row mb-3 required">
+						<label class="col-sm-2 col-form-label" for="input-vendor">{{ entry_vendor }}</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<input type="text" name="payment_sagepay_direct_vendor" value="{{ payment_sagepay_direct_vendor }}" placeholder="{{ entry_vendor }}" id="input-vendor" class="form-control" />
+								<div id="error-vendor" class="invalid-feedback"></div>
+							</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label class="col-sm-2 col-form-label" for="input-test">{{ entry_test }}</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<select name="payment_sagepay_direct_test" id="input-test" class="form-select">
+									{% if payment_sagepay_direct_test == 'live' %}
+									<option value="live" selected="selected">{{ text_live }}</option>
+									{% else %}
+									<option value="live">{{ text_live }}</option>
+									{% endif %}
+									{% if payment_sagepay_direct_test == 'test' %}
+									<option value="test" selected="selected">{{ text_test }}</option>
+									{% else %}
+									<option value="test">{{ text_test }}</option>
+									{% endif %}
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label class="col-sm-2 col-form-label" for="input-transaction">{{ entry_transaction }}</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<select name="payment_sagepay_direct_transaction" id="input-transaction" class="form-select">
+									{% if payment_sagepay_direct_transaction == 'PAYMENT' %}
+									<option value="PAYMENT" selected="selected">{{ text_payment }}</option>
+									{% else %}
+									<option value="PAYMENT">{{ text_payment }}</option>
+									{% endif %}
+									{% if payment_sagepay_direct_transaction == 'DEFERRED' %}
+									<option value="DEFERRED" selected="selected">{{ text_defered }}</option>
+									{% else %}
+									<option value="DEFERRED">{{ text_defered }}</option>
+									{% endif %}
+									{% if payment_sagepay_direct_transaction == 'AUTHENTICATE' %}
+									<option value="AUTHENTICATE" selected="selected">{{ text_authenticate }}</option>
+									{% else %}
+									<option value="AUTHENTICATE">{{ text_authenticate }}</option>
+									{% endif %}
+								</select>
+							</div>
+							<div class="form-text">{{ help_transaction }}</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label class="col-sm-2 col-form-label" for="input-order-status">{{ entry_order_status }}</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<select name="payment_sagepay_direct_order_status_id" id="input-order-status" class="form-select">
+									{% for order_status in order_statuses %}
+									{% if order_status['order_status_id'] == payment_sagepay_direct_order_status_id %}
+									<option value="{{ order_status['order_status_id'] }}" selected="selected">{{ order_status['name'] }}</option>
+									{% else %}
+									<option value="{{ order_status['order_status_id'] }}">{{ order_status['name'] }}</option>
+									{% endif %}
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label class="col-sm-2 col-form-label" for="input-geo-zone">{{ entry_geo_zone }}</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<select name="payment_sagepay_direct_geo_zone_id" id="input-geo-zone" class="form-select">
+									<option value="0">{{ text_all_zones }}</option>
+									{% for geo_zone in geo_zones %}
+									{% if geo_zone['geo_zone_id'] == payment_sagepay_direct_geo_zone_id %}
+									<option value="{{ geo_zone['geo_zone_id'] }}" selected="selected">{{ geo_zone['name'] }}</option>
+									{% else %}
+									<option value="{{ geo_zone['geo_zone_id'] }}">{{ geo_zone['name'] }}</option>
+									{% endif %}
+									{% endfor %}
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label class="col-sm-2 col-form-label" for="input-debug">{{ entry_debug }}</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<select name="payment_sagepay_direct_debug" id="input-debug" class="form-select">
+									{% if payment_sagepay_direct_debug %}
+									<option value="1" selected="selected">{{ text_enabled }}</option>
+									<option value="0">{{ text_disabled }}</option>
+									{% else %}
+									<option value="1">{{ text_enabled }}</option>
+									<option value="0" selected="selected">{{ text_disabled }}</option>
+									{% endif %}
+								</select>
+							</div>
+							<div class="form-text">{{ help_debug }}</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label class="col-sm-2 col-form-label" for="input-status">{{ entry_status }}</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<select name="payment_sagepay_direct_status" id="input-status" class="form-select">
+									{% if payment_sagepay_direct_status %}
+									<option value="1" selected="selected">{{ text_enabled }}</option>
+									<option value="0">{{ text_disabled }}</option>
+									{% else %}
+									<option value="1">{{ text_enabled }}</option>
+									<option value="0" selected="selected">{{ text_disabled }}</option>
+									{% endif %}
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label class="col-sm-2 col-form-label" for="input-sort-order">{{ entry_sort_order }}</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<input type="text" name="payment_sagepay_direct_sort_order" value="{{ payment_sagepay_direct_sort_order }}" placeholder="{{ entry_sort_order }}" id="input-sort-order" class="form-control" />
+							</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label class="col-sm-2 col-form-label" for="sagepay-direct-cron-job-token">{{ entry_cron_job_token }}</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<input type="text" name="payment_sagepay_direct_cron_job_token" value="{{ payment_sagepay_direct_cron_job_token }}" placeholder="{{ entry_cron_job_token }}" id="sagepay-direct-cron-job-token" class="form-control" />
+							</div>
+							<div class="form-text">{{ help_cron_job_token }}</div>
+						</div>
+					</div>
+					<div class="row mb-3">
+						<label class="col-sm-2 col-form-label" for="cron-job-url">{{ entry_cron_job_url }}</label>
+						<div class="col-sm-10">
+							<div class="input-group">
+								<input type="text" name="sagepay_direct_cron_job_url" value="{{ sagepay_direct_cron_job_url }}" placeholder="{{ entry_cron_job_url }}" id="input-cron-job-url" class="form-control" />
+							</div>
+							<div class="form-text">{{ help_cron_job_url }}</div>
+						</div>
+					</div>
+					{% if payment_sagepay_direct_last_cron_job_run %}
+					<div class="row mb-3">
+						<label class="col-sm-2 col-form-label">{{ entry_last_cron_job_run }}</label>
+						<div class="col-sm-10">{{ payment_sagepay_direct_last_cron_job_run }}</div>
+					</div>
+					{% endif %}
+				</form>
+			</div>
+		</div>
+	</div>
+</div>		 					
+{{ footer }}					

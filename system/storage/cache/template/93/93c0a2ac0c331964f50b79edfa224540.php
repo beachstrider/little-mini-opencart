@@ -34,8 +34,12 @@ class __TwigTemplate_7e3a4d9fe324855c23c385c7d75a843d extends Template
     {
         $macros = $this->macros;
         // line 1
-        echo "<form id=\"form-shipping-method\" class=\"border-t border-darkBlue py-[20px]\">
-  <fieldset>
+        echo "<form id=\"form-shipping-method\" class=\"border-t border-darkBlue py-[20px] ";
+        if ( !($context["shipping_methods"] ?? null)) {
+            echo " hidden ";
+        }
+        echo "\">
+    <input name=\"shipping_method\" id=\"input-shipping-method\" type=\"hidden\" value=\"\" >
     <div class=\"sm:text-[16px] text-[12px] font-bold\">";
         // line 3
         echo ($context["heading_title"] ?? null);
@@ -49,7 +53,7 @@ class __TwigTemplate_7e3a4d9fe324855c23c385c7d75a843d extends Template
         foreach ($context['_seq'] as $context["_key"] => $context["shipping_method"]) {
             // line 7
             echo "            <div class=\"mb-[20px]\">
-                <div class=\"bg-orangeLight flex justify-between items-center px-[10px] py-[2px] font-bold\">
+                <div class=\"bg-orangeLight flex justify-between items-center px-[10px] py-[4px] font-bold\">
                     <div class=\"\">";
             // line 9
             echo twig_get_attribute($this->env, $this->source, $context["shipping_method"], "title", [], "any", false, false, false, 9);
@@ -60,8 +64,10 @@ class __TwigTemplate_7e3a4d9fe324855c23c385c7d75a843d extends Template
             // line 12
             echo twig_get_attribute($this->env, $this->source, $context["shipping_method"], "title", [], "any", false, false, false, 12);
             echo "</div>
-                    <button class=\"font-semibold uppercase bg-indigo text-white px-[8px] py-[4px]\">";
+                    <button type=\"button\" class=\"font-semibold uppercase bg-indigo text-white px-[8px] py-[4px]\" onclick=\"\$('#input-shipping-method').val('";
             // line 13
+            echo twig_get_attribute($this->env, $this->source, twig_first($this->env, twig_get_attribute($this->env, $this->source, $context["shipping_method"], "quote", [], "any", false, false, false, 13)), "code", [], "any", false, false, false, 13);
+            echo "');\$('#form-shipping-method').submit();\">";
             echo ($context["chose_place"] ?? null);
             echo "</button>
                 </div>
@@ -72,83 +78,16 @@ class __TwigTemplate_7e3a4d9fe324855c23c385c7d75a843d extends Template
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['shipping_method'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 17
-        echo "            <select name=\"shipping_method\" id=\"input-shipping-method\" class=\"hidden\"";
-        if ( !($context["shipping_methods"] ?? null)) {
-            echo " disabled";
-        }
-        echo ">
-                <option value=\"\">";
-        // line 18
-        echo ($context["text_select"] ?? null);
-        echo "</option>
-                ";
-        // line 19
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(($context["shipping_methods"] ?? null));
-        foreach ($context['_seq'] as $context["_key"] => $context["shipping_method"]) {
-            // line 20
-            echo "                <optgroup label=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["shipping_method"], "title", [], "any", false, false, false, 20);
-            echo "\">
-                    ";
-            // line 21
-            if ( !twig_get_attribute($this->env, $this->source, $context["shipping_method"], "error", [], "any", false, false, false, 21)) {
-                // line 22
-                echo "                    ";
-                $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["shipping_method"], "quote", [], "any", false, false, false, 22));
-                foreach ($context['_seq'] as $context["_key"] => $context["quote"]) {
-                    // line 23
-                    echo "                        <option value=\"";
-                    echo twig_get_attribute($this->env, $this->source, $context["quote"], "code", [], "any", false, false, false, 23);
-                    echo "\"";
-                    if ((twig_get_attribute($this->env, $this->source, $context["quote"], "code", [], "any", false, false, false, 23) == ($context["code"] ?? null))) {
-                        echo " selected";
-                    }
-                    echo ">";
-                    echo twig_get_attribute($this->env, $this->source, $context["quote"], "title", [], "any", false, false, false, 23);
-                    if (twig_get_attribute($this->env, $this->source, $context["quote"], "cost", [], "any", false, false, false, 23)) {
-                        echo " - ";
-                        echo twig_get_attribute($this->env, $this->source, $context["quote"], "text", [], "any", false, false, false, 23);
-                    }
-                    echo "</option>
-                    ";
-                }
-                $_parent = $context['_parent'];
-                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['quote'], $context['_parent'], $context['loop']);
-                $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 25
-                echo "                    ";
-            } else {
-                // line 26
-                echo "                    <option value=\"\" class=\"text-danger\" disabled>";
-                echo twig_get_attribute($this->env, $this->source, $context["shipping_method"], "error", [], "any", false, false, false, 26);
-                echo "</option>
-                    ";
-            }
-            // line 28
-            echo "                </optgroup>
-                ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['shipping_method'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
-        echo "            </select>
-            <button type=\"button\" id=\"button-shipping-method\" class=\"hidden btn btn-light\"><i class=\"fa-solid fa-rotate\"></i></button>
-        </div>
+        echo "        </div>
     </div>
-  </fieldset>
 </form>
 <script type=\"text/javascript\">
 // Shipping Methods
-\$('#button-shipping-method').on('click', function () {
-    var element = this;
-
+async function refreshShippingMethod(){
     chain.attach(function () {
         return \$.ajax({
             url: 'index.php?route=checkout/shipping_method|getMethods&language=";
-        // line 43
+        // line 25
         echo ($context["language"] ?? null);
         echo "',
             dataType: 'json',
@@ -168,7 +107,7 @@ class __TwigTemplate_7e3a4d9fe324855c23c385c7d75a843d extends Template
 
                 // Shipping Methods
                 html = '<option value=\"\">";
-        // line 60
+        // line 42
         echo ($context["text_select"] ?? null);
         echo "</option>';
 
@@ -204,7 +143,7 @@ class __TwigTemplate_7e3a4d9fe324855c23c385c7d75a843d extends Template
                 \$('#input-shipping-method').html(html);
 
                 \$('#checkout-confirm').load('index.php?route=checkout/confirm|confirm&language=";
-        // line 93
+        // line 75
         echo ($context["language"] ?? null);
         echo "');
             },
@@ -213,28 +152,23 @@ class __TwigTemplate_7e3a4d9fe324855c23c385c7d75a843d extends Template
             }
         });
     });
-});
+};
 
 // Shipping Method
-\$('#input-shipping-method').on('change', function () {
-    var element = this;
+\$('#form-shipping-method').on('submit', function (e) {
+    e.preventDefault();
+    const form = \$(this);
 
     chain.attach(function () {
         return \$.ajax({
             url: 'index.php?route=checkout/shipping_method|save&language=";
-        // line 108
+        // line 91
         echo ($context["language"] ?? null);
         echo "',
             type: 'post',
-            data: \$('#form-shipping-method').serialize(),
+            data: form.serialize(),
             dataType: 'json',
             contentType: 'application/x-www-form-urlencoded',
-            beforeSend: function () {
-                \$(element).prop('disabled', true);
-            },
-            complete: function () {
-                \$(element).prop('disabled', false);
-            },
             success: function (json) {
                 console.log(json);
 
@@ -247,9 +181,10 @@ class __TwigTemplate_7e3a4d9fe324855c23c385c7d75a843d extends Template
                 }
 
                 if (json['success']) {
-                    \$('#alert').prepend('<div class=\"alert alert-success alert-dismissible\"><i class=\"fa-solid fa-circle-check\"></i> ' + json['success'] + ' <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button></div>');
+                    toast({type: 'success', text: json['success']})
 
-                    \$('#button-payment-method').trigger('click');
+                    \$('#checkout-shipping-address-method').hide();
+                    \$('#checkout-confirm').show();
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {
@@ -273,7 +208,7 @@ class __TwigTemplate_7e3a4d9fe324855c23c385c7d75a843d extends Template
 
     public function getDebugInfo()
     {
-        return array (  226 => 108,  208 => 93,  172 => 60,  152 => 43,  137 => 30,  130 => 28,  124 => 26,  121 => 25,  102 => 23,  97 => 22,  95 => 21,  90 => 20,  86 => 19,  82 => 18,  75 => 17,  65 => 13,  61 => 12,  55 => 9,  51 => 7,  47 => 6,  41 => 3,  37 => 1,);
+        return array (  166 => 91,  147 => 75,  111 => 42,  91 => 25,  81 => 17,  69 => 13,  65 => 12,  59 => 9,  55 => 7,  51 => 6,  45 => 3,  37 => 1,);
     }
 
     public function getSourceContext()

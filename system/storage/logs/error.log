@@ -323,3 +323,41 @@ age\vendor\twig\twig\src\Cache\FilesystemCache.php on line 61
 2023-04-03 09:22:33 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/checkout/shipping_address.twig" (looked into: ). in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
 2023-04-03 09:22:56 - Twig\Error\LoaderError:  Unable to find template "catalog/view/template/checkout/shipping_address.twig" (looked into: ). in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Loader\FilesystemLoader.php on line 227
 2023-04-03 09:39:35 - Twig\Error\SyntaxError:  Unknown "endfor" tag. in E:\xampp\htdocs\catalog\view\template\checkout\shipping_method.twig on line 15
+2023-04-03 16:51:46 - PHP Warning: unlink(E:/xampp/htdocs/system/storage/cache/cache.store.1680544302): No such file or directory
+File: E:\xampp\htdocs\system\library\cache\file.php
+Line: 49
+
+2023-04-03 16:51:46 - PHP Warning: unlink(E:/xampp/htdocs/system/storage/cache/cache.store.1680544302): Permission denied
+File: E:\xampp\htdocs\system\library\cache\file.php
+Line: 49
+
+2023-04-03 16:51:55 - PHP Warning: unlink(E:/xampp/htdocs/system/storage/cache/cache.store.1680544315): Permission denied
+File: E:\xampp\htdocs\system\library\cache\file.php
+Line: 49
+
+\library\cache\file.php
+Line: 28
+
+2023-04-03 16:51:55 - PHP Warning: file_put_contents(E:/xampp/htdocs/system/storage/cache/cache.store.1680544315): Failed to open stream: Permission denied
+File: E:\xampp\htdocs\system\library\cache\file.php
+Line: 41
+
+2023-04-03 16:51:55 - PHP Warning: file_put_contents(E:/xampp/htdocs/system/storage/cache/cache.store.1680544315): Failed to open stream: Permission denied
+File: E:\xampp\htdocs\system\library\cache\file.php
+Line: 41
+
+2023-04-03 18:22:05 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\confirm.php on line 333
+2023-04-03 18:22:45 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\confirm.php on line 333
+2023-04-03 18:23:53 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\confirm.php on line 331
+2023-04-03 18:25:39 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\confirm.php on line 331
+2023-04-03 18:46:56 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\confirm.php on line 201
+2023-04-03 18:47:00 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\confirm.php on line 201
+2023-04-03 18:47:02 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\confirm.php on line 201
+2023-04-03 18:47:43 - PHP Warning:  Undefined array key "meta_title" in E:\xampp\htdocs\catalog\controller\checkout\confirm.php on line 201
+2023-04-03 19:30:25 - PHP Warning:  rename(E:\xampp\htdocs\system\storage\cache\template\d8\d85ADB9.tmp,E:/xampp/htdocs/system/storage/cache/template/d8/d856a49b10821c1c26187898d68ebe1a.php): Access is denied (code: 5) in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 61
+2023-04-03 19:30:25 - RuntimeException:  Failed to write cache file "E:/xampp/htdocs/system/storage/cache/template/d8/d856a49b10821c1c26187898d68ebe1a.php". in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 76
+2023-04-03 19:37:11 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\checkout\payment_method.php on line 131
+2023-04-03 19:37:12 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\checkout\payment_method.php on line 131
+2023-04-03 19:38:25 - PHP Warning:  rename(E:\xampp\htdocs\system\storage\cache\template\d8\d85FF28.tmp,E:/xampp/htdocs/system/storage/cache/template/d8/d856a49b10821c1c26187898d68ebe1a.php): Access is denied (code: 5) in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 61
+2023-04-03 19:38:25 - RuntimeException:  Failed to write cache file "E:/xampp/htdocs/system/storage/cache/template/d8/d856a49b10821c1c26187898d68ebe1a.php". in E:\xampp\htdocs\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 76
+2023-04-04 00:07:53 - PHP Warning:  Undefined variable $status in E:\xampp\htdocs\catalog\controller\checkout\payment_method.php on line 439

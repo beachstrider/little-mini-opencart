@@ -2,18 +2,17 @@
 <div id="checkout-checkout" class="container mx-auto sm:px-0 px-[20px]">
 	<div id="checkout-register">{{ register }}</div>
 
-	{% if payment_address %}
-		<div id="checkout-payment-address">{{ payment_address }}</div>
-	{% endif %}
+	<div id="checkout-shipping-address-method">
+		{{ shipping_address }}
+		{{ shipping_method }}
+	</div>
 
-	{% if shipping_address %}
-		<div id="checkout-shipping-address">{{ shipping_address }}</div>
-	{% endif %} 
-
-	{% if shipping_method %}
-		<div id="checkout-shipping-method" class="mb-3">{{ shipping_method }}</div>
-	{% endif %}
-	
+	<div id="checkout-confirm" class="hidden">
+		{{ confirm }}
+	</div>
+	<div id="checkout-payment-method" class="hidden">
+		{{ payment_method }}
+	</div>
 </div>
 {{ section_save_membership }}
 {{ section_best_deals }}

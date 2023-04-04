@@ -1,43 +1,25 @@
-<form id="form-shipping-method" class="border-t border-darkBlue py-[20px]">
-  <fieldset>
+<form id="form-shipping-method" class="border-t border-darkBlue py-[20px] {% if not shipping_methods %} hidden {% endif %}">
+    <input name="shipping_method" id="input-shipping-method" type="hidden" value="" >
     <div class="sm:text-[16px] text-[12px] font-bold">{{ heading_title }}</div>
     <div class="mt-[12px]">
         <div class="max-w-[814px] w-full mx-auto">
             {% for shipping_method in shipping_methods %}
             <div class="mb-[20px]">
-                <div class="bg-orangeLight flex justify-between items-center px-[10px] py-[2px] font-bold">
+                <div class="bg-orangeLight flex justify-between items-center px-[10px] py-[4px] font-bold">
                     <div class="">{{ shipping_method.title }}</div>
                 </div>
                 <div class="bg-orangeGray flex justify-between items-center px-[10px] py-[15px]">
                     <div class="">{{ shipping_method.title }}</div>
-                    <button class="font-semibold uppercase bg-indigo text-white px-[8px] py-[4px]">{{chose_place}}</button>
+                    <button type="button" class="font-semibold uppercase bg-indigo text-white px-[8px] py-[4px]" onclick="$('#input-shipping-method').val('{{ shipping_method.quote|first.code }}');$('#form-shipping-method').submit();">{{chose_place}}</button>
                 </div>
             </div>
             {% endfor %}
-            <select name="shipping_method" id="input-shipping-method" class="hidden"{% if not shipping_methods %} disabled{% endif %}>
-                <option value="">{{ text_select }}</option>
-                {% for shipping_method in shipping_methods %}
-                <optgroup label="{{ shipping_method.title }}">
-                    {% if not shipping_method.error %}
-                    {% for quote in shipping_method.quote %}
-                        <option value="{{ quote.code }}"{% if quote.code == code %} selected{% endif %}>{{ quote.title }}{% if quote.cost %} - {{ quote.text }}{% endif %}</option>
-                    {% endfor %}
-                    {% else %}
-                    <option value="" class="text-danger" disabled>{{ shipping_method.error }}</option>
-                    {% endif %}
-                </optgroup>
-                {% endfor %}
-            </select>
-            <button type="button" id="button-shipping-method" class="hidden btn btn-light"><i class="fa-solid fa-rotate"></i></button>
         </div>
     </div>
-  </fieldset>
 </form>
 <script type="text/javascript">
 // Shipping Methods
-$('#button-shipping-method').on('click', function () {
-    var element = this;
-
+async function refreshShippingMethod(){
     chain.attach(function () {
         return $.ajax({
             url: 'index.php?route=checkout/shipping_method|getMethods&language={{ language }}',
@@ -97,25 +79,20 @@ $('#button-shipping-method').on('click', function () {
             }
         });
     });
-});
+};
 
 // Shipping Method
-$('#input-shipping-method').on('change', function () {
-    var element = this;
+$('#form-shipping-method').on('submit', function (e) {
+    e.preventDefault();
+    const form = $(this);
 
     chain.attach(function () {
         return $.ajax({
             url: 'index.php?route=checkout/shipping_method|save&language={{ language }}',
             type: 'post',
-            data: $('#form-shipping-method').serialize(),
+            data: form.serialize(),
             dataType: 'json',
             contentType: 'application/x-www-form-urlencoded',
-            beforeSend: function () {
-                $(element).prop('disabled', true);
-            },
-            complete: function () {
-                $(element).prop('disabled', false);
-            },
             success: function (json) {
                 console.log(json);
 
@@ -128,9 +105,10 @@ $('#input-shipping-method').on('change', function () {
                 }
 
                 if (json['success']) {
-                    $('#alert').prepend('<div class="alert alert-success alert-dismissible"><i class="fa-solid fa-circle-check"></i> ' + json['success'] + ' <button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>');
+                    toast({type: 'success', text: json['success']})
 
-                    $('#button-payment-method').trigger('click');
+                    $('#checkout-shipping-address-method').hide();
+                    $('#checkout-confirm').show();
                 }
             },
             error: function (xhr, ajaxOptions, thrownError) {

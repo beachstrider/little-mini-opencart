@@ -120,6 +120,21 @@ class PaymentMethod extends \Opencart\System\Engine\Controller {
 			$data['agree'] = '';
 		}
 
+		// Validate if payment method has been set.
+		if (isset($this->session->data['payment_method'])) {
+			$code = $this->session->data['payment_method'];
+		} else {
+			$code = '';
+		}
+
+		$extension_info = $this->model_setting_extension->getExtensionByCode('payment', $code);
+
+		if ($status && $extension_info) {
+			$data['payment'] = $this->load->controller('extension/' . $extension_info['extension'] . '/payment/' . $extension_info['code']);
+		} else {
+			$data['payment'] = '';
+		}
+
 		return $this->load->view('checkout/payment_method', $data);
 	}
 
@@ -275,6 +290,24 @@ class PaymentMethod extends \Opencart\System\Engine\Controller {
 
 			$json['success'] = $this->language->get('text_success');
 		}
+
+		// ---
+		if (isset($this->session->data['payment_method'])) {
+			$code = $this->session->data['payment_method'];
+		} else {
+			$code = '';
+		}
+
+		$extension_info = $this->model_setting_extension->getExtensionByCode('payment', $code);
+
+		if ($extension_info) {
+			$payment = $this->load->controller('extension/' . $extension_info['extension'] . '/payment/' . $extension_info['code']);
+		} else {
+			$payment = '';
+		}
+
+		$json['payment'] = $payment;
+		// ---
 
 		$this->response->addHeader('Content-Type: application/json');
 		$this->response->setOutput(json_encode($json));

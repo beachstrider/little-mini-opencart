@@ -42,51 +42,40 @@ class __TwigTemplate_3e84d41f18cf9580ef8229614e4203ad extends Template
         echo ($context["register"] ?? null);
         echo "</div>
 
-\t";
-        // line 5
-        if (($context["payment_address"] ?? null)) {
-            // line 6
-            echo "\t\t<div id=\"checkout-payment-address\">";
-            echo ($context["payment_address"] ?? null);
-            echo "</div>
-\t";
-        }
-        // line 8
+\t<div id=\"checkout-shipping-address-method\">
+\t\t";
+        // line 6
+        echo ($context["shipping_address"] ?? null);
         echo "
-\t";
-        // line 9
-        if (($context["shipping_address"] ?? null)) {
-            // line 10
-            echo "\t\t<div id=\"checkout-shipping-address\">";
-            echo ($context["shipping_address"] ?? null);
-            echo "</div>
-\t";
-        }
-        // line 11
-        echo " 
+\t\t";
+        // line 7
+        echo ($context["shipping_method"] ?? null);
+        echo "
+\t</div>
 
-\t";
-        // line 13
-        if (($context["shipping_method"] ?? null)) {
-            // line 14
-            echo "\t\t<div id=\"checkout-shipping-method\" class=\"mb-3\">";
-            echo ($context["shipping_method"] ?? null);
-            echo "</div>
-\t";
-        }
-        // line 16
-        echo "\t
+\t<div id=\"checkout-confirm\" class=\"hidden\">
+\t\t";
+        // line 11
+        echo ($context["confirm"] ?? null);
+        echo "
+\t</div>
+\t<div id=\"checkout-payment-method\" class=\"hidden\">
+\t\t";
+        // line 14
+        echo ($context["payment_method"] ?? null);
+        echo "
+\t</div>
 </div>
 ";
-        // line 18
+        // line 17
         echo ($context["section_save_membership"] ?? null);
         echo "
 ";
-        // line 19
+        // line 18
         echo ($context["section_best_deals"] ?? null);
         echo "
 ";
-        // line 20
+        // line 19
         echo ($context["footer"] ?? null);
         echo "
 ";
@@ -104,7 +93,7 @@ class __TwigTemplate_3e84d41f18cf9580ef8229614e4203ad extends Template
 
     public function getDebugInfo()
     {
-        return array (  90 => 20,  86 => 19,  82 => 18,  78 => 16,  72 => 14,  70 => 13,  66 => 11,  60 => 10,  58 => 9,  55 => 8,  49 => 6,  47 => 5,  42 => 3,  37 => 1,);
+        return array (  79 => 19,  75 => 18,  71 => 17,  65 => 14,  59 => 11,  52 => 7,  48 => 6,  42 => 3,  37 => 1,);
     }
 
     public function getSourceContext()

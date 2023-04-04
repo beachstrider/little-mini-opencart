@@ -1,5 +1,7 @@
 <?php
 // Text
+$_['heading_title_1']          = 'Your';
+$_['heading_title_2']          = 'Order';
 $_['text_subscription']          = 'Subscription';
 $_['text_subscription_trial']    = '%s every %d %s(s) for %d payment(s) then ';
 $_['text_subscription_duration'] = '%s every %d %s(s) for %d payment(s)';
