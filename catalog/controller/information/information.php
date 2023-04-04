@@ -4,13 +4,6 @@ class Information extends \Opencart\System\Engine\Controller {
 	public function index(): void {
 		$this->load->language('information/information');
 
-		$data['breadcrumbs'] = [];
-
-		$data['breadcrumbs'][] = [
-			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/home', 'language=' . $this->config->get('config_language'))
-		];
-
 		if (isset($this->request->get['information_id'])) {
 			$information_id = (int)$this->request->get['information_id'];
 		} else {
@@ -25,11 +18,6 @@ class Information extends \Opencart\System\Engine\Controller {
 			$this->document->setTitle($information_info['meta_title']);
 			$this->document->setDescription($information_info['meta_description']);
 			$this->document->setKeywords($information_info['meta_keyword']);
-
-			$data['breadcrumbs'][] = [
-				'text' => $information_info['title'],
-				'href' => $this->url->link('information/information', 'language=' . $this->config->get('config_language') . '&information_id=' .  $information_id)
-			];
 
 			$data['heading_title'] = $information_info['title'];
 
@@ -47,10 +35,6 @@ class Information extends \Opencart\System\Engine\Controller {
 
 			$this->response->setOutput($this->load->view('information/information', $data));
 		} else {
-			$data['breadcrumbs'][] = [
-				'text' => $this->language->get('text_error'),
-				'href' => $this->url->link('information/information', 'language=' . $this->config->get('config_language') . '&information_id=' . $information_id)
-			];
 
 			$this->document->setTitle($this->language->get('text_error'));
 

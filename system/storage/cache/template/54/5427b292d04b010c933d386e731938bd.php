@@ -122,45 +122,29 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
 \t\t\t\t\t";
         }
         // line 43
-        echo "\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-        // line 44
-        echo ($context["sitemap"] ?? null);
-        echo "\">";
-        echo ($context["text_sitemap"] ?? null);
-        echo "</a>
-\t\t\t\t\t</li>
-\t\t\t\t</ul>
+        echo "\t\t\t\t</ul>
 \t\t\t</div>
 \t\t\t<div class=\"sm:col-span-1 col-span-6 w-full\">
 \t\t\t\t<h5 class=\"font-bold uppercase pb-[24px]\">";
-        // line 49
+        // line 46
         echo ($context["text_extra"] ?? null);
         echo "</h5>
 \t\t\t\t<ul class=\"list-unstyled\">
 \t\t\t\t\t<li>
 \t\t\t\t\t\t<a href=\"";
-        // line 52
+        // line 49
         echo ($context["manufacturer"] ?? null);
         echo "\">";
         echo ($context["text_manufacturer"] ?? null);
         echo "</a>
 \t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-        // line 55
-        echo ($context["voucher"] ?? null);
-        echo "\">";
-        echo ($context["text_voucher"] ?? null);
-        echo "</a>
-\t\t\t\t\t</li>
 \t\t\t\t\t";
-        // line 57
+        // line 51
         if (($context["affiliate"] ?? null)) {
-            // line 58
+            // line 52
             echo "\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"";
-            // line 59
+            // line 53
             echo ($context["affiliate"] ?? null);
             echo "\">";
             echo ($context["text_affiliate"] ?? null);
@@ -168,10 +152,10 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
 \t\t\t\t\t\t</li>
 \t\t\t\t\t";
         }
-        // line 62
+        // line 56
         echo "\t\t\t\t\t<li>
 \t\t\t\t\t\t<a href=\"";
-        // line 63
+        // line 57
         echo ($context["special"] ?? null);
         echo "\">";
         echo ($context["text_special"] ?? null);
@@ -181,13 +165,13 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
 \t\t\t</div>
 \t\t\t<div class=\"sm:col-span-1 col-span-6 w-full\">
 \t\t\t\t<h5 class=\"font-bold uppercase pb-[24px]\">";
-        // line 68
+        // line 62
         echo ($context["text_account"] ?? null);
         echo "</h5>
 \t\t\t\t<ul class=\"list-unstyled\">
 \t\t\t\t\t<li>
 \t\t\t\t\t\t<a href=\"";
-        // line 71
+        // line 65
         echo ($context["account"] ?? null);
         echo "\">";
         echo ($context["text_account"] ?? null);
@@ -195,7 +179,7 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
 \t\t\t\t\t</li>
 \t\t\t\t\t<li>
 \t\t\t\t\t\t<a href=\"";
-        // line 74
+        // line 68
         echo ($context["order"] ?? null);
         echo "\">";
         echo ($context["text_order"] ?? null);
@@ -203,7 +187,7 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
 \t\t\t\t\t</li>
 \t\t\t\t\t<li>
 \t\t\t\t\t\t<a href=\"";
-        // line 77
+        // line 71
         echo ($context["wishlist"] ?? null);
         echo "\">";
         echo ($context["text_wishlist"] ?? null);
@@ -211,7 +195,7 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
 \t\t\t\t\t</li>
 \t\t\t\t\t<li>
 \t\t\t\t\t\t<a href=\"";
-        // line 80
+        // line 74
         echo ($context["newsletter"] ?? null);
         echo "\">";
         echo ($context["text_newsletter"] ?? null);
@@ -243,39 +227,39 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
 \t<div class=\"border-t border-[#6B7A93] bg-[#f5f5f5]\">
 \t\t<div class=\"container mx-auto sm:px-0 px-[20px] flex justify-between sm:items-start sm:gap-0 gap-[16px] items-center text-center sm:flex-row flex-col py-[26px] text-[#6B7A93]\">
 \t\t\t<p>";
-        // line 107
+        // line 101
         echo ($context["text_powered"] ?? null);
         echo "</p>
 \t\t\t<p>";
-        // line 108
+        // line 102
         echo ($context["copyright"] ?? null);
         echo "</p>
 \t\t</div>
 \t</div>
 </footer>
 ";
-        // line 112
+        // line 106
         echo ($context["cookie"] ?? null);
         echo "
 <script src=\"";
-        // line 113
+        // line 107
         echo ($context["bootstrap"] ?? null);
         echo "\" type=\"text/javascript\"></script>
 ";
-        // line 114
+        // line 108
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["scripts"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["script"]) {
-            // line 115
+            // line 109
             echo "\t<script src=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["script"], "href", [], "any", false, false, false, 115);
+            echo twig_get_attribute($this->env, $this->source, $context["script"], "href", [], "any", false, false, false, 109);
             echo "\" type=\"text/javascript\"></script>
 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['script'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 117
+        // line 111
         echo "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js\"></script></body></html>
 ";
     }
@@ -292,7 +276,7 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
 
     public function getDebugInfo()
     {
-        return array (  279 => 117,  270 => 115,  266 => 114,  262 => 113,  258 => 112,  251 => 108,  247 => 107,  215 => 80,  207 => 77,  199 => 74,  191 => 71,  185 => 68,  175 => 63,  172 => 62,  164 => 59,  161 => 58,  159 => 57,  152 => 55,  144 => 52,  138 => 49,  128 => 44,  125 => 43,  117 => 40,  114 => 39,  112 => 38,  105 => 36,  97 => 33,  91 => 30,  88 => 29,  83 => 26,  72 => 23,  69 => 22,  65 => 21,  60 => 19,  57 => 18,  55 => 17,  37 => 1,);
+        return array (  263 => 111,  254 => 109,  250 => 108,  246 => 107,  242 => 106,  235 => 102,  231 => 101,  199 => 74,  191 => 71,  183 => 68,  175 => 65,  169 => 62,  159 => 57,  156 => 56,  148 => 53,  145 => 52,  143 => 51,  136 => 49,  130 => 46,  125 => 43,  117 => 40,  114 => 39,  112 => 38,  105 => 36,  97 => 33,  91 => 30,  88 => 29,  83 => 26,  72 => 23,  69 => 22,  65 => 21,  60 => 19,  57 => 18,  55 => 17,  37 => 1,);
     }
 
     public function getSourceContext()

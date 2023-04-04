@@ -1,0 +1,31 @@
+      {# AAA #}
+      <div class="sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]">
+        <div class="col-span-2 flex justify-end items-center">
+          <label for="input-aaa" class="form-label sm:w-[270px] flex items-center">{{ entry_aaa }}:<div class="w-[6px] h-[6px] rounded-full bg-orange ml-[10px]"></div>
+          </label>
+        </div>
+        <div class="col-span-2 required flex items-center">
+          <input type="text" name="aaa" value="{{ aaa }}" placeholder="{{ entry_aaa }}" id="input-aaa" class="w-full"/>
+        </div>
+        <div id="error-aaa" class="text-[12px] text-orange flex items-center"></div>
+      </div>
+
+      {# BBB #}
+      <div class="sm:grid grid-cols-5 sm:gap-[30px] gap-[20px]">
+        <div class="col-span-2 flex justify-end items-center">
+          <label for="input-bbb" class="form-label sm:w-[270px] flex items-center">AAA / BBB:<div class="w-[6px] h-[6px] rounded-full bg-orange ml-[10px]"></div>
+          </label>
+        </div>
+        <div class="col-span-2 required grid grid-cols-2 gap-[20px]">
+          <div class="">
+            <input type="text" name="bbb" value="{{ bbb }}" placeholder="{{ entry_bbb }} ..." id="input-bbb" class="w-full"/>
+          </div>
+          <div class="">
+            <input type="text" name="ccc" value="{{ ccc }}" placeholder="{{ entry_ccc }} ..." id="input-ccc" class="w-full"/>
+          </div>
+        </div>
+        <div class="">
+          <div id="error-bbb" class="text-[12px] text-orange flex items-center"></div>
+          <div id="error-ccc" class="text-[12px] text-orange flex items-center"></div>
+        </div>
+      </div>

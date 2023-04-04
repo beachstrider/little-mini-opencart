@@ -7,18 +7,6 @@ class Contact extends \Opencart\System\Engine\Controller {
 
 		$this->document->setTitle($this->language->get('heading_title'));
 
-		$data['breadcrumbs'] = [];
-
-		$data['breadcrumbs'][] = [
-			'text' => $this->language->get('text_home'),
-			'href' => $this->url->link('common/home', 'language=' . $this->config->get('config_language'))
-		];
-
-		$data['breadcrumbs'][] = [
-			'text' => $this->language->get('heading_title'),
-			'href' => $this->url->link('information/contact', 'language=' . $this->config->get('config_language'))
-		];
-
 		$data['send'] = $this->url->link('information/contact|send', 'language=' . $this->config->get('config_language'));
 
 		$this->load->model('tool/image');
@@ -78,10 +66,7 @@ class Contact extends \Opencart\System\Engine\Controller {
 			$data['captcha'] = '';
 		}
 
-		$data['column_left'] = $this->load->controller('common/column_left');
-		$data['column_right'] = $this->load->controller('common/column_right');
-		$data['content_top'] = $this->load->controller('common/content_top');
-		$data['content_bottom'] = $this->load->controller('common/content_bottom');
+		$data['section_best_deals'] = $this->load->view('common/section_best_deals');
 		$data['footer'] = $this->load->controller('common/footer');
 		$data['header'] = $this->load->controller('common/header');
 

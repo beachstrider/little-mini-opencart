@@ -70,7 +70,7 @@ $("#form-product").on("submit", function (e) {
       if (json["success"]) {
         toast({ text: json["success"] });
 
-        $("#header-cart").load("index.php?route=common/cart|info");
+        $("#header-cart").load(`index.php?route=common/cart|info&language=${language}`);
       }
     },
     error: function (xhr, ajaxOptions, thrownError) {

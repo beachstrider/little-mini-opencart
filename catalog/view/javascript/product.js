@@ -52,7 +52,7 @@ $("#form-product").on("submit", function (e) {
         toast({ text: json["success"] });
 
         $("#header-cart").load(
-          `/index.php?route=common/cart|info?language=${language}`
+          `/index.php?route=common/cart|info&language=${language}`
         );
       }
     },

@@ -1,0 +1,90 @@
+<?php
+//==============================================================================
+// MailChimp Integration (v4 installer)
+// 
+// Author: Clear Thinking, LLC
+// E-mail: johnathan@getclearthinking.com
+// Website: http://www.getclearthinking.com
+// 
+// All code within this file is copyright Clear Thinking, LLC.
+// You may not copy or reuse code within this file without written permission.
+//==============================================================================
+?>
+
+<?php echo $header; ?>
+
+<style type="text/css">
+	#container {
+		background: white;
+	}
+	label {
+		font-weight: normal;
+		padding-top: 8px;
+		text-align: right;
+	}
+	.well {
+		background: #F5F5F5 !important;
+		border: 1px solid #E3E3E3;
+		border-radius: 3px;
+		box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+		margin: 15px 0;
+		padding: 15px;
+	}
+</style>
+
+<?php if (isset($column_left)) echo $column_left; ?>
+
+<div id="content">
+	<div class="page-header">
+		<div class="container-fluid">
+			<div class="pull-right float-end pad-bottom-sm">
+				<a href="<?php echo $exit; ?>" class="btn btn-default btn-light"><i class="fa fa-reply"></i> &nbsp;<?php echo $button_back; ?></a>
+			</div>
+			<h1 class="panel-title"><?php echo $heading_title; ?></h1>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<form class="form-horizontal">
+			<div class="well"><?php echo $text_help_info; ?></div>
+			<div class="form-group row mb-3">
+				<label class="control-label col-sm-4"><?php echo $text_license_key; ?></label>
+				<div class="col-sm-8"><input id="license-key" type="text" class="form-control" autocomplete="off" maxlength="32" style="width: 300px" /></div>
+			</div>
+			<div class="form-group row mb-3">
+				<label class="control-label col-sm-4"></label>
+				<div class="col-sm-8"><a id="verify-button" onclick="verify()" class="button btn btn-primary"><?php echo $button_verify; ?></a></div>
+			</div>
+		</form>
+	</div>
+</div>
+
+<?php echo $copyright; ?>
+
+<script>
+	function verify() {
+		$.ajax({
+			type: 'POST',
+			url: 'index.php?route=extension/<?php echo $name . '/' . $type . '/' . $name; ?>|verify&token=<?php echo $token; ?>',
+			data: {key: $('#license-key').val()},
+			beforeSend: function(){
+				$('.alert').remove();
+				$('#verify-button').attr('disabled', 'disabled').addClass('disabled').html('<i class="fa fa-spinner fa-pulse"></i> <?php echo $standard_please_wait; ?>');
+			},
+			complete: function(){
+				$('#verify-button').removeAttr('disabled').removeClass('disabled').html('<?php echo $button_verify; ?>');				
+			},
+			success: function(data) {
+				if (data && data != 'success') {
+					$('.well').after('<div class="alert alert-danger">' + data + '</div>');
+				} else {
+					confirm('<?php echo $text_success; ?>');
+					location.reload();
+				}
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+				confirm(jqXHR.status + ' (' + errorThrown + ')');
+				console.log(jqXHR.status + ' (' + errorThrown + ')');
+			}
+		});
+	}
+</script>

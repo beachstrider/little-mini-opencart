@@ -400,3 +400,50 @@ Line: 22
 2023-04-04 08:07:49 - TypeError:  Opencart\Catalog\Model\Checkout\Order::editOrder(): Argument #2 ($data) must be of type array, null given in E:\xampp\htdocs\catalog\model\checkout\order.php on line 74
 2023-04-04 08:45:37 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\checkout\shipping_method.php on line 168
 2023-04-04 08:50:31 - PHP Warning:  Undefined array key "shipping_methods" in E:\xampp\htdocs\catalog\controller\checkout\shipping_method.php on line 168
+2023-04-04 13:56:58 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\controller\checkout\cart.php on line 298
+2023-04-04 14:07:50 - ParseError:  syntax error, unexpected variable "$data" in E:\xampp\htdocs\catalog\controller\information\information.php on line 31
+2023-04-04 15:52:28 - PHP Warning:  Undefined array key "product_id" in E:\xampp\htdocs\catalog\model\account\returns.php on line 5
+2023-04-04 16:34:07 - PHP Warning: fsockopen(): Unable to connect to smtp.mandrillapp.com:587 (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond)
+File: E:\xampp\htdocs\system\library\mail\smtp.php
+Line: 104
+
+2023-04-04 16:34:07 - Exception:  Error: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond (10060)
+File: E:\xampp\htdocs\system\library\mail\smtp.php
+Line: 107
+
+2023-04-04 16:47:40 - PHP Warning:  fsockopen(): Unable to connect to smtp.mandrillapp.com:587 (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) in E:\xampp\htdocs\system\library\mail\smtp.php on line 104
+2023-04-04 16:47:40 - Exception:  Error: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond (10060) in E:\xampp\htdocs\system\library\mail\smtp.php on line 107
+2023-04-04 16:47:53 - PHP Warning:  fsockopen(): Unable to connect to smtp.mandrillapp.com:587 (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) in E:\xampp\htdocs\system\library\mail\smtp.php on line 104
+2023-04-04 16:47:53 - Exception:  Error: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond (10060) in E:\xampp\htdocs\system\library\mail\smtp.php on line 107
+2023-04-04 16:48:31 - PHP Warning:  fsockopen(): Unable to connect to smtp.mandrillapp.com:587 (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) in E:\xampp\htdocs\system\library\mail\smtp.php on line 104
+2023-04-04 16:48:31 - Exception:  Error: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond (10060) in E:\xampp\htdocs\system\library\mail\smtp.php on line 107
+2023-04-04 16:52:21 - PHP Warning:  fsockopen(): Unable to connect to smtp.mandrillapp.com:587 (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) in E:\xampp\htdocs\system\library\mail\smtp.php on line 104
+2023-04-04 16:52:21 - Exception:  Error: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond (10060) in E:\xampp\htdocs\system\library\mail\smtp.php on line 107
+2023-04-04 16:52:54 - PHP Warning:  fsockopen(): Unable to connect to smtp.mandrillapp.com:587 (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) in E:\xampp\htdocs\system\library\mail\smtp.php on line 104
+2023-04-04 16:52:54 - Exception:  Error: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond (10060) in E:\xampp\htdocs\system\library\mail\smtp.php on line 107
+2023-04-04 16:54:35 - PHP Warning:  fsockopen(): Unable to connect to ssl://smtp.mandrillapp.com:587 (A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond) in E:\xampp\htdocs\system\library\mail\smtp.php on line 104
+2023-04-04 16:54:35 - Exception:  Error: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond (10060) in E:\xampp\htdocs\system\library\mail\smtp.php on line 107
+2023-04-04 17:00:43 - PHP Unknown: ZipArchive::open(): Using empty file as ZipArchive is deprecated
+File: E:\xampp\htdocs\extension\mailchimp_integration\admin\controller\module\mailchimp_integration.php
+Line: 115
+
+2023-04-04 17:00:43 - PHP Warning: unlink(E:/xampp/htdocs/system/storage/download/clearthinking.zip): No such file or directory
+File: E:\xampp\htdocs\extension\mailchimp_integration\admin\controller\module\mailchimp_integration.php
+Line: 123
+
+2023-04-04 17:00:43 - ValueError:  Invalid or uninitialized Zip object
+File: E:\xampp\htdocs\extension\mailchimp_integration\admin\controller\module\mailchimp_integration.php
+Line: 130
+
+2023-04-04 17:01:48 - PHP Unknown: ZipArchive::open(): Using empty file as ZipArchive is deprecated
+File: E:\xampp\htdocs\extension\mailchimp_integration\admin\controller\module\mailchimp_integration.php
+Line: 115
+
+2023-04-04 17:01:48 - PHP Warning: unlink(E:/xampp/htdocs/system/storage/download/clearthinking.zip): No such file or directory
+File: E:\xampp\htdocs\extension\mailchimp_integration\admin\controller\module\mailchimp_integration.php
+Line: 123
+
+2023-04-04 17:01:48 - ValueError:  Invalid or uninitialized Zip object
+File: E:\xampp\htdocs\extension\mailchimp_integration\admin\controller\module\mailchimp_integration.php
+Line: 130
+

@@ -111,6 +111,10 @@ input[type="checkbox"] {
   height: 20px;
 }
 
+textarea{
+  padding: 0.5rem 0.75rem !important;
+}
+
 .list-unstyled a {
   text-decoration: none;
 }
