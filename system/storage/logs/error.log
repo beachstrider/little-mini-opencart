@@ -447,187 +447,20 @@ Line: 123
 File: E:\xampp\htdocs\extension\mailchimp_integration\admin\controller\module\mailchimp_integration.php
 Line: 130
 
-2023-04-05 13:51:31 - PHP Warning:  Undefined array key "meta_tag_description" in E:\xampp\htdocs\catalog\controller\information\information.php on line 23
-2023-04-05 14:39:11 - Exception:  Error: Could not load model Opencart\Catalog\Model\Customer\Customer! in E:\xampp\htdocs\system\engine\loader.php on line 122
-2023-04-05 14:41:30 - ArgumentCountError:  Too few arguments to function Opencart\Catalog\Model\Setting\Store::getStore(), 0 passed and exactly 1 expected in E:\xampp\htdocs\catalog\model\setting\store.php on line 4
-2023-04-05 14:42:54 - ArgumentCountError:  Too few arguments to function Opencart\Catalog\Model\Setting\Store::getStore(), 0 passed and exactly 1 expected in E:\xampp\htdocs\catalog\model\setting\store.php on line 4
-2023-04-05 15:18:35 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:18:35 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\common\footer.php on line 55
-2023-04-05 15:18:35 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:18:35 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\common\footer.php on line 55
-2023-04-05 15:18:35 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:18:35 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\common\footer.php on line 55
-2023-04-05 15:18:35 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:18:35 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\common\footer.php on line 55
-2023-04-05 15:18:35 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:18:35 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\common\footer.php on line 55
-2023-04-05 15:18:35 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:18:35 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\common\footer.php on line 55
-2023-04-05 15:18:35 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:18:35 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\common\footer.php on line 55
-2023-04-05 15:18:35 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:18:35 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\common\footer.php on line 55
-2023-04-05 15:18:35 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:18:35 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\common\footer.php on line 55
-2023-04-05 15:18:35 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:18:35 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\common\footer.php on line 55
-2023-04-05 15:18:35 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:18:35 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\common\footer.php on line 55
-2023-04-05 15:18:35 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:18:35 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:18:35 - PHP Warning:  Array to string conversion in E:\xampp\htdocs\catalog\controller\common\footer.php on line 55
-2023-04-05 15:19:01 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:01 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:01 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:01 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:01 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:01 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:01 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:01 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:01 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:01 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:01 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:01 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:01 - PHP Warning:  Undefined variable $child in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:01 - PHP Warning:  Trying to access array offset on value of type null in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:19:40 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:40 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:40 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:40 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:40 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:40 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:40 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:40 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:40 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:40 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:40 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:19:40 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 56
-2023-04-05 15:20:33 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:33 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:33 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:33 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:33 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:33 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:33 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:33 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:33 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:33 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:33 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:33 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:39 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:39 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:39 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:39 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:39 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:39 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:39 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:39 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:39 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:39 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:39 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:39 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:56 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:56 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:56 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:56 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:56 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:56 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:56 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:56 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:56 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:56 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:56 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:20:56 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:29 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:29 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:29 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:29 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:29 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:29 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:29 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:29 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:29 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:29 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:29 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:29 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:43 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:43 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:43 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:43 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:43 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:43 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:43 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:43 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:43 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:43 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:43 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:43 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
-2023-04-05 15:21:46 - PHP Warning:  Attempt to read property "name" on array in E:\xampp\htdocs\catalog\controller\common\footer.php on line 57
+2023-04-04 17:29:58 - PHP Warning:  fsockopen(): Unable to connect to smtp.mandrillapp.com:587 (Connection refused) in /home/xttl3xy3mfcj/public_html/system/library/mail/smtp.php on line 104
+2023-04-04 17:29:58 - Exception:  Error: Connection refused (111) in /home/xttl3xy3mfcj/public_html/system/library/mail/smtp.php on line 107
+2023-04-04 17:53:21 - PHP Warning:  fsockopen(): Unable to connect to ssl://smtp.mandrillapp.com:587 (Connection refused) in /home/xttl3xy3mfcj/public_html/system/library/mail/smtp.php on line 104
+2023-04-04 17:53:21 - Exception:  Error: Connection refused (111) in /home/xttl3xy3mfcj/public_html/system/library/mail/smtp.php on line 107
+2023-04-04 17:54:44 - PHP Warning:  fsockopen(): Unable to connect to ssl://smtp.mandrillapp.com:587 (Connection refused) in /home/xttl3xy3mfcj/public_html/system/library/mail/smtp.php on line 104
+2023-04-04 17:54:44 - Exception:  Error: Connection refused (111) in /home/xttl3xy3mfcj/public_html/system/library/mail/smtp.php on line 107
+2023-04-05 11:31:24 - TypeError:  Opencart\Catalog\Model\Catalog\Review::getTotalReviewsByProductId(): Argument #1 ($product_id) must be of type int, string given in /home/xttl3xy3mfcj/public_html/catalog/model/catalog/review.php on line 24
+2023-04-05 11:31:25 - TypeError:  Opencart\Catalog\Model\Catalog\Review::getTotalReviewsByProductId(): Argument #1 ($product_id) must be of type int, string given in /home/xttl3xy3mfcj/public_html/catalog/model/catalog/review.php on line 24
+2023-04-05 11:31:26 - TypeError:  Opencart\Catalog\Model\Catalog\Review::getTotalReviewsByProductId(): Argument #1 ($product_id) must be of type int, string given in /home/xttl3xy3mfcj/public_html/catalog/model/catalog/review.php on line 24
+2023-04-05 11:31:28 - TypeError:  Opencart\Catalog\Model\Catalog\Review::getTotalReviewsByProductId(): Argument #1 ($product_id) must be of type int, string given in /home/xttl3xy3mfcj/public_html/catalog/model/catalog/review.php on line 24
+2023-04-05 11:31:29 - TypeError:  Opencart\Catalog\Model\Catalog\Review::getTotalReviewsByProductId(): Argument #1 ($product_id) must be of type int, string given in /home/xttl3xy3mfcj/public_html/catalog/model/catalog/review.php on line 24
+2023-04-05 11:31:29 - TypeError:  Opencart\Catalog\Model\Catalog\Review::getTotalReviewsByProductId(): Argument #1 ($product_id) must be of type int, string given in /home/xttl3xy3mfcj/public_html/catalog/model/catalog/review.php on line 24
+2023-04-05 11:31:30 - TypeError:  Opencart\Catalog\Model\Catalog\Review::getTotalReviewsByProductId(): Argument #1 ($product_id) must be of type int, string given in /home/xttl3xy3mfcj/public_html/catalog/model/catalog/review.php on line 24
+2023-04-05 11:31:31 - TypeError:  Opencart\Catalog\Model\Catalog\Review::getTotalReviewsByProductId(): Argument #1 ($product_id) must be of type int, string given in /home/xttl3xy3mfcj/public_html/catalog/model/catalog/review.php on line 24
+2023-04-05 11:31:32 - TypeError:  Opencart\Catalog\Model\Catalog\Review::getTotalReviewsByProductId(): Argument #1 ($product_id) must be of type int, string given in /home/xttl3xy3mfcj/public_html/catalog/model/catalog/review.php on line 24
+2023-04-05 11:31:32 - TypeError:  Opencart\Catalog\Model\Catalog\Review::getTotalReviewsByProductId(): Argument #1 ($product_id) must be of type int, string given in /home/xttl3xy3mfcj/public_html/catalog/model/catalog/review.php on line 24
+2023-04-05 11:31:33 - TypeError:  Opencart\Catalog\Model\Catalog\Review::getTotalReviewsByProductId(): Argument #1 ($product_id) must be of type int, string given in /home/xttl3xy3mfcj/public_html/catalog/model/catalog/review.php on line 24
