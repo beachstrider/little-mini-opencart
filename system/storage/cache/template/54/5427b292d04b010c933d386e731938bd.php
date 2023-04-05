@@ -59,7 +59,7 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
             // line 19
             echo ($context["text_information"] ?? null);
             echo "</h5>
-\t\t\t\t\t<ul class=\"list-unstyled\">
+\t\t\t\t\t<ul class=\"flex flex-col gap-[16px]\">
 \t\t\t\t\t\t";
             // line 21
             $context['_parent'] = $context;
@@ -88,120 +88,95 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
         echo "\t\t\t<div class=\"sm:col-span-1 col-span-3 w-full sm:mt-0 mt-[30px]\">
 \t\t\t\t<h5 class=\"font-bold uppercase pb-[24px]\">";
         // line 30
-        echo ($context["text_service"] ?? null);
+        echo ($context["text_categories"] ?? null);
         echo "</h5>
-\t\t\t\t<ul class=\"list-unstyled\">
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-        // line 33
-        echo ($context["contact"] ?? null);
-        echo "\">";
-        echo ($context["text_contact"] ?? null);
-        echo "</a>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-        // line 36
-        echo ($context["return"] ?? null);
-        echo "\">";
-        echo ($context["text_return"] ?? null);
-        echo "</a>
-\t\t\t\t\t</li>
+\t\t\t\t<ul class=\"flex flex-col gap-[16px]\">
 \t\t\t\t\t";
-        // line 38
-        if (($context["gdpr"] ?? null)) {
-            // line 39
+        // line 32
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["categories"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["category"]) {
+            // line 33
             echo "\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"";
-            // line 40
-            echo ($context["gdpr"] ?? null);
+            // line 34
+            echo twig_get_attribute($this->env, $this->source, $context["category"], "href", [], "any", false, false, false, 34);
             echo "\">";
-            echo ($context["text_gdpr"] ?? null);
+            echo twig_get_attribute($this->env, $this->source, $context["category"], "name", [], "any", false, false, false, 34);
             echo "</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t";
         }
-        // line 43
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['category'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 37
         echo "\t\t\t\t</ul>
 \t\t\t</div>
 \t\t\t<div class=\"sm:col-span-1 col-span-6 w-full\">
 \t\t\t\t<h5 class=\"font-bold uppercase pb-[24px]\">";
-        // line 46
-        echo ($context["text_extra"] ?? null);
+        // line 40
+        echo ($context["text_help"] ?? null);
         echo "</h5>
-\t\t\t\t<ul class=\"list-unstyled\">
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-        // line 49
-        echo ($context["manufacturer"] ?? null);
-        echo "\">";
-        echo ($context["text_manufacturer"] ?? null);
-        echo "</a>
-\t\t\t\t\t</li>
+\t\t\t\t<ul class=\"flex flex-col gap-[16px]\">
 \t\t\t\t\t";
-        // line 51
-        if (($context["affiliate"] ?? null)) {
-            // line 52
+        // line 42
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["helps"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["help"]) {
+            // line 43
             echo "\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t<a href=\"";
-            // line 53
-            echo ($context["affiliate"] ?? null);
+            // line 44
+            echo twig_get_attribute($this->env, $this->source, $context["help"], "href", [], "any", false, false, false, 44);
             echo "\">";
-            echo ($context["text_affiliate"] ?? null);
+            echo twig_get_attribute($this->env, $this->source, $context["help"], "title", [], "any", false, false, false, 44);
             echo "</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t";
         }
-        // line 56
-        echo "\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-        // line 57
-        echo ($context["special"] ?? null);
-        echo "\">";
-        echo ($context["text_special"] ?? null);
-        echo "</a>
-\t\t\t\t\t</li>
-\t\t\t\t</ul>
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['help'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 47
+        echo "\t\t\t\t</ul>
 \t\t\t</div>
 \t\t\t<div class=\"sm:col-span-1 col-span-6 w-full\">
 \t\t\t\t<h5 class=\"font-bold uppercase pb-[24px]\">";
-        // line 62
-        echo ($context["text_account"] ?? null);
+        // line 50
+        echo ($context["text_contact"] ?? null);
         echo "</h5>
-\t\t\t\t<ul class=\"list-unstyled\">
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-        // line 65
-        echo ($context["account"] ?? null);
+\t\t\t\t<div class=\"flex flex-col gap-[16px] text-dark\">
+\t\t\t\t\t<a class=\"\" href=\"";
+        // line 52
+        echo ($context["contact"] ?? null);
         echo "\">";
-        echo ($context["text_account"] ?? null);
+        echo ($context["store_address"] ?? null);
         echo "</a>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-        // line 68
-        echo ($context["order"] ?? null);
-        echo "\">";
-        echo ($context["text_order"] ?? null);
-        echo "</a>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-        // line 71
-        echo ($context["wishlist"] ?? null);
-        echo "\">";
-        echo ($context["text_wishlist"] ?? null);
-        echo "</a>
-\t\t\t\t\t</li>
-\t\t\t\t\t<li>
-\t\t\t\t\t\t<a href=\"";
-        // line 74
-        echo ($context["newsletter"] ?? null);
-        echo "\">";
-        echo ($context["text_newsletter"] ?? null);
-        echo "</a>
-\t\t\t\t\t</li>
-\t\t\t\t</ul>
+\t\t\t\t\t<div class=\"\">";
+        // line 53
+        echo ($context["text_email"] ?? null);
+        echo ": ";
+        echo ($context["store_email"] ?? null);
+        echo "</div>
+\t\t\t\t</div>
+\t\t\t\t<div class=\"flex gap-[13px] mt-[16px]\">
+\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t<svg width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+\t\t\t\t\t\t\t<path d=\"M7.5 14.5C3.63401 14.5 0.5 11.366 0.5 7.5C0.5 3.63401 3.63401 0.5 7.5 0.5C11.366 0.5 14.5 3.63401 14.5 7.5C14.5 11.366 11.366 14.5 7.5 14.5ZM7.5 14.5V6.5C7.5 5.39543 8.39543 4.5 9.5 4.5H10M5 8.5H10\" stroke=\"#080E16\"/>
+\t\t\t\t\t\t</svg>
+\t\t\t\t\t</a>
+\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t<svg width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+\t\t\t\t\t\t<path d=\"M11 3.5H12M4.5 0.5H10.5C12.7091 0.5 14.5 2.29086 14.5 4.5V10.5C14.5 12.7091 12.7091 14.5 10.5 14.5H4.5C2.29086 14.5 0.5 12.7091 0.5 10.5V4.5C0.5 2.29086 2.29086 0.5 4.5 0.5ZM7.5 10.5C5.84315 10.5 4.5 9.15685 4.5 7.5C4.5 5.84315 5.84315 4.5 7.5 4.5C9.15685 4.5 10.5 5.84315 10.5 7.5C10.5 9.15685 9.15685 10.5 7.5 10.5Z\" stroke=\"#080E16\"/>
+\t\t\t\t\t\t</svg>
+\t\t\t\t\t</a>
+\t\t\t\t\t<a href=\"#\">
+\t\t\t\t\t\t<svg width=\"15\" height=\"15\" viewBox=\"0 0 15 15\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+\t\t\t\t\t\t<path d=\"M4.5 13.5L7.5 6.5M4.26389 9.5C3.78885 8.96924 3.5 8.26835 3.5 7.5V7C3.5 5.067 5.067 3.5 7 3.5H8C9.933 3.5 11.5 5.067 11.5 7V7.5C11.5 9.15685 10.1569 10.5 8.5 10.5C7.60421 10.5 6.80893 9.92679 6.52566 9.07697L6.5 9M7.5 14.5C3.63401 14.5 0.5 11.366 0.5 7.5C0.5 3.63401 3.63401 0.5 7.5 0.5C11.366 0.5 14.5 3.63401 14.5 7.5C14.5 11.366 11.366 14.5 7.5 14.5Z\" stroke=\"#080E16\"/>
+\t\t\t\t\t\t</svg>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
 \t</div>
@@ -227,39 +202,39 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
 \t<div class=\"border-t border-[#6B7A93] bg-[#f5f5f5]\">
 \t\t<div class=\"container mx-auto sm:px-0 px-[20px] flex justify-between sm:items-start sm:gap-0 gap-[16px] items-center text-center sm:flex-row flex-col py-[26px] text-[#6B7A93]\">
 \t\t\t<p>";
-        // line 101
+        // line 96
         echo ($context["text_powered"] ?? null);
         echo "</p>
 \t\t\t<p>";
-        // line 102
+        // line 97
         echo ($context["copyright"] ?? null);
         echo "</p>
 \t\t</div>
 \t</div>
 </footer>
 ";
-        // line 106
+        // line 101
         echo ($context["cookie"] ?? null);
         echo "
 <script src=\"";
-        // line 107
+        // line 102
         echo ($context["bootstrap"] ?? null);
         echo "\" type=\"text/javascript\"></script>
 ";
-        // line 108
+        // line 103
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["scripts"] ?? null));
         foreach ($context['_seq'] as $context["_key"] => $context["script"]) {
-            // line 109
+            // line 104
             echo "\t<script src=\"";
-            echo twig_get_attribute($this->env, $this->source, $context["script"], "href", [], "any", false, false, false, 109);
+            echo twig_get_attribute($this->env, $this->source, $context["script"], "href", [], "any", false, false, false, 104);
             echo "\" type=\"text/javascript\"></script>
 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['script'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 111
+        // line 106
         echo "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js\"></script></body></html>
 ";
     }
@@ -276,7 +251,7 @@ class __TwigTemplate_f2049f3122b1f49d7a6a140460b3e106 extends Template
 
     public function getDebugInfo()
     {
-        return array (  263 => 111,  254 => 109,  250 => 108,  246 => 107,  242 => 106,  235 => 102,  231 => 101,  199 => 74,  191 => 71,  183 => 68,  175 => 65,  169 => 62,  159 => 57,  156 => 56,  148 => 53,  145 => 52,  143 => 51,  136 => 49,  130 => 46,  125 => 43,  117 => 40,  114 => 39,  112 => 38,  105 => 36,  97 => 33,  91 => 30,  88 => 29,  83 => 26,  72 => 23,  69 => 22,  65 => 21,  60 => 19,  57 => 18,  55 => 17,  37 => 1,);
+        return array (  238 => 106,  229 => 104,  225 => 103,  221 => 102,  217 => 101,  210 => 97,  206 => 96,  158 => 53,  152 => 52,  147 => 50,  142 => 47,  131 => 44,  128 => 43,  124 => 42,  119 => 40,  114 => 37,  103 => 34,  100 => 33,  96 => 32,  91 => 30,  88 => 29,  83 => 26,  72 => 23,  69 => 22,  65 => 21,  60 => 19,  57 => 18,  55 => 17,  37 => 1,);
     }
 
     public function getSourceContext()

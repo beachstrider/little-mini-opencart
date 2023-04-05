@@ -462,7 +462,9 @@ footer a {
 }
 
 /* content */
-#content {}
+#content strong {
+  font-family: 'avenir-bold';
+}
 
 /* footer */
 footer {

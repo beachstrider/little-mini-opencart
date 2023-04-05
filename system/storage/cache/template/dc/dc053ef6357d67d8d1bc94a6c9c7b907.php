@@ -36,52 +36,61 @@ class __TwigTemplate_29d481ba6fe934bbf7eb0c3e0f62abb2 extends Template
         // line 1
         echo ($context["header"] ?? null);
         echo "
-<div id=\"information-information\" class=\"sm:h-[400px] text-center bg-orangeLight flex justify-between items-end relative\">
-  <img src=\"/image/catalog/objects/howitworks_left.png\" alt=\"\" srcset=\"\" class=\"sm:block hidden\">
-  <img src=\"/image/catalog/objects/howitworks_right.png\" alt=\"\" srcset=\"\" class=\"sm:block hidden\">
-  <div class=\"sm:py-[40px] py-[30px] sm:absolute w-full h-full\">
+<div id=\"information-information\" class=\"";
+        // line 2
+        if ((($context["meta_description"] ?? null) == "with background")) {
+            echo " bg-orangeLight text-center ";
+        }
+        echo " flex justify-between items-end relative\">
+  <img src=\"/image/catalog/objects/howitworks_left.png\" alt=\"\" srcset=\"\" class=\"";
+        // line 3
+        if ((($context["meta_description"] ?? null) == "with background")) {
+            echo " sm:block ";
+        }
+        echo " hidden absolute left-0 bottom-0\">
+  <img src=\"/image/catalog/objects/howitworks_right.png\" alt=\"\" srcset=\"\" class=\"";
+        // line 4
+        if ((($context["meta_description"] ?? null) == "with background")) {
+            echo " sm:block ";
+        }
+        echo " hidden absolute right-0 bottom-0\">
+  <div class=\"sm:py-[40px] py-[30px] w-full h-full\">
     <div class=\"container\">
-      <h1 class=\"sm:text-[40px] text-[30px] font-bold\">";
-        // line 7
-        echo ($context["text_heading_title_1"] ?? null);
-        echo "&nbsp;<span class=\"text-orange\">'LITTLEMINI'</span>";
-        echo ($context["text_heading_title_2"] ?? null);
-        echo "</h1>
-      <div id=\"content\" class=\"sm:py-[40px] py-[30px] sm:text-[16px] text-[12px] text-center\">
-        <div class=\"font-bold uppercase\">";
+      <div id=\"content\" class=\"relative sm:py-[40px] py-[30px] sm:text-[16px] text-[12px]\">
+        <div class=\"\">";
+        // line 8
+        echo ($context["description"] ?? null);
+        echo "</div>
+        ";
         // line 9
-        echo ($context["text_description_title"] ?? null);
-        echo "</div>
-        <div class=\"sm:mt-[40px] mt-[30px]\">";
-        // line 10
-        echo ($context["text_description_content"] ?? null);
-        echo "</div>
+        echo ($context["meta_description"] ?? null);
+        echo "
       </div>
     </div>
   </div>
 </div>
 ";
-        // line 15
+        // line 14
         echo ($context["section_members"] ?? null);
         echo "
 ";
-        // line 16
+        // line 15
         echo ($context["section_more_buy"] ?? null);
         echo "
 ";
-        // line 17
+        // line 16
         echo ($context["section_how_possible"] ?? null);
         echo "
 ";
-        // line 18
+        // line 17
         echo ($context["section_know_more"] ?? null);
         echo "
 ";
-        // line 19
+        // line 18
         echo ($context["section_best_deals"] ?? null);
         echo "
 ";
-        // line 20
+        // line 19
         echo ($context["footer"] ?? null);
     }
 
@@ -97,7 +106,7 @@ class __TwigTemplate_29d481ba6fe934bbf7eb0c3e0f62abb2 extends Template
 
     public function getDebugInfo()
     {
-        return array (  85 => 20,  81 => 19,  77 => 18,  73 => 17,  69 => 16,  65 => 15,  57 => 10,  53 => 9,  46 => 7,  37 => 1,);
+        return array (  94 => 19,  90 => 18,  86 => 17,  82 => 16,  78 => 15,  74 => 14,  66 => 9,  62 => 8,  53 => 4,  47 => 3,  41 => 2,  37 => 1,);
     }
 
     public function getSourceContext()

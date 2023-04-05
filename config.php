@@ -1,7 +1,7 @@
 <?php
 // ========== DEV ========== 
 define('APPLICATION', 'Catalog');
-define('HTTP_SERVER', 'http://localhost/');
+define('HTTP_SERVER', 'https://localhost/');
 define('DIR_OPENCART', 'E:/xampp/htdocs/');
 define('DIR_APPLICATION', DIR_OPENCART . 'catalog/');
 define('DIR_EXTENSION', DIR_OPENCART . 'extension/');

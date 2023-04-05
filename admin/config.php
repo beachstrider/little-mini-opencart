@@ -1,8 +1,8 @@
 <?php
 // ========== DEV ========== 
 define('APPLICATION', 'Admin');
-define('HTTP_SERVER', 'http://localhost/admin/');
-define('HTTP_CATALOG', 'http://localhost/');
+define('HTTP_SERVER', 'https://localhost/admin/');
+define('HTTP_CATALOG', 'https://localhost/');
 define('DIR_OPENCART', 'E:/xampp/htdocs/');
 define('DIR_APPLICATION', DIR_OPENCART . 'admin/');
 define('DIR_EXTENSION', DIR_OPENCART . 'extension/');

@@ -5,12 +5,19 @@ class Footer extends \Opencart\System\Engine\Controller {
 		$this->load->language('common/footer');
 
 		$this->load->model('catalog/information');
+		$this->load->model('setting/store');
+		$this->load->model('catalog/category');
 
 		$data['informations'] = [];
 
 		foreach ($this->model_catalog_information->getInformations() as $result) {
 			if ($result['bottom']) {
 				$data['informations'][] = [
+					'title' => $result['title'],
+					'href'  => $this->url->link('information/information', 'language=' . $this->config->get('config_language') . '&information_id=' . $result['information_id'])
+				];
+			}else{
+				$data['helps'][] = [
 					'title' => $result['title'],
 					'href'  => $this->url->link('information/information', 'language=' . $this->config->get('config_language') . '&information_id=' . $result['information_id'])
 				];
@@ -44,6 +51,20 @@ class Footer extends \Opencart\System\Engine\Controller {
 
 		$data['text_powered'] = $this->language->get('text_powered');
 		$data['copyright'] =  date('Y', time()) . " - All Rights Reserved" ;
+		
+		$data['store_email'] = $this->config->get('config_email');
+		$data['store_address'] = $this->config->get('config_address');
+
+		$_categories = $this->model_catalog_category->getCategories(0);
+		$categories = [];
+		foreach ($_categories as $category) {
+			$categories[] = [
+				'name'  => $category['name'],
+				'href'  => $this->url->link('product/category', 'language=' . $this->config->get('config_language') . '&path=' . $category['category_id'])
+			];
+		}
+
+		$data['categories'] = array_slice($categories, 1, 4);
 
 		// Whos Online
 		if ($this->config->get('config_customer_online')) {

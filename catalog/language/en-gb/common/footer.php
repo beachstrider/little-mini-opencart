@@ -1,9 +1,11 @@
 <?php
 // Text
 $_['text_information']  = 'Information';
-$_['text_service']      = 'Customer Service';
-$_['text_extra']        = 'Extras';
-$_['text_contact']      = 'Contact Us';
+$_['text_categories']      = 'Categories';
+$_['text_help']        = 'Help';
+$_['text_email']        = 'Email';
+$_['text_contact']      = 'Contact';
+$_['text_contact_us']      = 'Contact Us';
 $_['text_return']       = 'Returns';
 $_['text_sitemap']      = 'Site Map';
 $_['text_gdpr']         = 'GDPR';

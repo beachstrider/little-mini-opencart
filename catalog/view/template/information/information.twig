@@ -1,13 +1,12 @@
 {{ header }}
-<div id="information-information" class="sm:h-[400px] text-center bg-orangeLight flex justify-between items-end relative">
-  <img src="/image/catalog/objects/howitworks_left.png" alt="" srcset="" class="sm:block hidden">
-  <img src="/image/catalog/objects/howitworks_right.png" alt="" srcset="" class="sm:block hidden">
-  <div class="sm:py-[40px] py-[30px] sm:absolute w-full h-full">
+<div id="information-information" class="{% if meta_description == 'with background' %} bg-orangeLight text-center {% endif %} flex justify-between items-end relative">
+  <img src="/image/catalog/objects/howitworks_left.png" alt="" srcset="" class="{% if meta_description == 'with background' %} sm:block {% endif %} hidden absolute left-0 bottom-0">
+  <img src="/image/catalog/objects/howitworks_right.png" alt="" srcset="" class="{% if meta_description == 'with background' %} sm:block {% endif %} hidden absolute right-0 bottom-0">
+  <div class="sm:py-[40px] py-[30px] w-full h-full">
     <div class="container">
-      <h1 class="sm:text-[40px] text-[30px] font-bold">{{ text_heading_title_1 }}&nbsp;<span class="text-orange">'LITTLEMINI'</span>{{ text_heading_title_2 }}</h1>
-      <div id="content" class="sm:py-[40px] py-[30px] sm:text-[16px] text-[12px] text-center">
-        <div class="font-bold uppercase">{{ text_description_title }}</div>
-        <div class="sm:mt-[40px] mt-[30px]">{{text_description_content}}</div>
+      <div id="content" class="relative sm:py-[40px] py-[30px] sm:text-[16px] text-[12px]">
+        <div class="">{{description}}</div>
+        {{meta_description}}
       </div>
     </div>
   </div>

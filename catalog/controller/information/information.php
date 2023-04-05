@@ -19,9 +19,8 @@ class Information extends \Opencart\System\Engine\Controller {
 			$this->document->setDescription($information_info['meta_description']);
 			$this->document->setKeywords($information_info['meta_keyword']);
 
-			$data['heading_title'] = $information_info['title'];
-
 			$data['description'] = html_entity_decode($information_info['description'], ENT_QUOTES, 'UTF-8');
+			$data['meta_description'] = $information_info['meta_description'];
 
 			$data['continue'] = $this->url->link('common/home', 'language=' . $this->config->get('config_language'));
 
@@ -45,11 +44,6 @@ class Information extends \Opencart\System\Engine\Controller {
 			$data['continue'] = $this->url->link('common/home', 'language=' . $this->config->get('config_language'));
 
 			$this->response->addHeader($this->request->server['SERVER_PROTOCOL'] . ' 404 Not Found');
-
-			$data['column_left'] = $this->load->controller('common/column_left');
-			$data['column_right'] = $this->load->controller('common/column_right');
-			$data['content_top'] = $this->load->controller('common/content_top');
-			$data['content_bottom'] = $this->load->controller('common/content_bottom');
 			$data['footer'] = $this->load->controller('common/footer');
 			$data['header'] = $this->load->controller('common/header');
 

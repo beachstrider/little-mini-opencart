@@ -14,6 +14,10 @@
 # having 'interest-cohort' by adding a # in front
 ##
 
+<IfModule mod_headers.c>
+  Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
 ## No directory listings
 <IfModule mod_autoindex.c>
   IndexIgnore *
@@ -54,6 +58,11 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|webp|js|css|svg)
 RewriteRule ^([^?]*) index.php?_route_=$1 [L,QSA]
+
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 ## Optional error documents
 #ErrorDocument 400 /index.php?route=error/not_found
